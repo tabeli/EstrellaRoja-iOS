@@ -97,11 +97,11 @@
 		B561F444216C669D00EB917C /* ER */ = {
 			isa = PBXGroup;
 			children = (
+				B5D6BD392173FFA3004CDCC2 /* Storyboards */,
 				B561F445216C669D00EB917C /* AppDelegate.swift */,
 				B561F447216C669D00EB917C /* ViewController.swift */,
 				B561F449216C669D00EB917C /* Main.storyboard */,
 				B561F44C216C669F00EB917C /* Assets.xcassets */,
-				B561F44E216C669F00EB917C /* LaunchScreen.storyboard */,
 				B561F451216C669F00EB917C /* Info.plist */,
 			);
 			path = ER;
@@ -123,6 +123,14 @@
 				B561F467216C66A000EB917C /* Info.plist */,
 			);
 			path = ERUITests;
+			sourceTree = "<group>";
+		};
+		B5D6BD392173FFA3004CDCC2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B561F44E216C669F00EB917C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
