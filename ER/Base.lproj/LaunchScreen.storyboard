@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iox-o6-Use">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="SFg-kk-RgX">
+            <objects>
+                <viewController id="Iox-o6-Use" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0of-l7-ORw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashscreen" translatesAutoresizingMaskIntoConstraints="NO" id="EF5-Oq-UjU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="904"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gki-Zz-So6" firstAttribute="trailing" secondItem="EF5-Oq-UjU" secondAttribute="trailing" id="7Tv-sa-7vn"/>
+                            <constraint firstItem="gki-Zz-So6" firstAttribute="bottom" secondItem="EF5-Oq-UjU" secondAttribute="bottomMargin" id="VZ1-37-OQ4"/>
+                            <constraint firstItem="EF5-Oq-UjU" firstAttribute="top" secondItem="0of-l7-ORw" secondAttribute="top" id="fHt-fd-UD3"/>
+                            <constraint firstItem="EF5-Oq-UjU" firstAttribute="leading" secondItem="gki-Zz-So6" secondAttribute="leading" id="v1v-j0-46U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gki-Zz-So6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z33-eR-hNC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-589" y="15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splashscreen" width="414" height="896"/>
+    </resources>
+</document>
