@@ -14,6 +14,10 @@
 		B561F450216C669F00EB917C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F44E216C669F00EB917C /* LaunchScreen.storyboard */; };
 		B561F45B216C66A000EB917C /* ERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F45A216C66A000EB917C /* ERTests.swift */; };
 		B561F466216C66A000EB917C /* ERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F465216C66A000EB917C /* ERUITests.swift */; };
+		B5D6BD3B21740013004CDCC2 /* Ruta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3A21740013004CDCC2 /* Ruta.storyboard */; };
+		B5D6BD3D21740021004CDCC2 /* Pago.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3C21740021004CDCC2 /* Pago.storyboard */; };
+		B5D6BD3F2174004A004CDCC2 /* RutaDesbloqueada.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */; };
+		B5D6BD4121740090004CDCC2 /* Opciones.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD4021740090004CDCC2 /* Opciones.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		B561F461216C66A000EB917C /* ERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B561F465216C66A000EB917C /* ERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERUITests.swift; sourceTree = "<group>"; };
 		B561F467216C66A000EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D6BD3A21740013004CDCC2 /* Ruta.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ruta.storyboard; sourceTree = "<group>"; };
+		B5D6BD3C21740021004CDCC2 /* Pago.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pago.storyboard; sourceTree = "<group>"; };
+		B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RutaDesbloqueada.storyboard; sourceTree = "<group>"; };
+		B5D6BD4021740090004CDCC2 /* Opciones.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Opciones.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +108,7 @@
 				B5D6BD392173FFA3004CDCC2 /* Storyboards */,
 				B561F445216C669D00EB917C /* AppDelegate.swift */,
 				B561F447216C669D00EB917C /* ViewController.swift */,
-				B561F449216C669D00EB917C /* Main.storyboard */,
+				B561F44E216C669F00EB917C /* LaunchScreen.storyboard */,
 				B561F44C216C669F00EB917C /* Assets.xcassets */,
 				B561F451216C669F00EB917C /* Info.plist */,
 			);
@@ -128,7 +136,11 @@
 		B5D6BD392173FFA3004CDCC2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				B561F44E216C669F00EB917C /* LaunchScreen.storyboard */,
+				B561F449216C669D00EB917C /* Main.storyboard */,
+				B5D6BD3A21740013004CDCC2 /* Ruta.storyboard */,
+				B5D6BD3C21740021004CDCC2 /* Pago.storyboard */,
+				B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */,
+				B5D6BD4021740090004CDCC2 /* Opciones.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -238,8 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B561F450216C669F00EB917C /* LaunchScreen.storyboard in Resources */,
+				B5D6BD4121740090004CDCC2 /* Opciones.storyboard in Resources */,
 				B561F44D216C669F00EB917C /* Assets.xcassets in Resources */,
+				B5D6BD3F2174004A004CDCC2 /* RutaDesbloqueada.storyboard in Resources */,
+				B5D6BD3B21740013004CDCC2 /* Ruta.storyboard in Resources */,
 				B561F44B216C669D00EB917C /* Main.storyboard in Resources */,
+				B5D6BD3D21740021004CDCC2 /* Pago.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
