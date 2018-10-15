@@ -340,6 +340,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$65" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGz-w8-fKe">
+                                        <rect key="frame" x="0.0" y="30.666666666666686" width="116" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -350,11 +356,14 @@
                                     <constraint firstItem="K90-Lp-DVd" firstAttribute="height" secondItem="BU6-Kt-8fr" secondAttribute="height" id="BWa-sK-SU6"/>
                                     <constraint firstItem="SaK-OH-bTh" firstAttribute="centerX" secondItem="BU6-Kt-8fr" secondAttribute="centerX" multiplier="1.7" id="LNJ-Kh-DMd"/>
                                     <constraint firstItem="K90-Lp-DVd" firstAttribute="centerY" secondItem="BU6-Kt-8fr" secondAttribute="centerY" id="NuR-c7-8c5"/>
+                                    <constraint firstItem="RGz-w8-fKe" firstAttribute="width" secondItem="K90-Lp-DVd" secondAttribute="width" multiplier="0.5" id="Q8D-ZM-YoN"/>
                                     <constraint firstItem="K90-Lp-DVd" firstAttribute="centerX" secondItem="BU6-Kt-8fr" secondAttribute="centerX" multiplier="0.7" id="WYl-Wj-rje"/>
                                     <constraint firstItem="47K-EK-Z5a" firstAttribute="height" secondItem="BU6-Kt-8fr" secondAttribute="height" id="WlU-Zm-Bid"/>
                                     <constraint firstItem="47K-EK-Z5a" firstAttribute="centerY" secondItem="BU6-Kt-8fr" secondAttribute="centerY" id="YQ2-XL-5Ou"/>
                                     <constraint firstItem="Net-68-bf3" firstAttribute="centerX" secondItem="BU6-Kt-8fr" secondAttribute="centerX" multiplier="1.9" id="avB-qn-xIh"/>
                                     <constraint firstItem="SaK-OH-bTh" firstAttribute="height" secondItem="BU6-Kt-8fr" secondAttribute="height" id="kIJ-ZH-bp8"/>
+                                    <constraint firstItem="RGz-w8-fKe" firstAttribute="centerY" secondItem="BU6-Kt-8fr" secondAttribute="centerY" multiplier="1.7" id="oyM-yR-e9M"/>
+                                    <constraint firstItem="RGz-w8-fKe" firstAttribute="centerX" secondItem="BU6-Kt-8fr" secondAttribute="centerX" multiplier="0.35" id="pEI-4E-5RA"/>
                                     <constraint firstItem="SaK-OH-bTh" firstAttribute="centerY" secondItem="BU6-Kt-8fr" secondAttribute="centerY" id="uJZ-YA-ccd"/>
                                 </constraints>
                             </view>
@@ -473,6 +482,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="RGz-w8-fKe" firstAttribute="height" secondItem="5Ab-F5-QxR" secondAttribute="height" multiplier="0.05" id="5L0-ZT-z8d"/>
                             <constraint firstItem="6LR-ko-FfM" firstAttribute="centerX" secondItem="5Ab-F5-QxR" secondAttribute="centerX" id="Af6-B9-itO"/>
                             <constraint firstItem="6DW-fE-geX" firstAttribute="trailing" secondItem="7ej-ms-nhv" secondAttribute="trailing" id="Bv7-Kl-UMq"/>
                             <constraint firstItem="6DW-fE-geX" firstAttribute="bottom" secondItem="7ej-ms-nhv" secondAttribute="bottom" id="GFD-63-nrO"/>
@@ -510,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1j6-Zk-hzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090" y="-41"/>
+            <point key="canvasLocation" x="2089.8550724637685" y="-41.517857142857139"/>
         </scene>
         <!--DetalleCompra-->
         <scene sceneID="Eq8-hj-JNP">
