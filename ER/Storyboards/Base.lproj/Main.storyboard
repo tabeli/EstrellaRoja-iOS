@@ -367,10 +367,10 @@
             </objects>
             <point key="canvasLocation" x="974" y="7"/>
         </scene>
-        <!--Registro-->
+        <!--RecuperaContraseña-->
         <scene sceneID="1gR-vB-6sn">
             <objects>
-                <viewController title="Registro" id="IsO-K0-ghg" sceneMemberID="viewController">
+                <viewController title="RecuperaContraseña" id="IsO-K0-ghg" userLabel="RecuperaContraseña" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Szc-2U-oFl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
