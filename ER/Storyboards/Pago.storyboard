@@ -341,7 +341,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$65" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGz-w8-fKe">
-                                        <rect key="frame" x="0.0" y="30.666666666666686" width="116" height="45"/>
+                                        <rect key="frame" x="0.0" y="34" width="116" height="44.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -362,7 +362,7 @@
                                     <constraint firstItem="47K-EK-Z5a" firstAttribute="centerY" secondItem="BU6-Kt-8fr" secondAttribute="centerY" id="YQ2-XL-5Ou"/>
                                     <constraint firstItem="Net-68-bf3" firstAttribute="centerX" secondItem="BU6-Kt-8fr" secondAttribute="centerX" multiplier="1.9" id="avB-qn-xIh"/>
                                     <constraint firstItem="SaK-OH-bTh" firstAttribute="height" secondItem="BU6-Kt-8fr" secondAttribute="height" id="kIJ-ZH-bp8"/>
-                                    <constraint firstItem="RGz-w8-fKe" firstAttribute="centerY" secondItem="BU6-Kt-8fr" secondAttribute="centerY" multiplier="1.7" id="oyM-yR-e9M"/>
+                                    <constraint firstItem="RGz-w8-fKe" firstAttribute="centerY" secondItem="BU6-Kt-8fr" secondAttribute="centerY" multiplier="1.8" id="oyM-yR-e9M"/>
                                     <constraint firstItem="RGz-w8-fKe" firstAttribute="centerX" secondItem="BU6-Kt-8fr" secondAttribute="centerX" multiplier="0.35" id="pEI-4E-5RA"/>
                                     <constraint firstItem="SaK-OH-bTh" firstAttribute="centerY" secondItem="BU6-Kt-8fr" secondAttribute="centerY" id="uJZ-YA-ccd"/>
                                 </constraints>
