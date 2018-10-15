@@ -1,7 +1,111 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Puebla-->
+        <scene sceneID="xwr-Kl-wz7">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Pt-JM-2Tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Main" title="Puebla" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I8E-vX-dvk" customClass="ViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c11-9b-Cba">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="2ez-7o-DaD" userLabel="chin">
+                                <rect key="frame" x="0.0" y="806.5" width="414" height="89.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="aXL-F1-ZZV">
+                                <rect key="frame" x="291" y="830" width="123" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aXL-F1-ZZV" secondAttribute="height" multiplier="55:34" id="Yw0-9J-zCM"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EiQ-tK-XfQ" userLabel="Header">
+                                <rect key="frame" x="0.0" y="-9" width="414" height="107.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puebla fascinante" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH8-mT-I29">
+                                        <rect key="frame" x="0.0" y="43.5" width="414" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.079285345970000004" green="0.4452073574" blue="0.82666951420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LH8-mT-I29" firstAttribute="centerY" secondItem="EiQ-tK-XfQ" secondAttribute="centerY" multiplier="1.2" id="UJ8-Oq-vW4"/>
+                                    <constraint firstItem="LH8-mT-I29" firstAttribute="width" secondItem="EiQ-tK-XfQ" secondAttribute="width" id="e3k-e8-N94"/>
+                                    <constraint firstItem="LH8-mT-I29" firstAttribute="centerX" secondItem="EiQ-tK-XfQ" secondAttribute="centerX" id="npy-tY-4QF"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Gu-Hs-CWQ">
+                                <rect key="frame" x="0.0" y="98.5" width="414" height="752.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1K-ct-gMp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="752.5"/>
+                                        <subviews>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ukq-v0-ZbY">
+                                                <rect key="frame" x="17" y="20" width="373" height="354"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </mapView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYn-CD-dEb">
+                                                <rect key="frame" x="129" y="383" width="150" height="41"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <state key="normal" title="Leer narrativa">
+                                                    <color key="titleColor" white="0.60999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="250" constant="752.66999999999996" id="6KD-DD-3MW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="b1K-ct-gMp" firstAttribute="top" secondItem="0Gu-Hs-CWQ" secondAttribute="top" id="1Ii-U4-XDS"/>
+                                    <constraint firstItem="b1K-ct-gMp" firstAttribute="centerY" secondItem="0Gu-Hs-CWQ" secondAttribute="centerY" id="CMZ-Io-h8z"/>
+                                    <constraint firstItem="b1K-ct-gMp" firstAttribute="centerX" secondItem="0Gu-Hs-CWQ" secondAttribute="centerX" id="Rdz-8c-UBd"/>
+                                    <constraint firstAttribute="bottom" secondItem="b1K-ct-gMp" secondAttribute="bottom" id="iZf-kT-EpM"/>
+                                    <constraint firstAttribute="trailing" secondItem="b1K-ct-gMp" secondAttribute="trailing" id="xtW-QZ-yw7"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Gu-Hs-CWQ" firstAttribute="bottom" secondItem="2ez-7o-DaD" secondAttribute="centerY" id="5tw-sn-tf7"/>
+                            <constraint firstItem="EiQ-tK-XfQ" firstAttribute="width" secondItem="c11-9b-Cba" secondAttribute="width" id="8vc-i3-6Vj"/>
+                            <constraint firstItem="2ez-7o-DaD" firstAttribute="bottom" secondItem="aXL-F1-ZZV" secondAttribute="bottom" constant="-10" id="9wn-Ij-EWz"/>
+                            <constraint firstItem="2ez-7o-DaD" firstAttribute="centerX" secondItem="Gcy-zo-GkU" secondAttribute="centerX" id="HIR-OY-N5a"/>
+                            <constraint firstItem="EiQ-tK-XfQ" firstAttribute="centerX" secondItem="c11-9b-Cba" secondAttribute="centerX" id="Hd6-He-sCX"/>
+                            <constraint firstItem="0Gu-Hs-CWQ" firstAttribute="top" secondItem="EiQ-tK-XfQ" secondAttribute="bottom" id="Hvg-bE-ye0"/>
+                            <constraint firstItem="b1K-ct-gMp" firstAttribute="width" secondItem="c11-9b-Cba" secondAttribute="width" id="JIZ-QF-OxW"/>
+                            <constraint firstItem="0Gu-Hs-CWQ" firstAttribute="leading" secondItem="Gcy-zo-GkU" secondAttribute="leading" id="LES-Pr-zfO"/>
+                            <constraint firstItem="2ez-7o-DaD" firstAttribute="trailing" secondItem="aXL-F1-ZZV" secondAttribute="trailing" id="ZWa-Na-Eyc"/>
+                            <constraint firstItem="EiQ-tK-XfQ" firstAttribute="centerY" secondItem="c11-9b-Cba" secondAttribute="centerY" multiplier="0.1" id="ciF-vd-3Z0"/>
+                            <constraint firstItem="aXL-F1-ZZV" firstAttribute="height" secondItem="2ez-7o-DaD" secondAttribute="height" multiplier="0.85" id="d1P-O1-k4T"/>
+                            <constraint firstItem="2ez-7o-DaD" firstAttribute="height" secondItem="c11-9b-Cba" secondAttribute="height" multiplier="0.1" id="e8l-UW-H05"/>
+                            <constraint firstItem="Gcy-zo-GkU" firstAttribute="trailing" secondItem="0Gu-Hs-CWQ" secondAttribute="trailing" id="jtL-jh-cKa"/>
+                            <constraint firstItem="2ez-7o-DaD" firstAttribute="bottom" secondItem="c11-9b-Cba" secondAttribute="bottom" id="qt7-jF-Mmq"/>
+                            <constraint firstItem="EiQ-tK-XfQ" firstAttribute="height" secondItem="c11-9b-Cba" secondAttribute="height" multiplier="0.12" id="vYj-1i-Ewq"/>
+                            <constraint firstItem="2ez-7o-DaD" firstAttribute="width" secondItem="c11-9b-Cba" secondAttribute="width" id="yza-M2-WcB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gcy-zo-GkU"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1024.6376811594205" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottom" width="414" height="87"/>
+        <image name="icon" width="165" height="102"/>
+    </resources>
 </document>
