@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="spX-WG-GX2">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -453,6 +453,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cv-G2-liM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1688" y="7"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mcT-Jf-ZJi">
+            <objects>
+                <viewController id="spX-WG-GX2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qf3-fr-C3l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPn-CG-JqF" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPi-8d-HJN">
+                                        <rect key="frame" x="0.0" y="54" width="414" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98905342819999997" green="0.71650582549999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="XPi-8d-HJN" firstAttribute="centerX" secondItem="MPn-CG-JqF" secondAttribute="centerX" id="4Ex-9Z-Ybw"/>
+                                    <constraint firstItem="XPi-8d-HJN" firstAttribute="centerY" secondItem="MPn-CG-JqF" secondAttribute="centerY" multiplier="1.2" id="ffy-A4-vjG"/>
+                                    <constraint firstItem="XPi-8d-HJN" firstAttribute="width" secondItem="MPn-CG-JqF" secondAttribute="width" id="vud-Ar-9KN"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWL-Fk-J9R">
+                                <rect key="frame" x="0.0" y="121" width="414" height="879"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rnh-ch-Uz9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOO-70-WcL">
+                                                <rect key="frame" x="41.333333333333343" y="0.0" width="331.33333333333326" height="1000"/>
+                                                <mutableString key="text">holi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blabla blaholi blablablaholi blabla blaholi blablablaholi blabla blaholi blablablaholi blabla blaholi blablablaholi blabla blaholi blablablaholi blabla blaholi blablablaholi blabla blaholi blablablaholi blabla blaholi blablablaholi blabla blaholi blablablaholi blabla blaholi blablablaholi blabla blaholi blabla blaholi blabla blaholi blabla  </mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="zOO-70-WcL" firstAttribute="centerY" secondItem="Rnh-ch-Uz9" secondAttribute="centerY" id="1nN-ra-7jV"/>
+                                            <constraint firstItem="zOO-70-WcL" firstAttribute="centerX" secondItem="Rnh-ch-Uz9" secondAttribute="centerX" id="3lA-EZ-umF"/>
+                                            <constraint firstItem="zOO-70-WcL" firstAttribute="width" secondItem="Rnh-ch-Uz9" secondAttribute="width" multiplier="0.8" id="3nm-an-yF3"/>
+                                            <constraint firstItem="zOO-70-WcL" firstAttribute="height" secondItem="Rnh-ch-Uz9" secondAttribute="height" id="8JS-t1-qXx"/>
+                                            <constraint firstAttribute="height" constant="1000" id="kHf-ar-QnM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Rnh-ch-Uz9" firstAttribute="leading" secondItem="eWL-Fk-J9R" secondAttribute="leading" id="CVK-w9-QLy"/>
+                                    <constraint firstItem="Rnh-ch-Uz9" firstAttribute="width" secondItem="eWL-Fk-J9R" secondAttribute="width" id="iTW-Np-Sal"/>
+                                    <constraint firstItem="Rnh-ch-Uz9" firstAttribute="top" secondItem="eWL-Fk-J9R" secondAttribute="top" id="k9h-mE-qPY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rnh-ch-Uz9" secondAttribute="bottom" id="kNE-eu-6V5"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rnh-ch-Uz9" secondAttribute="trailing" id="xSn-eI-SSH"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MPn-CG-JqF" firstAttribute="centerX" secondItem="Qf3-fr-C3l" secondAttribute="centerX" id="8dE-QB-RDI"/>
+                            <constraint firstItem="MPn-CG-JqF" firstAttribute="width" secondItem="Qf3-fr-C3l" secondAttribute="width" id="DPe-Ar-qR9"/>
+                            <constraint firstItem="eWL-Fk-J9R" firstAttribute="trailing" secondItem="Ozv-g9-pn8" secondAttribute="trailing" id="OaF-d9-Kkp"/>
+                            <constraint firstItem="eWL-Fk-J9R" firstAttribute="top" secondItem="MPn-CG-JqF" secondAttribute="top" constant="121" id="Pko-7Z-YbT"/>
+                            <constraint firstItem="eWL-Fk-J9R" firstAttribute="leading" secondItem="Ozv-g9-pn8" secondAttribute="leading" id="ZF0-qD-EYU"/>
+                            <constraint firstItem="MPn-CG-JqF" firstAttribute="centerY" secondItem="Qf3-fr-C3l" secondAttribute="centerY" multiplier="0.12" id="a5m-QY-V6g"/>
+                            <constraint firstAttribute="bottom" secondItem="eWL-Fk-J9R" secondAttribute="bottom" id="aBB-5r-cyz"/>
+                            <constraint firstItem="MPn-CG-JqF" firstAttribute="height" secondItem="Qf3-fr-C3l" secondAttribute="height" multiplier="0.12" id="zen-iz-t3J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ozv-g9-pn8"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkw-JF-OsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2689.8550724637685" y="-8.0357142857142847"/>
         </scene>
     </scenes>
     <resources>
