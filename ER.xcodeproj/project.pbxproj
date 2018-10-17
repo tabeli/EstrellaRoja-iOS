@@ -18,6 +18,11 @@
 		B5D6BD3D21740021004CDCC2 /* Pago.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3C21740021004CDCC2 /* Pago.storyboard */; };
 		B5D6BD3F2174004A004CDCC2 /* RutaDesbloqueada.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */; };
 		B5D6BD4121740090004CDCC2 /* Opciones.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD4021740090004CDCC2 /* Opciones.storyboard */; };
+		B5F80DF82177C78600CDB5BE /* AgregarPasajerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DF72177C78600CDB5BE /* AgregarPasajerosViewController.swift */; };
+		B5F80DFA2177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DF92177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift */; };
+		B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */; };
+		B5F80DFE2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DFD2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift */; };
+		B5F80E002177C83200CDB5BE /* SiguienteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DFF2177C83200CDB5BE /* SiguienteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		B5D6BD3C21740021004CDCC2 /* Pago.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pago.storyboard; sourceTree = "<group>"; };
 		B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RutaDesbloqueada.storyboard; sourceTree = "<group>"; };
 		B5D6BD4021740090004CDCC2 /* Opciones.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Opciones.storyboard; sourceTree = "<group>"; };
+		B5F80DF72177C78600CDB5BE /* AgregarPasajerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarPasajerosViewController.swift; sourceTree = "<group>"; };
+		B5F80DF92177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarPasajerosTableViewController.swift; sourceTree = "<group>"; };
+		B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComenzarViajeTableViewCell.swift; sourceTree = "<group>"; };
+		B5F80DFD2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosPasajeroTableViewCell.swift; sourceTree = "<group>"; };
+		B5F80DFF2177C83200CDB5BE /* SiguienteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiguienteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,7 @@
 		B561F444216C669D00EB917C /* ER */ = {
 			isa = PBXGroup;
 			children = (
+				B5F80DF62177C71700CDB5BE /* ComprarBoleto */,
 				B5D6BD392173FFA3004CDCC2 /* Storyboards */,
 				B561F445216C669D00EB917C /* AppDelegate.swift */,
 				B561F447216C669D00EB917C /* ViewController.swift */,
@@ -143,6 +154,18 @@
 				B5D6BD4021740090004CDCC2 /* Opciones.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B5F80DF62177C71700CDB5BE /* ComprarBoleto */ = {
+			isa = PBXGroup;
+			children = (
+				B5F80DF72177C78600CDB5BE /* AgregarPasajerosViewController.swift */,
+				B5F80DF92177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift */,
+				B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */,
+				B5F80DFD2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift */,
+				B5F80DFF2177C83200CDB5BE /* SiguienteTableViewCell.swift */,
+			);
+			path = ComprarBoleto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F80E002177C83200CDB5BE /* SiguienteTableViewCell.swift in Sources */,
+				B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */,
+				B5F80DFA2177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift in Sources */,
+				B5F80DFE2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift in Sources */,
+				B5F80DF82177C78600CDB5BE /* AgregarPasajerosViewController.swift in Sources */,
 				B561F448216C669D00EB917C /* ViewController.swift in Sources */,
 				B561F446216C669D00EB917C /* AppDelegate.swift in Sources */,
 			);
