@@ -58,9 +58,9 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2em-pM-bnD">
-                                <rect key="frame" x="41.5" y="327" width="331" height="63"/>
+                                <rect key="frame" x="10.5" y="327" width="393" height="63"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <state key="normal" title="Aviso de Privacidad">
+                                <state key="normal" title="Terminos y condiciones">
                                     <color key="titleColor" red="0.084240458909999996" green="0.21069431299999999" blue="0.38041132690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
@@ -73,7 +73,7 @@
                             <constraint firstItem="seE-Ey-sO3" firstAttribute="centerY" secondItem="fo5-B5-wJG" secondAttribute="centerY" multiplier="0.5" id="E5K-sr-bKU"/>
                             <constraint firstItem="9n3-4u-YoU" firstAttribute="height" secondItem="fo5-B5-wJG" secondAttribute="height" multiplier="0.12" id="EeV-ed-60K"/>
                             <constraint firstItem="seE-Ey-sO3" firstAttribute="centerX" secondItem="fo5-B5-wJG" secondAttribute="centerX" id="GxC-PB-mFc"/>
-                            <constraint firstItem="2em-pM-bnD" firstAttribute="width" secondItem="fo5-B5-wJG" secondAttribute="width" multiplier="0.8" id="Hjj-5e-3jh"/>
+                            <constraint firstItem="2em-pM-bnD" firstAttribute="width" secondItem="fo5-B5-wJG" secondAttribute="width" multiplier="0.95" id="Hjj-5e-3jh"/>
                             <constraint firstItem="cnA-jR-8IW" firstAttribute="height" secondItem="fo5-B5-wJG" secondAttribute="height" multiplier="0.1" id="Jmk-rb-6mS"/>
                             <constraint firstItem="UAK-oV-hb0" firstAttribute="centerX" secondItem="fo5-B5-wJG" secondAttribute="centerX" id="R3I-Sb-T1j"/>
                             <constraint firstItem="2em-pM-bnD" firstAttribute="centerY" secondItem="fo5-B5-wJG" secondAttribute="centerY" multiplier="0.8" id="Rzh-V4-FHq"/>
