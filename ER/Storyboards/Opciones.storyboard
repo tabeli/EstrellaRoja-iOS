@@ -49,6 +49,9 @@
                                 <state key="normal" title="Ajustes">
                                     <color key="titleColor" red="0.084240458909999996" green="0.21069431299999999" blue="0.38041132690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ay2-6q-mH8" kind="show" id="C86-k6-NIC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAK-oV-hb0">
                                 <rect key="frame" x="103.5" y="461.5" width="207" height="62.5"/>
@@ -56,6 +59,9 @@
                                 <state key="normal" title="Ayuda">
                                     <color key="titleColor" red="0.084240458909999996" green="0.21069431299999999" blue="0.38041132690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iyD-2m-8MI" kind="show" id="vAY-TJ-z1M"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2em-pM-bnD">
                                 <rect key="frame" x="10.5" y="327" width="393" height="63"/>
@@ -63,6 +69,9 @@
                                 <state key="normal" title="Terminos y condiciones">
                                     <color key="titleColor" red="0.084240458909999996" green="0.21069431299999999" blue="0.38041132690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="uRs-Mk-cwB" kind="show" id="Inm-eT-hpD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
