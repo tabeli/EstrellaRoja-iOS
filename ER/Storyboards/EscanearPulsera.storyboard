@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ayuda-->
+        <!--Escanear pulsera-->
         <scene sceneID="1Vp-4O-FQo">
             <objects>
-                <viewController title="Registro" id="MYm-8k-eky" userLabel="Ayuda" sceneMemberID="viewController">
+                <viewController title="Registro" id="MYm-8k-eky" userLabel="Escanear pulsera" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4tM-Ip-pvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
