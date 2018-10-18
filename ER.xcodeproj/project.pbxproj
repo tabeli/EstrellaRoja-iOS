@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5333E39217864E800C0C19D /* RutaMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5333E38217864E800C0C19D /* RutaMenuViewController.swift */; };
 		B561F446216C669D00EB917C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F445216C669D00EB917C /* AppDelegate.swift */; };
 		B561F448216C669D00EB917C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F447216C669D00EB917C /* ViewController.swift */; };
 		B561F44B216C669D00EB917C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F449216C669D00EB917C /* Main.storyboard */; };
@@ -23,6 +24,11 @@
 		B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */; };
 		B5F80DFE2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DFD2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift */; };
 		B5F80E002177C83200CDB5BE /* SiguienteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DFF2177C83200CDB5BE /* SiguienteTableViewCell.swift */; };
+		B5F80E03217801FD00CDB5BE /* InicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80E02217801FD00CDB5BE /* InicialViewController.swift */; };
+		B5F80E052178022200CDB5BE /* IniciaSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80E042178022200CDB5BE /* IniciaSesionViewController.swift */; };
+		B5F80E072178023800CDB5BE /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80E062178023800CDB5BE /* RegistroViewController.swift */; };
+		B5F80E092178025200CDB5BE /* CambiaContrasenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80E082178025200CDB5BE /* CambiaContrasenaViewController.swift */; };
+		B5F80E0C2178154100CDB5BE /* SiguientesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80E0B2178154100CDB5BE /* SiguientesButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5333E38217864E800C0C19D /* RutaMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaMenuViewController.swift; sourceTree = "<group>"; };
 		B561F442216C669D00EB917C /* ER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B561F445216C669D00EB917C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B561F447216C669D00EB917C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +72,11 @@
 		B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComenzarViajeTableViewCell.swift; sourceTree = "<group>"; };
 		B5F80DFD2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosPasajeroTableViewCell.swift; sourceTree = "<group>"; };
 		B5F80DFF2177C83200CDB5BE /* SiguienteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiguienteTableViewCell.swift; sourceTree = "<group>"; };
+		B5F80E02217801FD00CDB5BE /* InicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicialViewController.swift; sourceTree = "<group>"; };
+		B5F80E042178022200CDB5BE /* IniciaSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniciaSesionViewController.swift; sourceTree = "<group>"; };
+		B5F80E062178023800CDB5BE /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		B5F80E082178025200CDB5BE /* CambiaContrasenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiaContrasenaViewController.swift; sourceTree = "<group>"; };
+		B5F80E0B2178154100CDB5BE /* SiguientesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiguientesButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5333E372178648700C0C19D /* Rutas */ = {
+			isa = PBXGroup;
+			children = (
+				B5333E38217864E800C0C19D /* RutaMenuViewController.swift */,
+			);
+			path = Rutas;
+			sourceTree = "<group>";
+		};
 		B561F439216C669D00EB917C = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +135,9 @@
 		B561F444216C669D00EB917C /* ER */ = {
 			isa = PBXGroup;
 			children = (
+				B5F80E0A217814F900CDB5BE /* CustomClass */,
+				B5F80E01217801A400CDB5BE /* Inicial */,
+				B5333E372178648700C0C19D /* Rutas */,
 				B5F80DF62177C71700CDB5BE /* ComprarBoleto */,
 				B5D6BD392173FFA3004CDCC2 /* Storyboards */,
 				B561F445216C669D00EB917C /* AppDelegate.swift */,
@@ -166,6 +189,25 @@
 				B5F80DFF2177C83200CDB5BE /* SiguienteTableViewCell.swift */,
 			);
 			path = ComprarBoleto;
+			sourceTree = "<group>";
+		};
+		B5F80E01217801A400CDB5BE /* Inicial */ = {
+			isa = PBXGroup;
+			children = (
+				B5F80E02217801FD00CDB5BE /* InicialViewController.swift */,
+				B5F80E042178022200CDB5BE /* IniciaSesionViewController.swift */,
+				B5F80E062178023800CDB5BE /* RegistroViewController.swift */,
+				B5F80E082178025200CDB5BE /* CambiaContrasenaViewController.swift */,
+			);
+			path = Inicial;
+			sourceTree = "<group>";
+		};
+		B5F80E0A217814F900CDB5BE /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				B5F80E0B2178154100CDB5BE /* SiguientesButton.swift */,
+			);
+			path = CustomClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +346,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F80E002177C83200CDB5BE /* SiguienteTableViewCell.swift in Sources */,
+				B5F80E0C2178154100CDB5BE /* SiguientesButton.swift in Sources */,
+				B5F80E052178022200CDB5BE /* IniciaSesionViewController.swift in Sources */,
 				B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */,
+				B5333E39217864E800C0C19D /* RutaMenuViewController.swift in Sources */,
+				B5F80E072178023800CDB5BE /* RegistroViewController.swift in Sources */,
 				B5F80DFA2177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift in Sources */,
 				B5F80DFE2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift in Sources */,
 				B5F80DF82177C78600CDB5BE /* AgregarPasajerosViewController.swift in Sources */,
 				B561F448216C669D00EB917C /* ViewController.swift in Sources */,
+				B5F80E092178025200CDB5BE /* CambiaContrasenaViewController.swift in Sources */,
+				B5F80E03217801FD00CDB5BE /* InicialViewController.swift in Sources */,
 				B561F446216C669D00EB917C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
