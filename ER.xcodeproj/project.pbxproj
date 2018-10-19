@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030706072178E5CF0071E0A0 /* BoletosAdquiridos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030706062178E5CF0071E0A0 /* BoletosAdquiridos.storyboard */; };
+		030706092178E5E40071E0A0 /* EscanearPulsera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030706082178E5E40071E0A0 /* EscanearPulsera.storyboard */; };
 		B5333E39217864E800C0C19D /* RutaMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5333E38217864E800C0C19D /* RutaMenuViewController.swift */; };
 		B561F446216C669D00EB917C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F445216C669D00EB917C /* AppDelegate.swift */; };
 		B561F448216C669D00EB917C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F447216C669D00EB917C /* ViewController.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		030706062178E5CF0071E0A0 /* BoletosAdquiridos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BoletosAdquiridos.storyboard; sourceTree = "<group>"; };
+		030706082178E5E40071E0A0 /* EscanearPulsera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EscanearPulsera.storyboard; sourceTree = "<group>"; };
 		B5333E38217864E800C0C19D /* RutaMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaMenuViewController.swift; sourceTree = "<group>"; };
 		B561F442216C669D00EB917C /* ER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B561F445216C669D00EB917C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				B5D6BD3C21740021004CDCC2 /* Pago.storyboard */,
 				B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */,
 				B5D6BD4021740090004CDCC2 /* Opciones.storyboard */,
+				030706062178E5CF0071E0A0 /* BoletosAdquiridos.storyboard */,
+				030706082178E5E40071E0A0 /* EscanearPulsera.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -343,11 +349,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030706072178E5CF0071E0A0 /* BoletosAdquiridos.storyboard in Resources */,
 				B561F450216C669F00EB917C /* LaunchScreen.storyboard in Resources */,
 				B5D6BD4121740090004CDCC2 /* Opciones.storyboard in Resources */,
 				B561F44D216C669F00EB917C /* Assets.xcassets in Resources */,
 				B5D6BD3F2174004A004CDCC2 /* RutaDesbloqueada.storyboard in Resources */,
 				B5D6BD3B21740013004CDCC2 /* Ruta.storyboard in Resources */,
+				030706092178E5E40071E0A0 /* EscanearPulsera.storyboard in Resources */,
 				B561F44B216C669D00EB917C /* Main.storyboard in Resources */,
 				B5D6BD3D21740021004CDCC2 /* Pago.storyboard in Resources */,
 			);

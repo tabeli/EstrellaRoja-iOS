@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Boletos adquiridos-->
+        <scene sceneID="o50-Kn-BXS">
+            <objects>
+                <viewController title="Registro" id="t20-Uk-B3M" userLabel="Boletos adquiridos" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wgm-J9-oua">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-6m-FMg" userLabel="chin">
+                                <rect key="frame" x="0.0" y="806.5" width="414" height="89.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="dqE-Ql-2ES">
+                                <rect key="frame" x="291" y="820" width="123" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dqE-Ql-2ES" secondAttribute="height" multiplier="55:34" id="5cm-GJ-x6r"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDU-FS-vDt" userLabel="Header">
+                                <rect key="frame" x="0.0" y="-9" width="414" height="107.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boletos adquiridos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="342-yV-low">
+                                        <rect key="frame" x="0.0" y="43.5" width="414" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.084240458909999996" green="0.21069431299999999" blue="0.38041132690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="342-yV-low" firstAttribute="width" secondItem="lDU-FS-vDt" secondAttribute="width" id="YG9-7i-BFW"/>
+                                    <constraint firstItem="342-yV-low" firstAttribute="centerY" secondItem="lDU-FS-vDt" secondAttribute="centerY" multiplier="1.2" id="asU-zf-Mtw"/>
+                                    <constraint firstItem="342-yV-low" firstAttribute="centerX" secondItem="lDU-FS-vDt" secondAttribute="centerX" id="d74-Ob-XPe"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boletox1" translatesAutoresizingMaskIntoConstraints="NO" id="DEw-Mi-wua">
+                                <rect key="frame" x="145" y="114" width="124" height="134.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conoce todos tus viajes aquí:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmZ-i4-Bql">
+                                <rect key="frame" x="72.5" y="249.5" width="269" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Cen-et-wSX">
+                                <rect key="frame" x="41.5" y="297" width="331" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cen-et-wSX" firstAttribute="centerX" secondItem="191-gO-8Hc" secondAttribute="centerX" id="2F5-HN-sT7"/>
+                            <constraint firstItem="tmZ-i4-Bql" firstAttribute="height" secondItem="Wgm-J9-oua" secondAttribute="height" multiplier="0.05" id="6fB-jY-D6u"/>
+                            <constraint firstItem="tmZ-i4-Bql" firstAttribute="width" secondItem="Wgm-J9-oua" secondAttribute="width" multiplier="0.65" id="8O5-xP-Uzq"/>
+                            <constraint firstItem="JMT-6m-FMg" firstAttribute="height" secondItem="Wgm-J9-oua" secondAttribute="height" multiplier="0.1" id="Agf-cU-CUV"/>
+                            <constraint firstItem="Cen-et-wSX" firstAttribute="height" secondItem="Wgm-J9-oua" secondAttribute="height" multiplier="0.5" id="DFl-Si-3aw"/>
+                            <constraint firstItem="Cen-et-wSX" firstAttribute="width" secondItem="Wgm-J9-oua" secondAttribute="width" multiplier="0.8" id="G3B-lI-Hlk"/>
+                            <constraint firstItem="lDU-FS-vDt" firstAttribute="centerY" secondItem="Wgm-J9-oua" secondAttribute="centerY" multiplier="0.1" id="GCk-zs-c8k"/>
+                            <constraint firstItem="JMT-6m-FMg" firstAttribute="centerX" secondItem="191-gO-8Hc" secondAttribute="centerX" id="JjN-UP-icE"/>
+                            <constraint firstItem="DEw-Mi-wua" firstAttribute="width" secondItem="Wgm-J9-oua" secondAttribute="width" multiplier="0.3" id="KYM-NZ-oph"/>
+                            <constraint firstItem="lDU-FS-vDt" firstAttribute="height" secondItem="Wgm-J9-oua" secondAttribute="height" multiplier="0.12" id="OQi-N5-SoC"/>
+                            <constraint firstItem="tmZ-i4-Bql" firstAttribute="centerY" secondItem="191-gO-8Hc" secondAttribute="centerY" multiplier="0.6" id="ThP-ks-cCR"/>
+                            <constraint firstItem="JMT-6m-FMg" firstAttribute="bottom" secondItem="Wgm-J9-oua" secondAttribute="bottom" id="UyL-qV-ubl"/>
+                            <constraint firstItem="DEw-Mi-wua" firstAttribute="height" secondItem="Wgm-J9-oua" secondAttribute="height" multiplier="0.15" id="Wf0-8e-sAc"/>
+                            <constraint firstItem="JMT-6m-FMg" firstAttribute="bottom" secondItem="dqE-Ql-2ES" secondAttribute="bottom" id="YMS-vz-A0b"/>
+                            <constraint firstItem="JMT-6m-FMg" firstAttribute="trailing" secondItem="dqE-Ql-2ES" secondAttribute="trailing" id="bKf-7c-bnD"/>
+                            <constraint firstItem="DEw-Mi-wua" firstAttribute="centerY" secondItem="191-gO-8Hc" secondAttribute="centerY" multiplier="0.4" id="emS-Am-AUt"/>
+                            <constraint firstItem="Cen-et-wSX" firstAttribute="centerY" secondItem="191-gO-8Hc" secondAttribute="centerY" multiplier="1.15" id="ezP-La-Zyv"/>
+                            <constraint firstItem="JMT-6m-FMg" firstAttribute="width" secondItem="Wgm-J9-oua" secondAttribute="width" id="feb-kk-WGJ"/>
+                            <constraint firstItem="tmZ-i4-Bql" firstAttribute="centerX" secondItem="191-gO-8Hc" secondAttribute="centerX" id="fmi-mp-quQ"/>
+                            <constraint firstItem="DEw-Mi-wua" firstAttribute="centerX" secondItem="191-gO-8Hc" secondAttribute="centerX" id="jYP-c2-hqF"/>
+                            <constraint firstItem="dqE-Ql-2ES" firstAttribute="height" secondItem="JMT-6m-FMg" secondAttribute="height" multiplier="0.85" id="lEo-7T-UY4"/>
+                            <constraint firstItem="lDU-FS-vDt" firstAttribute="centerX" secondItem="Wgm-J9-oua" secondAttribute="centerX" id="mzz-oc-0KR"/>
+                            <constraint firstItem="lDU-FS-vDt" firstAttribute="width" secondItem="Wgm-J9-oua" secondAttribute="width" id="shh-oX-R1H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="191-gO-8Hc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcQ-hg-Y40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3124.6376811594205" y="-25.446428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="boletox1" width="67.199996948242188" height="67.199996948242188"/>
+        <image name="bottom" width="414" height="87"/>
+        <image name="icon" width="165" height="102"/>
+    </resources>
+</document>
