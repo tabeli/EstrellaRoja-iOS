@@ -47,7 +47,6 @@ class RutasTableViewController: UITableViewController {
         return cell
     }
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RutaTableViewCell
         let dad = self.parent as! RutaMenuViewController
