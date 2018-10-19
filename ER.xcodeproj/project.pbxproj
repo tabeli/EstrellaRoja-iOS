@@ -15,6 +15,13 @@
 		B561F450216C669F00EB917C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F44E216C669F00EB917C /* LaunchScreen.storyboard */; };
 		B561F45B216C66A000EB917C /* ERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F45A216C66A000EB917C /* ERTests.swift */; };
 		B561F466216C66A000EB917C /* ERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F465216C66A000EB917C /* ERUITests.swift */; };
+		B5B79F8D21794C13001AEDEE /* RutasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */; };
+		B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */; };
+		B5B79F912179AA14001AEDEE /* RutaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */; };
+		B5B79F932179AA46001AEDEE /* RutaDetalleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F922179AA46001AEDEE /* RutaDetalleTableViewController.swift */; };
+		B5B79F952179AA79001AEDEE /* DetalleImagenRutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F942179AA79001AEDEE /* DetalleImagenRutaTableViewCell.swift */; };
+		B5B79F972179AA91001AEDEE /* DetalleDescripcionRutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F962179AA91001AEDEE /* DetalleDescripcionRutaTableViewCell.swift */; };
+		B5B79F992179AAA6001AEDEE /* DetalleComprarRutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F982179AAA6001AEDEE /* DetalleComprarRutaTableViewCell.swift */; };
 		B5D6BD3B21740013004CDCC2 /* Ruta.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3A21740013004CDCC2 /* Ruta.storyboard */; };
 		B5D6BD3D21740021004CDCC2 /* Pago.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3C21740021004CDCC2 /* Pago.storyboard */; };
 		B5D6BD3F2174004A004CDCC2 /* RutaDesbloqueada.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */; };
@@ -63,6 +70,13 @@
 		B561F461216C66A000EB917C /* ERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B561F465216C66A000EB917C /* ERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERUITests.swift; sourceTree = "<group>"; };
 		B561F467216C66A000EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasTableViewController.swift; sourceTree = "<group>"; };
+		B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaTableViewCell.swift; sourceTree = "<group>"; };
+		B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaDetalleViewController.swift; sourceTree = "<group>"; };
+		B5B79F922179AA46001AEDEE /* RutaDetalleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaDetalleTableViewController.swift; sourceTree = "<group>"; };
+		B5B79F942179AA79001AEDEE /* DetalleImagenRutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleImagenRutaTableViewCell.swift; sourceTree = "<group>"; };
+		B5B79F962179AA91001AEDEE /* DetalleDescripcionRutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleDescripcionRutaTableViewCell.swift; sourceTree = "<group>"; };
+		B5B79F982179AAA6001AEDEE /* DetalleComprarRutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleComprarRutaTableViewCell.swift; sourceTree = "<group>"; };
 		B5D6BD3A21740013004CDCC2 /* Ruta.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ruta.storyboard; sourceTree = "<group>"; };
 		B5D6BD3C21740021004CDCC2 /* Pago.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pago.storyboard; sourceTree = "<group>"; };
 		B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RutaDesbloqueada.storyboard; sourceTree = "<group>"; };
@@ -108,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				B5333E38217864E800C0C19D /* RutaMenuViewController.swift */,
+				B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */,
+				B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */,
 			);
 			path = Rutas;
 			sourceTree = "<group>";
@@ -135,8 +151,9 @@
 		B561F444216C669D00EB917C /* ER */ = {
 			isa = PBXGroup;
 			children = (
-				B5F80E0A217814F900CDB5BE /* CustomClass */,
 				B5F80E01217801A400CDB5BE /* Inicial */,
+				B5F80E0A217814F900CDB5BE /* CustomClass */,
+				B5B79F9A2179AB19001AEDEE /* RutaDetalle */,
 				B5333E372178648700C0C19D /* Rutas */,
 				B5F80DF62177C71700CDB5BE /* ComprarBoleto */,
 				B5D6BD392173FFA3004CDCC2 /* Storyboards */,
@@ -165,6 +182,18 @@
 				B561F467216C66A000EB917C /* Info.plist */,
 			);
 			path = ERUITests;
+			sourceTree = "<group>";
+		};
+		B5B79F9A2179AB19001AEDEE /* RutaDetalle */ = {
+			isa = PBXGroup;
+			children = (
+				B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */,
+				B5B79F922179AA46001AEDEE /* RutaDetalleTableViewController.swift */,
+				B5B79F942179AA79001AEDEE /* DetalleImagenRutaTableViewCell.swift */,
+				B5B79F962179AA91001AEDEE /* DetalleDescripcionRutaTableViewCell.swift */,
+				B5B79F982179AAA6001AEDEE /* DetalleComprarRutaTableViewCell.swift */,
+			);
+			path = RutaDetalle;
 			sourceTree = "<group>";
 		};
 		B5D6BD392173FFA3004CDCC2 /* Storyboards */ = {
@@ -345,14 +374,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B79F912179AA14001AEDEE /* RutaDetalleViewController.swift in Sources */,
+				B5B79F932179AA46001AEDEE /* RutaDetalleTableViewController.swift in Sources */,
 				B5F80E002177C83200CDB5BE /* SiguienteTableViewCell.swift in Sources */,
+				B5B79F972179AA91001AEDEE /* DetalleDescripcionRutaTableViewCell.swift in Sources */,
 				B5F80E0C2178154100CDB5BE /* SiguientesButton.swift in Sources */,
+				B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */,
 				B5F80E052178022200CDB5BE /* IniciaSesionViewController.swift in Sources */,
+				B5B79F952179AA79001AEDEE /* DetalleImagenRutaTableViewCell.swift in Sources */,
 				B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */,
 				B5333E39217864E800C0C19D /* RutaMenuViewController.swift in Sources */,
+				B5B79F8D21794C13001AEDEE /* RutasTableViewController.swift in Sources */,
 				B5F80E072178023800CDB5BE /* RegistroViewController.swift in Sources */,
 				B5F80DFA2177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift in Sources */,
 				B5F80DFE2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift in Sources */,
+				B5B79F992179AAA6001AEDEE /* DetalleComprarRutaTableViewCell.swift in Sources */,
 				B5F80DF82177C78600CDB5BE /* AgregarPasajerosViewController.swift in Sources */,
 				B561F448216C669D00EB917C /* ViewController.swift in Sources */,
 				B5F80E092178025200CDB5BE /* CambiaContrasenaViewController.swift in Sources */,
