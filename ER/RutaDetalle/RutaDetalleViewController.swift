@@ -10,9 +10,14 @@ import UIKit
 
 class RutaDetalleViewController: UIViewController {
     var idRuta = -1
+    
+    @IBAction func backArrow(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print(idRuta)
+        
         // Do any additional setup after loading the view.
     }
     
