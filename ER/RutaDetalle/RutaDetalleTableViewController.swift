@@ -9,10 +9,16 @@
 import UIKit
 
 class RutaDetalleTableViewController: UITableViewController {
+    var idRuta = -1
+    let img = "pueblaredondo.png"
+    let descripcion = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution"
+    var heights:[CGFloat] = [CGFloat(0.0),CGFloat(0.0),CGFloat(0.0)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.tableView.separatorStyle = .none
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,23 +30,79 @@ class RutaDetalleTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
 
-    /*
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        print("indexPath:\(indexPath)")
 
-        // Configure the cell...
+        if (indexPath.row == 0) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detalleImagenCell", for: indexPath) as! DetalleImagenRutaTableViewCell
+            cell.rutaImg.image = UIImage(named: img)
+            
+            
+            var height = CGFloat(0.0)
+            for view in cell.subviews {
+                height += view.frame.height
+            }
+            heights.append(height)
 
-        return cell
+            cell.heightAnchor.constraint(equalToConstant: height).isActive = true
+            return cell
+        }
+        else if (indexPath.row == 1) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detalleDescripcionCell", for: indexPath) as! DetalleDescripcionRutaTableViewCell
+            
+            cell.rutaDescripcion.text = descripcion
+            print("PREVIOUS \(cell.rutaDescripcion.frame.height)")
+            if let textView = cell.rutaDescripcion{
+                let fixedWidth = textView.frame.size.width
+                let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+                textView.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+            }
+            else{
+                print("alksjfdalskdfjalskfjdlaskdfjalskjdflakj")
+            }
+            
+            var height = CGFloat(0.0)
+            for view in cell.subviews {
+                height += view.frame.height
+            }
+            heights.append(height)
+            
+            cell.heightAnchor.constraint(equalToConstant: height).isActive = true
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detalleComprarCell", for: indexPath) as! DetalleComprarRutaTableViewCell
+            cell.rutaId = idRuta
+            var height = CGFloat(0.0)
+            for view in cell.subviews {
+                height += view.frame.height
+            }
+            heights.append(height)
+            
+            cell.heightAnchor.constraint(equalToConstant: height).isActive = true
+            return cell
+        }
+        
+
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row == 2) {
+            let dad = self.parent as! RutaDetalleViewController
+            dad.performSegue(withIdentifier: "compraSegue", sender: nil)
+        }
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

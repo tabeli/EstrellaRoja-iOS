@@ -15,7 +15,7 @@ class RutasTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("Hola")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,12 +38,14 @@ class RutasTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("HOla")
+        print("bye")
+        print("indexPath:\(indexPath)")
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "rutaCell", for: indexPath) as! RutaTableViewCell
         cell.id = id[indexPath.row]
-        cell.nombreRuta.setTitle(nombreRuta[indexPath.row], for: .normal)
+        cell.nombreRuta.text = nombreRuta[indexPath.row]
         // Configure the cell...
-        cell.nombreRuta.titleLabel?.adjustsFontSizeToFitWidth = true
+        cell.nombreRuta.adjustsFontSizeToFitWidth = true
         return cell
     }
     
@@ -51,6 +53,10 @@ class RutasTableViewController: UITableViewController {
         let cell = tableView.cellForRow(at: indexPath) as! RutaTableViewCell
         let dad = self.parent as! RutaMenuViewController
         dad.performSegue(withIdentifier: "detalleRutaSegue", sender: cell)
+     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
     }
 
     /*

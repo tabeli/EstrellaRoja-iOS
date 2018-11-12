@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,7 @@
         <!--ReservaBoleto-->
         <scene sceneID="p7q-QE-fqg">
             <objects>
-                <viewController title="ReservaBoleto" id="lYd-hm-Six" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompraUno" title="ReservaBoleto" id="lYd-hm-Six" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R0E-Pp-Uwt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,12 +35,22 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gu-Y1-2Rh">
+                                        <rect key="frame" x="22.666666666666657" y="53.666666666666657" width="37.666666666666657" height="32.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0gu-Y1-2Rh" secondAttribute="height" multiplier="7:6" id="EZb-6L-2cn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="left-arrow"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15748834609985352" green="0.68512696027755737" blue="0.0099700447171926498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="0gu-Y1-2Rh" firstAttribute="centerY" secondItem="vp9-wD-D1U" secondAttribute="centerY" multiplier="1.3" id="Hmd-Qa-4k1"/>
+                                    <constraint firstItem="0gu-Y1-2Rh" firstAttribute="height" secondItem="vp9-wD-D1U" secondAttribute="height" multiplier="0.3" id="Zyq-ul-E1r"/>
                                     <constraint firstItem="bBF-Fe-971" firstAttribute="centerY" secondItem="vp9-wD-D1U" secondAttribute="centerY" multiplier="1.2" id="acP-oY-p7x"/>
                                     <constraint firstItem="bBF-Fe-971" firstAttribute="width" secondItem="vp9-wD-D1U" secondAttribute="width" id="bn3-YZ-5lB"/>
                                     <constraint firstItem="bBF-Fe-971" firstAttribute="centerX" secondItem="vp9-wD-D1U" secondAttribute="centerX" id="czj-Jd-mz6"/>
+                                    <constraint firstItem="0gu-Y1-2Rh" firstAttribute="centerX" secondItem="vp9-wD-D1U" secondAttribute="centerX" multiplier="0.2" id="tmQ-Xx-5Ca"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9C6-33-0RO">
@@ -1648,6 +1658,7 @@
         <image name="boy" width="283" height="438"/>
         <image name="girl" width="283" height="438"/>
         <image name="icon" width="165" height="102"/>
+        <image name="left-arrow" width="980" height="840"/>
         <image name="mastercard" width="500" height="311"/>
         <image name="turista" width="368.36004638671875" height="368.36004638671875"/>
         <image name="visa" width="4060" height="1648"/>

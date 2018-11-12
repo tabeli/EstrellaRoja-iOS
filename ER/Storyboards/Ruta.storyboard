@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wko-k3-Flk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wko-k3-Flk">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,52 +66,37 @@
         <scene sceneID="2Fq-aZ-bnV">
             <objects>
                 <tableViewController id="wBZ-4S-afo" customClass="RutasTableViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="255" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xv2-Ef-fAo">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="243" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xv2-Ef-fAo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="763.33333333333326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rutaCell" rowHeight="255" id="pri-IE-MTE" customClass="RutaTableViewCell" customModule="ER" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="255"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rutaCell" rowHeight="243" id="pri-IE-MTE" customClass="RutaTableViewCell" customModule="ER" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="243"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pri-IE-MTE" id="2lN-kk-Xs9" userLabel="rutaCell">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="254.66666666666666"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pri-IE-MTE" id="2lN-kk-Xs9" userLabel="rutaCell">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="242.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffb-ZA-2XV">
-                                            <rect key="frame" x="0.0" y="40" width="414" height="70"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMM-w0-bYq">
-                                                    <rect key="frame" x="0.0" y="7" width="414" height="56"/>
-                                                    <color key="backgroundColor" red="0.98905342819999997" green="0.71650582549999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                                    <state key="normal" title="Puebla Fascinante">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="verRutaAction:" destination="pri-IE-MTE" eventType="touchUpInside" id="GQP-EE-UxN"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puebla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-Rm-jjo">
+                                            <rect key="frame" x="0.0" y="71.333333333333329" width="414" height="99.999999999999986"/>
+                                            <color key="backgroundColor" red="0.98905342819999997" green="0.71650582549999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="rMM-w0-bYq" firstAttribute="centerY" secondItem="ffb-ZA-2XV" secondAttribute="centerY" id="2he-e6-5aj"/>
-                                                <constraint firstItem="rMM-w0-bYq" firstAttribute="height" secondItem="ffb-ZA-2XV" secondAttribute="height" multiplier="0.8" id="9el-Ur-6gq"/>
-                                                <constraint firstItem="rMM-w0-bYq" firstAttribute="centerX" secondItem="ffb-ZA-2XV" secondAttribute="centerX" id="Bbv-66-xoT"/>
-                                                <constraint firstItem="rMM-w0-bYq" firstAttribute="width" secondItem="ffb-ZA-2XV" secondAttribute="width" id="Qum-7f-cdK"/>
-                                                <constraint firstAttribute="height" constant="70" id="n54-8t-HHU"/>
+                                                <constraint firstAttribute="height" constant="100" id="JZR-XD-uDn"/>
                                             </constraints>
-                                        </view>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="ffb-ZA-2XV" secondAttribute="bottom" constant="20" id="iod-D6-Fwv"/>
-                                        <constraint firstItem="ffb-ZA-2XV" firstAttribute="top" secondItem="2lN-kk-Xs9" secondAttribute="top" constant="40" id="jFC-pS-rM3"/>
-                                        <constraint firstItem="ffb-ZA-2XV" firstAttribute="width" secondItem="2lN-kk-Xs9" secondAttribute="width" id="w6u-jn-yvR"/>
-                                        <constraint firstItem="ffb-ZA-2XV" firstAttribute="centerX" secondItem="2lN-kk-Xs9" secondAttribute="centerX" id="yec-ot-dVM"/>
+                                        <constraint firstItem="mBI-Rm-jjo" firstAttribute="centerY" secondItem="2lN-kk-Xs9" secondAttribute="centerY" id="2v0-9E-dqd"/>
+                                        <constraint firstItem="mBI-Rm-jjo" firstAttribute="width" secondItem="2lN-kk-Xs9" secondAttribute="width" id="BKp-Qg-Om9"/>
+                                        <constraint firstItem="mBI-Rm-jjo" firstAttribute="centerX" secondItem="2lN-kk-Xs9" secondAttribute="centerX" id="bd2-lh-GHa"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="nombreRuta" destination="rMM-w0-bYq" id="czo-TY-lQM"/>
+                                    <outlet property="nombreRuta" destination="mBI-Rm-jjo" id="tbL-Au-ni8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -123,12 +108,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QG-k2-F0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2159" y="313"/>
+            <point key="canvasLocation" x="1878" y="496"/>
         </scene>
         <!--Puebla-->
         <scene sceneID="ZZ6-V0-2LB">
             <objects>
-                <viewController storyboardIdentifier="Main" title="Puebla" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xy6-iY-jps" customClass="RutaDetalleViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RutaDetallada" title="Puebla" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xy6-iY-jps" customClass="RutaDetalleViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3iA-Qc-ofq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +121,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGP-ax-LLI" userLabel="Header">
                                 <rect key="frame" x="0.0" y="-9" width="414" height="107.66666666666667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruta: Puebla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-qN-7ia">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-qN-7ia">
                                         <rect key="frame" x="62" y="43.666666666666657" width="290" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -166,7 +151,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxZ-aO-hht">
                                 <rect key="frame" x="0.0" y="98.666666666666686" width="414" height="763.33333333333326"/>
                                 <connections>
-                                    <segue destination="90x-u4-AHu" kind="embed" id="fsz-ph-5cx"/>
+                                    <segue destination="90x-u4-AHu" kind="embed" identifier="detalleRutaSegue" id="fsz-ph-5cx"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -183,10 +168,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ZT-Q4-Kel"/>
                     </view>
+                    <connections>
+                        <segue destination="48J-gq-kaW" kind="show" identifier="compraSegue" id="G0s-hy-7f5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kzf-yK-DLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2855" y="-94"/>
+            <point key="canvasLocation" x="2686" y="62"/>
+        </scene>
+        <!--Pago-->
+        <scene sceneID="Iit-np-HNo">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CompraUno" storyboardName="Pago" id="48J-gq-kaW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hR-u3-POq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3531" y="45"/>
         </scene>
         <!--Ruta Detalle Table View Controller-->
         <scene sceneID="PtN-BG-PC0">
@@ -197,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="242" id="zjF-cx-OkN" customClass="DetalleImagenRutaTableViewCell" customModule="ER" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detalleImagenCell" rowHeight="242" id="zjF-cx-OkN" customClass="DetalleImagenRutaTableViewCell" customModule="ER" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="242"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zjF-cx-OkN" id="h6y-ns-Y4t">
@@ -205,47 +201,49 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pueblaredondo" translatesAutoresizingMaskIntoConstraints="NO" id="87l-pI-oeo">
-                                            <rect key="frame" x="62.333333333333371" y="15" width="289.33333333333326" height="206.66666666666666"/>
+                                            <rect key="frame" x="59" y="20" width="296.33333333333331" height="211.66666666666666"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="87l-pI-oeo" secondAttribute="height" multiplier="7:5" id="5F4-ed-hmS"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="87l-pI-oeo" secondAttribute="bottom" constant="20" id="g82-ZZ-rAa"/>
-                                        <constraint firstItem="87l-pI-oeo" firstAttribute="top" secondItem="h6y-ns-Y4t" secondAttribute="top" constant="15" id="zMJ-nx-Eal"/>
+                                        <constraint firstAttribute="bottom" secondItem="87l-pI-oeo" secondAttribute="bottom" constant="10" id="g82-ZZ-rAa"/>
+                                        <constraint firstItem="87l-pI-oeo" firstAttribute="top" secondItem="h6y-ns-Y4t" secondAttribute="top" constant="20" id="zMJ-nx-Eal"/>
                                         <constraint firstItem="87l-pI-oeo" firstAttribute="centerX" secondItem="h6y-ns-Y4t" secondAttribute="centerX" id="zsD-JH-Z4n"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="rutaImg" destination="87l-pI-oeo" id="egG-yE-Xv7"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="207" id="a85-AQ-nVU" customClass="DetalleDescripcionRutaTableViewCell" customModule="ER" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detalleDescripcionCell" rowHeight="207" id="a85-AQ-nVU" customClass="DetalleDescripcionRutaTableViewCell" customModule="ER" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="270" width="414" height="207"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a85-AQ-nVU" id="rTz-Cn-fGD">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="206.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6F-21-c1Z">
-                                            <rect key="frame" x="41.333333333333343" y="10" width="331.33333333333326" height="187"/>
-                                            <string key="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution  </string>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-KB-bXp">
+                                            <rect key="frame" x="20" y="10" width="374" height="186.66666666666666"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="R6F-21-c1Z" firstAttribute="width" secondItem="rTz-Cn-fGD" secondAttribute="width" multiplier="0.8" id="1hW-71-boS"/>
-                                        <constraint firstItem="R6F-21-c1Z" firstAttribute="top" secondItem="rTz-Cn-fGD" secondAttribute="top" constant="10" id="irq-uA-kMs"/>
-                                        <constraint firstItem="R6F-21-c1Z" firstAttribute="centerX" secondItem="rTz-Cn-fGD" secondAttribute="centerX" id="qx1-fW-JA2"/>
+                                        <constraint firstItem="6Gv-KB-bXp" firstAttribute="leading" secondItem="rTz-Cn-fGD" secondAttribute="leading" constant="20" id="2gQ-dc-deZ"/>
+                                        <constraint firstItem="6Gv-KB-bXp" firstAttribute="top" secondItem="rTz-Cn-fGD" secondAttribute="top" constant="10" id="YYC-Cx-WTj"/>
+                                        <constraint firstAttribute="bottom" secondItem="6Gv-KB-bXp" secondAttribute="bottom" constant="10" id="hqD-Wu-pmp"/>
+                                        <constraint firstItem="6Gv-KB-bXp" firstAttribute="centerX" secondItem="rTz-Cn-fGD" secondAttribute="centerX" id="pTB-ad-fBZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="R6F-21-c1Z" secondAttribute="bottom" constant="10" id="h7b-R7-rfI"/>
-                                </constraints>
+                                <connections>
+                                    <outlet property="rutaDescripcion" destination="6Gv-KB-bXp" id="7lq-3c-t4G"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="208" id="PAh-Vd-bqD" customClass="DetalleComprarRutaTableViewCell" customModule="ER" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detalleComprarCell" rowHeight="208" id="PAh-Vd-bqD" customClass="DetalleComprarRutaTableViewCell" customModule="ER" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="477" width="414" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PAh-Vd-bqD" id="jA5-RN-7kY">
@@ -266,6 +264,9 @@ It is a long established fact that a reader will be distracted by the readable c
                                             <state key="normal" title="Button" image="cart">
                                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="rutaCompra:" destination="PAh-Vd-bqD" eventType="touchUpInside" id="BCY-Pp-55j"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -288,7 +289,7 @@ It is a long established fact that a reader will be distracted by the readable c
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ip3-A7-r0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3778" y="-94"/>
+            <point key="canvasLocation" x="3456.521739130435" y="495.53571428571428"/>
         </scene>
     </scenes>
     <resources>

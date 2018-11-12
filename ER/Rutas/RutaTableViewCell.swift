@@ -9,12 +9,10 @@
 import UIKit
 
 class RutaTableViewCell: UITableViewCell {
-    @IBOutlet weak var nombreRuta: UIButton!
+    @IBOutlet weak var nombreRuta: UILabel!
     var id = -1
     
-    @IBAction func verRutaAction(_ sender: UIButton) {
-        
-    }
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

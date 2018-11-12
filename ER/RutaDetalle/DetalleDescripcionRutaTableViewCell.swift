@@ -9,7 +9,9 @@
 import UIKit
 
 class DetalleDescripcionRutaTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var rutaDescripcion: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

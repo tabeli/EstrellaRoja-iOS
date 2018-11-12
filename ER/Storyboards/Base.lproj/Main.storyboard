@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Afi-fu-5qy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Afi-fu-5qy">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -73,6 +73,7 @@
         <!--iniciaSesion-->
         <scene sceneID="gfj-kw-szK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Rj-jT-9PD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="iniciaSesion" id="fQF-v8-bkp" customClass="IniciaSesionViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gVe-LB-SPu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -118,7 +119,7 @@
                                 <rect key="frame" x="41.333333333333343" y="470.33333333333331" width="331.33333333333326" height="44.999999999999943"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQm-oD-csA" customClass="SiguientesButton" customModule="ER" customModuleProvider="target">
                                 <rect key="frame" x="103.66666666666669" y="573.33333333333337" width="207" height="62.666666666666629"/>
@@ -220,15 +221,14 @@
                         <viewLayoutGuide key="safeArea" id="MAG-Lt-rro"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="m7g-Yw-zkB" id="FRW-MN-iyV"/>
                         <outlet property="head" destination="0b8-Nb-2JN" id="vzg-Zn-hBs"/>
                         <outlet property="ingresar" destination="yQm-oD-csA" id="lyb-nF-GUC"/>
-                        <outlet property="pwd" destination="Nui-Sg-azS" id="0Mm-j9-QFB"/>
+                        <outlet property="password" destination="Nui-Sg-azS" id="8pg-3t-jC8"/>
+                        <outlet property="username" destination="m7g-Yw-zkB" id="0eZ-KQ-rps"/>
                         <segue destination="IsO-K0-ghg" kind="show" identifier="recuperarPwdSegue" id="j1L-32-vBE"/>
                         <segue destination="UBT-Ce-Vn8" kind="show" identifier="RutaMenuSegue" id="fdY-jk-K1x"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Rj-jT-9PD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1122" y="-238"/>
         </scene>
@@ -527,6 +527,6 @@
         <image name="twittericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dS9-kq-yRZ"/>
+        <segue reference="fdY-jk-K1x"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,12 @@ import UIKit
 
 class DetalleComprarRutaTableViewCell: UITableViewCell {
 
+    var rutaId = -1
+    
+    @IBAction func rutaCompra(_ sender: UIButton) {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

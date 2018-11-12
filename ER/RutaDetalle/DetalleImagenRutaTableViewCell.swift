@@ -9,7 +9,8 @@
 import UIKit
 
 class DetalleImagenRutaTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var rutaImg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
