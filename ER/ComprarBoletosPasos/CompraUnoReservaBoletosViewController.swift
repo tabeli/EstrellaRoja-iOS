@@ -23,7 +23,7 @@ class CompraUnoReservaBoletosViewController: UIViewController {
     @IBOutlet weak var uno: UIButton!
     
     var ruta = ""
-    var fecha = ""
+    var fecha = Date()
     var horario = ""
     
     @IBAction func backArrow(_ sender: Any) {
@@ -34,9 +34,9 @@ class CompraUnoReservaBoletosViewController: UIViewController {
     @IBAction func siguienteAction(_ sender: Any) {
         
         ruta = eligeRuta.text!
-        fecha = eligeFecha.text!
+        //fecha = eligeFecha.text!
         horario = eligeHora.text!
-        if(ruta.isEmpty || fecha.isEmpty || horario.isEmpty) {
+        if(ruta.isEmpty || eligeFecha.text!.isEmpty || horario.isEmpty) {
             let title = "Error"
             let message = "Ingresar datos faltantes"
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -111,13 +111,19 @@ class CompraUnoReservaBoletosViewController: UIViewController {
         let formatoFecha = DateFormatter()
         formatoFecha.dateFormat = "dd/MM/yyyy"
         eligeFecha.text = formatoFecha.string(from: fechaPicker.date)
+        
+        //let weekday = Calendar.current.component(.weekday, from: myDate)
+        
+        fecha = fechaPicker.date
     }
     
     @objc func timeChanged(horaPicker: UIDatePicker){
         let formatoHora = DateFormatter()
         formatoHora.dateFormat = "HH:mm"
         
-        eligeHora.text = formatoHora.string(from: horaPicker.date)
+        let date = horaPicker.date
+       
+        eligeHora.text = formatoHora.string(from: date)
     }
     
     @objc func dismissKeyboard() {

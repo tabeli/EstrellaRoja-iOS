@@ -22,10 +22,15 @@ class DosSeleccionaPasajerosViewController: UIViewController {
     var countNino = 0
     var countInapam = 0
     
-    //Datos: Reserva boletos
+    var costoTotalAdulto = 65
+    var costoTotalNino = 45
+    var costoTotalInapam = 45
     
+    var precioTotal = 0
+    
+    //Datos: Reserva boletos
     var ruta = ""
-    var fecha = ""
+    var fecha = Date()
     var horario = ""
     
     
@@ -117,10 +122,13 @@ class DosSeleccionaPasajerosViewController: UIViewController {
             let vc = segue.destination as! TresDetalleCompraViewController
             vc.ruta = self.ruta
             vc.fecha = self.fecha
-            vc.horario = self.fecha
+            vc.horario = self.horario
             vc.countAdulto = self.countAdulto
             vc.countNino = self.countNino
             vc.countInapam = self.countInapam
+            
+            vc.precioTotal = (countAdulto * costoTotalAdulto) + (countNino * costoTotalNino) + (countInapam * costoTotalInapam)
+            
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.

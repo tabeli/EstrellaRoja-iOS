@@ -717,7 +717,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSk-m8-Mrv">
-                                <rect key="frame" x="62" y="694.33333333333337" width="290" height="45"/>
+                                <rect key="frame" x="103.66666666666669" y="685.33333333333337" width="207" height="62.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <state key="normal" title="¡Correcto!">
                                     <color key="titleColor" red="0.15748834610000001" green="0.68512696029999998" blue="0.0099700447170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -778,10 +778,10 @@
                                                     <constraint firstAttribute="width" secondItem="BEX-JK-40V" secondAttribute="height" multiplier="5:5" id="UCF-pc-Hic"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6n1-IR-YrS">
-                                                <rect key="frame" x="66" y="44.666666666666657" width="17.333333333333329" height="45"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6n1-IR-YrS">
+                                                <rect key="frame" x="52.333333333333314" y="44.666666666666657" width="44.666666666666657" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="6n1-IR-YrS" secondAttribute="height" multiplier="8:21" id="CPw-iq-PBY"/>
+                                                    <constraint firstAttribute="width" secondItem="6n1-IR-YrS" secondAttribute="height" multiplier="8:8" id="CPw-iq-PBY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -883,7 +883,7 @@
                             <constraint firstItem="ibP-4z-f3h" firstAttribute="centerY" secondItem="Tf5-wo-EM5" secondAttribute="centerY" multiplier="0.1" id="GxF-3T-tHp"/>
                             <constraint firstItem="ROb-re-107" firstAttribute="height" secondItem="Tf5-wo-EM5" secondAttribute="height" multiplier="0.1" id="IA2-hq-ihh"/>
                             <constraint firstItem="M9f-j9-m7K" firstAttribute="width" secondItem="Tf5-wo-EM5" secondAttribute="width" id="JGv-Cz-MR5"/>
-                            <constraint firstItem="fSk-m8-Mrv" firstAttribute="width" secondItem="Tf5-wo-EM5" secondAttribute="width" multiplier="0.7" id="L1h-Zp-cxS"/>
+                            <constraint firstItem="fSk-m8-Mrv" firstAttribute="width" secondItem="Tf5-wo-EM5" secondAttribute="width" multiplier="0.5" id="L1h-Zp-cxS"/>
                             <constraint firstItem="QU1-BS-M9U" firstAttribute="width" secondItem="Tf5-wo-EM5" secondAttribute="width" id="LCG-WG-JiI"/>
                             <constraint firstItem="j1I-lX-dzu" firstAttribute="width" secondItem="Tf5-wo-EM5" secondAttribute="width" id="Msg-GU-rEi"/>
                             <constraint firstItem="MtH-9L-9Bc" firstAttribute="centerX" secondItem="Tf5-wo-EM5" secondAttribute="centerX" id="NIK-oq-50x"/>
@@ -907,7 +907,7 @@
                             <constraint firstItem="Dfc-O3-KS8" firstAttribute="height" secondItem="Tf5-wo-EM5" secondAttribute="height" multiplier="0.05" id="go4-pm-8Ku"/>
                             <constraint firstItem="M9f-j9-m7K" firstAttribute="centerX" secondItem="Tf5-wo-EM5" secondAttribute="centerX" id="iGe-VK-aGd"/>
                             <constraint firstItem="8uk-a4-H4n" firstAttribute="width" secondItem="Tf5-wo-EM5" secondAttribute="width" multiplier="0.8" id="ilw-4q-YqL"/>
-                            <constraint firstItem="fSk-m8-Mrv" firstAttribute="height" secondItem="Tf5-wo-EM5" secondAttribute="height" multiplier="0.05" id="iw9-ve-bzD"/>
+                            <constraint firstItem="fSk-m8-Mrv" firstAttribute="height" secondItem="Tf5-wo-EM5" secondAttribute="height" multiplier="0.07" id="iw9-ve-bzD"/>
                             <constraint firstItem="Dfc-O3-KS8" firstAttribute="centerX" secondItem="Tf5-wo-EM5" secondAttribute="centerX" id="oQD-Fd-S9k"/>
                             <constraint firstItem="Dfc-O3-KS8" firstAttribute="centerY" secondItem="Tf5-wo-EM5" secondAttribute="centerY" multiplier="0.5" id="peO-ws-U3Z"/>
                             <constraint firstItem="Dfc-O3-KS8" firstAttribute="width" secondItem="Tf5-wo-EM5" secondAttribute="width" multiplier="0.8" id="qqq-v3-0te"/>
