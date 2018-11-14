@@ -14,12 +14,88 @@ class DosSeleccionaPasajerosViewController: UIViewController {
     @IBOutlet weak var siguienteOutlet: UIButton!
     @IBOutlet weak var dos: UIButton!
     
+    @IBOutlet weak var adulto: UILabel!
+    @IBOutlet weak var nino: UILabel!
+    @IBOutlet weak var inapam: UILabel!
+    
+    var countAdulto = 0
+    var countNino = 0
+    var countInapam = 0
+    
+    //Datos: Reserva boletos
+    
+    var ruta = ""
+    var fecha = ""
+    var horario = ""
+    
+    
     @IBAction func backArrow(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func plusAdulto(_ sender: UIButton) {
+        if(countAdulto < 10) {
+            countAdulto+=1
+            adulto.text = String(countAdulto)
+        }
+        
+    }
+    @IBAction func minusAdulto(_ sender: UIButton) {
+        if(countAdulto > 0) {
+            countAdulto-=1
+            adulto.text = String(countAdulto)
+        }
+    }
+    
+    @IBAction func plusNino(_ sender: UIButton) {
+        if(countNino < 10) {
+            countNino+=1
+            nino.text = String(countNino)
+        }
+    }
+    @IBAction func minusNino(_ sender: UIButton) {
+        if(countNino > 0) {
+            countNino-=1
+            nino.text = String(countNino)
+        }
+    }
+    
+    @IBAction func plusInapam(_ sender: UIButton) {
+        if(countInapam < 10) {
+            countInapam+=1
+            inapam.text = String(countInapam)
+        }
+    }
+    @IBAction func minusInapam(_ sender: UIButton) {
+        if(countInapam > 0) {
+            countInapam-=1
+            inapam.text = String(countInapam)
+        }
+    }
+    
+    
     @IBAction func siguienteAction(_ sender: UIButton) {
         
+        if(countAdulto + countNino + countInapam) > 10 {
+            let title = "Error"
+            let message = "Se permiten compras de hasta 10 boletos"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        }
+       
+        else if (countAdulto + countNino + countInapam == 0) {
+            let title = "Error"
+            let message = "Ingresa cuantos boletos deseas comprar"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        }
+        else {
+            performSegue(withIdentifier: "DetalleCompraSegue", sender: nil)
+        }
     }
     
     override func viewDidLoad() {
@@ -33,15 +109,21 @@ class DosSeleccionaPasajerosViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "DetalleCompraSegue") {
+            let vc = segue.destination as! TresDetalleCompraViewController
+            vc.ruta = self.ruta
+            vc.fecha = self.fecha
+            vc.horario = self.fecha
+            vc.countAdulto = self.countAdulto
+            vc.countNino = self.countNino
+            vc.countInapam = self.countInapam
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }

@@ -19,6 +19,7 @@
 		B561F450216C669F00EB917C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F44E216C669F00EB917C /* LaunchScreen.storyboard */; };
 		B561F45B216C66A000EB917C /* ERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F45A216C66A000EB917C /* ERTests.swift */; };
 		B561F466216C66A000EB917C /* ERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F465216C66A000EB917C /* ERUITests.swift */; };
+		B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */; };
 		B5B79F8D21794C13001AEDEE /* RutasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */; };
 		B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */; };
 		B5B79F912179AA14001AEDEE /* RutaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */; };
@@ -78,6 +79,7 @@
 		B561F461216C66A000EB917C /* ERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B561F465216C66A000EB917C /* ERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERUITests.swift; sourceTree = "<group>"; };
 		B561F467216C66A000EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresDetalleCompraViewController.swift; sourceTree = "<group>"; };
 		B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasTableViewController.swift; sourceTree = "<group>"; };
 		B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaTableViewCell.swift; sourceTree = "<group>"; };
 		B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaDetalleViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				B54B7A07219A441F008DBE6A /* CompraUnoReservaBoletosViewController.swift */,
 				B54B7A09219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift */,
+				B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */,
 			);
 			path = ComprarBoletosPasos;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				B5F80E0C2178154100CDB5BE /* SiguientesButton.swift in Sources */,
 				B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */,
 				B5F80E052178022200CDB5BE /* IniciaSesionViewController.swift in Sources */,
+				B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */,
 				B5B79F952179AA79001AEDEE /* DetalleImagenRutaTableViewCell.swift in Sources */,
 				B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */,
 				B5333E39217864E800C0C19D /* RutaMenuViewController.swift in Sources */,

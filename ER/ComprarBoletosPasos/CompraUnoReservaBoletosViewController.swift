@@ -22,19 +22,38 @@ class CompraUnoReservaBoletosViewController: UIViewController {
     
     @IBOutlet weak var uno: UIButton!
     
+    var ruta = ""
+    var fecha = ""
+    var horario = ""
+    
     @IBAction func backArrow(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     
     }
     
     @IBAction func siguienteAction(_ sender: Any) {
-        performSegue(withIdentifier: "SeleccionarPasajerosSegue", sender: nil)
+        
+        ruta = eligeRuta.text!
+        fecha = eligeFecha.text!
+        horario = eligeHora.text!
+        if(ruta.isEmpty || fecha.isEmpty || horario.isEmpty) {
+            let title = "Error"
+            let message = "Ingresar datos faltantes"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        } else {
+            performSegue(withIdentifier: "SeleccionarPasajerosSegue", sender: nil)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         crearToolbar()
         creaRutasPicker()
+        eligeFechaPicker()
+        eligeHoraPicker()
         topTitle.adjustsFontSizeToFitWidth = true
         
         uno.layer.cornerRadius = 15
@@ -53,6 +72,23 @@ class CompraUnoReservaBoletosViewController: UIViewController {
         rutasPicker.backgroundColor = .white
     }
     
+    func eligeFechaPicker() {
+        let fechaPicker = UIDatePicker()
+        fechaPicker.datePickerMode = .date
+        eligeFecha.inputView = fechaPicker
+        fechaPicker.addTarget(self, action: #selector(CompraUnoReservaBoletosViewController.dataChanged(fechaPicker:)), for: .valueChanged)
+        fechaPicker.backgroundColor = .white
+    }
+    
+    func eligeHoraPicker() {
+        let horaPicker = UIDatePicker()
+        horaPicker.datePickerMode = .time
+        eligeHora.inputView = horaPicker
+        horaPicker.addTarget(self, action: #selector(CompraUnoReservaBoletosViewController.timeChanged(horaPicker:)), for: .valueChanged)
+        horaPicker.backgroundColor = .white
+        
+    }
+    
     func crearToolbar() {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -67,22 +103,43 @@ class CompraUnoReservaBoletosViewController: UIViewController {
         toolBar.isUserInteractionEnabled = true
         
         eligeRuta.inputAccessoryView = toolBar
+        eligeFecha.inputAccessoryView = toolBar
+        eligeHora.inputAccessoryView = toolBar
     }
     
+    @objc func dataChanged(fechaPicker: UIDatePicker){
+        let formatoFecha = DateFormatter()
+        formatoFecha.dateFormat = "dd/MM/yyyy"
+        eligeFecha.text = formatoFecha.string(from: fechaPicker.date)
+    }
+    
+    @objc func timeChanged(horaPicker: UIDatePicker){
+        let formatoHora = DateFormatter()
+        formatoHora.dateFormat = "HH:mm"
+        
+        eligeHora.text = formatoHora.string(from: horaPicker.date)
+    }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "SeleccionarPasajerosSegue") {
+            let vc = segue.destination as! DosSeleccionaPasajerosViewController
+            vc.ruta = self.ruta
+            vc.fecha = self.fecha
+            vc.horario = self.horario
+        }
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
 
@@ -119,3 +176,4 @@ extension CompraUnoReservaBoletosViewController: UIPickerViewDelegate, UIPickerV
         return label
     }
 }
+
