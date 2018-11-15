@@ -170,6 +170,9 @@
                         <viewLayoutGuide key="safeArea" id="brf-we-uik"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tu ruta" image="route" id="8fA-fH-beY"/>
+                    <connections>
+                        <outlet property="mapView" destination="ISQ-m8-kAC" id="nXr-VN-ijN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zcc-1F-WMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
