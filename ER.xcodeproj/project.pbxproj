@@ -10,6 +10,7 @@
 		030706072178E5CF0071E0A0 /* BoletosAdquiridos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030706062178E5CF0071E0A0 /* BoletosAdquiridos.storyboard */; };
 		030706092178E5E40071E0A0 /* EscanearPulsera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030706082178E5E40071E0A0 /* EscanearPulsera.storyboard */; };
 		B5333E39217864E800C0C19D /* RutaMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5333E38217864E800C0C19D /* RutaMenuViewController.swift */; };
+		B535C385219D1BBA00D326F9 /* MuestraRutaActualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535C384219D1BB900D326F9 /* MuestraRutaActualViewController.swift */; };
 		B54B7A08219A4420008DBE6A /* CompraUnoReservaBoletosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B7A07219A441F008DBE6A /* CompraUnoReservaBoletosViewController.swift */; };
 		B54B7A0A219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B7A09219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift */; };
 		B561F446216C669D00EB917C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F445216C669D00EB917C /* AppDelegate.swift */; };
@@ -65,6 +66,7 @@
 		030706062178E5CF0071E0A0 /* BoletosAdquiridos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BoletosAdquiridos.storyboard; sourceTree = "<group>"; };
 		030706082178E5E40071E0A0 /* EscanearPulsera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EscanearPulsera.storyboard; sourceTree = "<group>"; };
 		B5333E38217864E800C0C19D /* RutaMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaMenuViewController.swift; sourceTree = "<group>"; };
+		B535C384219D1BB900D326F9 /* MuestraRutaActualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuestraRutaActualViewController.swift; sourceTree = "<group>"; };
 		B54B7A07219A441F008DBE6A /* CompraUnoReservaBoletosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompraUnoReservaBoletosViewController.swift; sourceTree = "<group>"; };
 		B54B7A09219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosSeleccionaPasajerosViewController.swift; sourceTree = "<group>"; };
 		B561F442216C669D00EB917C /* ER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ER.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,14 @@
 			path = Rutas;
 			sourceTree = "<group>";
 		};
+		B535C383219D08CF00D326F9 /* RutaDesbloquedadaMapa */ = {
+			isa = PBXGroup;
+			children = (
+				B535C384219D1BB900D326F9 /* MuestraRutaActualViewController.swift */,
+			);
+			path = RutaDesbloquedadaMapa;
+			sourceTree = "<group>";
+		};
 		B54B7A06219A435A008DBE6A /* ComprarBoletosPasos */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 				B54B7A06219A435A008DBE6A /* ComprarBoletosPasos */,
 				B5F80DF62177C71700CDB5BE /* ComprarBoletoDatosPasajero */,
 				B56C8E51219C14EE00C0EA61 /* RealizaPago */,
+				B535C383219D08CF00D326F9 /* RutaDesbloquedadaMapa */,
 				B5D6BD392173FFA3004CDCC2 /* Storyboards */,
 				B561F445216C669D00EB917C /* AppDelegate.swift */,
 				B561F447216C669D00EB917C /* ViewController.swift */,
@@ -425,6 +436,7 @@
 				B5F80E072178023800CDB5BE /* RegistroViewController.swift in Sources */,
 				B54B7A08219A4420008DBE6A /* CompraUnoReservaBoletosViewController.swift in Sources */,
 				B5F80DFA2177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift in Sources */,
+				B535C385219D1BBA00D326F9 /* MuestraRutaActualViewController.swift in Sources */,
 				B5F80DFE2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift in Sources */,
 				B5B79F992179AAA6001AEDEE /* DetalleComprarRutaTableViewCell.swift in Sources */,
 				B5F80DF82177C78600CDB5BE /* AgregarPasajerosViewController.swift in Sources */,

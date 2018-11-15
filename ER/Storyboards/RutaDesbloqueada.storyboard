@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I8E-vX-dvk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9PO-Vn-6ed">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Puebla-->
         <scene sceneID="xwr-Kl-wz7">
             <objects>
-                <viewController storyboardIdentifier="MainRutaDesbloqueda" title="Puebla" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I8E-vX-dvk" customClass="ViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainRuta" title="Puebla" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I8E-vX-dvk" customClass="ViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c11-9b-Cba">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,11 +111,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Pt-JM-2Tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024.6376811594205" y="89.732142857142847"/>
+            <point key="canvasLocation" x="883" y="-60"/>
+        </scene>
+        <!--Lugares-->
+        <scene sceneID="sLT-Pp-Uds">
+            <objects>
+                <viewController id="1kG-Er-tMF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="39g-92-JkT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.15748834610000001" green="0.68512696029999998" blue="0.0099700447170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="xgU-gx-9JA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lugares" image="importantplaces" id="Wpb-Wy-nOW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahf-cM-NMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="820"/>
+        </scene>
+        <!--Información-->
+        <scene sceneID="HcQ-by-iRH">
+            <objects>
+                <viewController id="Sgs-Ha-o4V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GSN-8G-6Yb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98905342819999997" green="0.71650582549999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4A5-Nh-XQs"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Información" image="busdata" id="mfg-cU-com"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgG-4Z-PiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2328" y="820"/>
+        </scene>
+        <!--Tu ruta-->
+        <scene sceneID="wyE-OV-58b">
+            <objects>
+                <viewController id="ebv-GM-tiQ" customClass="MuestraRutaActualViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ix-8e-RL5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ISQ-m8-kAC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ebv-GM-tiQ" id="2lb-LD-Epe"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ISQ-m8-kAC" firstAttribute="bottom" secondItem="brf-we-uik" secondAttribute="bottom" id="Cyh-cd-2Nj"/>
+                            <constraint firstItem="ISQ-m8-kAC" firstAttribute="leading" secondItem="brf-we-uik" secondAttribute="leading" id="mdz-o5-HQT"/>
+                            <constraint firstItem="ISQ-m8-kAC" firstAttribute="top" secondItem="1ix-8e-RL5" secondAttribute="top" id="uwR-Jo-4bF"/>
+                            <constraint firstItem="ISQ-m8-kAC" firstAttribute="trailing" secondItem="brf-we-uik" secondAttribute="trailing" id="vC0-OR-r9Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="brf-we-uik"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tu ruta" image="route" id="8fA-fH-beY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zcc-1F-WMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="820"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="F9H-Ah-6DA">
+            <objects>
+                <tabBarController storyboardIdentifier="MainRutaDesbloqueda" id="9PO-Vn-6ed" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V8n-Z2-KQC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ebv-GM-tiQ" kind="relationship" relationship="viewControllers" id="iNL-qV-Kj3"/>
+                        <segue destination="1kG-Er-tMF" kind="relationship" relationship="viewControllers" id="xy7-Tp-2RT"/>
+                        <segue destination="Sgs-Ha-o4V" kind="relationship" relationship="viewControllers" id="cdp-Ka-Jyf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGs-xf-LA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="89"/>
         </scene>
     </scenes>
     <resources>
         <image name="bottom" width="414" height="87"/>
+        <image name="busdata" width="31.5" height="31.5"/>
         <image name="icon" width="165" height="102"/>
+        <image name="importantplaces" width="31.5" height="31.5"/>
+        <image name="route" width="31.5" height="31.5"/>
     </resources>
 </document>
