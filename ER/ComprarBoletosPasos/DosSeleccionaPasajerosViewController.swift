@@ -81,7 +81,15 @@ class DosSeleccionaPasajerosViewController: UIViewController {
     
     @IBAction func siguienteAction(_ sender: UIButton) {
         
-        if(countAdulto + countNino + countInapam) > 10 {
+        if(countNino > 0) && ((countAdulto + countInapam == 0)) {
+            let title = "Error"
+            let message = "Los niños deben de ir acompañados de un adulto"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        }
+        else if(countAdulto + countNino + countInapam) > 10 {
             let title = "Error"
             let message = "Se permiten compras de hasta 10 boletos"
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

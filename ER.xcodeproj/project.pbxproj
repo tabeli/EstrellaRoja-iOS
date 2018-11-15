@@ -19,6 +19,7 @@
 		B561F450216C669F00EB917C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F44E216C669F00EB917C /* LaunchScreen.storyboard */; };
 		B561F45B216C66A000EB917C /* ERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F45A216C66A000EB917C /* ERTests.swift */; };
 		B561F466216C66A000EB917C /* ERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F465216C66A000EB917C /* ERUITests.swift */; };
+		B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */; };
 		B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */; };
 		B5B79F8D21794C13001AEDEE /* RutasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */; };
 		B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */; };
@@ -79,6 +80,7 @@
 		B561F461216C66A000EB917C /* ERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B561F465216C66A000EB917C /* ERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERUITests.swift; sourceTree = "<group>"; };
 		B561F467216C66A000EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletaPagoViewController.swift; sourceTree = "<group>"; };
 		B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresDetalleCompraViewController.swift; sourceTree = "<group>"; };
 		B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasTableViewController.swift; sourceTree = "<group>"; };
 		B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaTableViewCell.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				B5B79F9A2179AB19001AEDEE /* RutaDetalle */,
 				B54B7A06219A435A008DBE6A /* ComprarBoletosPasos */,
 				B5F80DF62177C71700CDB5BE /* ComprarBoletoDatosPasajero */,
+				B56C8E51219C14EE00C0EA61 /* RealizaPago */,
 				B5D6BD392173FFA3004CDCC2 /* Storyboards */,
 				B561F445216C669D00EB917C /* AppDelegate.swift */,
 				B561F447216C669D00EB917C /* ViewController.swift */,
@@ -203,6 +206,14 @@
 				B561F467216C66A000EB917C /* Info.plist */,
 			);
 			path = ERUITests;
+			sourceTree = "<group>";
+		};
+		B56C8E51219C14EE00C0EA61 /* RealizaPago */ = {
+			isa = PBXGroup;
+			children = (
+				B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */,
+			);
+			path = RealizaPago;
 			sourceTree = "<group>";
 		};
 		B5B79F9A2179AB19001AEDEE /* RutaDetalle */ = {
@@ -419,6 +430,7 @@
 				B5F80DF82177C78600CDB5BE /* AgregarPasajerosViewController.swift in Sources */,
 				B561F448216C669D00EB917C /* ViewController.swift in Sources */,
 				B54B7A0A219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift in Sources */,
+				B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */,
 				B5F80E092178025200CDB5BE /* CambiaContrasenaViewController.swift in Sources */,
 				B5F80E03217801FD00CDB5BE /* InicialViewController.swift in Sources */,
 				B561F446216C669D00EB917C /* AppDelegate.swift in Sources */,
@@ -597,12 +609,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
 				INFOPLIST_FILE = ER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.ER;
+				PRODUCT_BUNDLE_IDENTIFIER = ProyectoERiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -614,12 +627,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
 				INFOPLIST_FILE = ER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.ER;
+				PRODUCT_BUNDLE_IDENTIFIER = ProyectoERiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

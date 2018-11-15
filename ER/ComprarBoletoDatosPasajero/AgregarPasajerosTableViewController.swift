@@ -76,6 +76,13 @@ class AgregarPasajerosTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row == adultNum + ninoNum + inapamNum + 1) {
+            let dad = self.parent as! AgregarPasajerosViewController
+            dad.performSegue(withIdentifier: "CompletaPagoSegue", sender: nil)
+        }
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
