@@ -37,7 +37,7 @@ class TresDetalleCompraViewController: UIViewController {
     
     
     @IBAction func siguienteAction(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "DatosPasajerosSegue", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -68,7 +68,7 @@ class TresDetalleCompraViewController: UIViewController {
         cambiaTipoTurista.text = str
         cambiaTipoTurista.adjustsFontSizeToFitWidth = true
         
-        cambiaTotal.text = String(precioTotal)
+        cambiaTotal.text = "$\(precioTotal)"
         
         // Do any additional setup after loading the view.
     }
@@ -138,14 +138,21 @@ class TresDetalleCompraViewController: UIViewController {
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "DatosPasajerosSegue") {
+            let vc = segue.destination as! AgregarPasajerosViewController
+            vc.countAdulto = self.countAdulto
+            vc.countNino = self.countNino
+            vc.countInapam = self.countInapam
+            
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
