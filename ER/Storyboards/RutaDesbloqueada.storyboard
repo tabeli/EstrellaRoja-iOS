@@ -118,7 +118,7 @@
             <objects>
                 <viewController id="1kG-Er-tMF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="39g-92-JkT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.15748834610000001" green="0.68512696029999998" blue="0.0099700447170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="xgU-gx-9JA"/>
@@ -134,7 +134,7 @@
             <objects>
                 <viewController id="Sgs-Ha-o4V" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GSN-8G-6Yb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.98905342819999997" green="0.71650582549999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4A5-Nh-XQs"/>
@@ -150,7 +150,7 @@
             <objects>
                 <viewController id="ebv-GM-tiQ" customClass="MuestraRutaActualViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ix-8e-RL5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ISQ-m8-kAC">
@@ -182,10 +182,12 @@
         <scene sceneID="F9H-Ah-6DA">
             <objects>
                 <tabBarController storyboardIdentifier="MainRutaDesbloqueda" id="9PO-Vn-6ed" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V8n-Z2-KQC">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" itemPositioning="fill" id="V8n-Z2-KQC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="ebv-GM-tiQ" kind="relationship" relationship="viewControllers" id="iNL-qV-Kj3"/>
@@ -205,4 +207,5 @@
         <image name="importantplaces" width="31.5" height="31.5"/>
         <image name="route" width="31.5" height="31.5"/>
     </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
