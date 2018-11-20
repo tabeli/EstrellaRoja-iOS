@@ -19,7 +19,7 @@ class AgregarPasajerosViewController: UIViewController {
     var countInapam = 0    
     
     @IBAction func backArrow(_ sender: UIButton) {
-        self.parent?.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     

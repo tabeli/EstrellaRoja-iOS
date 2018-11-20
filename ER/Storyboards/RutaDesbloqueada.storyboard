@@ -159,10 +159,23 @@
                                     <outlet property="delegate" destination="ebv-GM-tiQ" id="2lb-LD-Epe"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIG-vK-W7i">
+                                <rect key="frame" x="17.5" y="61" width="47.5" height="40.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zIG-vK-W7i" secondAttribute="height" multiplier="7:6" id="s6d-vG-fKi"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="left-arrow"/>
+                                <connections>
+                                    <action selector="backArrow:" destination="ebv-GM-tiQ" eventType="touchUpInside" id="B6F-wJ-5Og"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ISQ-m8-kAC" firstAttribute="bottom" secondItem="brf-we-uik" secondAttribute="bottom" id="Cyh-cd-2Nj"/>
+                            <constraint firstItem="zIG-vK-W7i" firstAttribute="height" secondItem="ISQ-m8-kAC" secondAttribute="height" multiplier="0.05" id="IiL-SS-fA6"/>
+                            <constraint firstItem="zIG-vK-W7i" firstAttribute="centerX" secondItem="1ix-8e-RL5" secondAttribute="centerX" multiplier="0.2" id="SwO-Np-Zk5"/>
+                            <constraint firstItem="zIG-vK-W7i" firstAttribute="centerY" secondItem="1ix-8e-RL5" secondAttribute="centerY" multiplier="0.2" id="mDd-n2-pYL"/>
                             <constraint firstItem="ISQ-m8-kAC" firstAttribute="leading" secondItem="brf-we-uik" secondAttribute="leading" id="mdz-o5-HQT"/>
                             <constraint firstItem="ISQ-m8-kAC" firstAttribute="top" secondItem="1ix-8e-RL5" secondAttribute="top" id="uwR-Jo-4bF"/>
                             <constraint firstItem="ISQ-m8-kAC" firstAttribute="trailing" secondItem="brf-we-uik" secondAttribute="trailing" id="vC0-OR-r9Y"/>
@@ -205,6 +218,7 @@
         <image name="busdata" width="31.5" height="31.5"/>
         <image name="icon" width="165" height="102"/>
         <image name="importantplaces" width="31.5" height="31.5"/>
+        <image name="left-arrow" width="980" height="840"/>
         <image name="route" width="31.5" height="31.5"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

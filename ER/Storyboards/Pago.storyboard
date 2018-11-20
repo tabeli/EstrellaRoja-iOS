@@ -929,7 +929,7 @@
                         <outlet property="siguienteOutlet" destination="fSk-m8-Mrv" id="ThH-07-s1R"/>
                         <outlet property="topTitle" destination="EcR-0n-iwy" id="M99-ck-FgA"/>
                         <outlet property="tres" destination="h6Y-t7-bBs" id="4KU-9y-5QM"/>
-                        <segue destination="uDY-ze-TPi" kind="showDetail" identifier="DatosPasajerosSegue" id="Ip0-rQ-Ie5"/>
+                        <segue destination="uDY-ze-TPi" kind="show" identifier="DatosPasajerosSegue" id="Ip0-rQ-Ie5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8J-3B-U3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,14 +14,77 @@ class MuestraRutaActualViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
    
+    @IBAction func backArrow(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 5000
+    let regionInMeters: Double = 50000
     
+    var coordinatesArr:[CLLocationCoordinate2D] = [
+        CLLocationCoordinate2D(latitude: 19.0380368, longitude: -98.1919112),
+        CLLocationCoordinate2D(latitude: 19.0442404, longitude: -98.191289),
+        CLLocationCoordinate2D(latitude: 19.0471625, longitude: -98.1892118),
+        CLLocationCoordinate2D(latitude: 19.0529056, longitude: -98.1891781),
+        CLLocationCoordinate2D(latitude: 19.0531589, longitude: -98.1851249),
+        CLLocationCoordinate2D(latitude: 19.0579336, longitude: -98.1870003),
+        CLLocationCoordinate2D(latitude: 19.0562241, longitude: -98.1827389),
+        CLLocationCoordinate2D(latitude: 19.0525066, longitude: -98.179964),
+        CLLocationCoordinate2D(latitude: 19.053879, longitude: -98.18019), //centro expositorio
+        CLLocationCoordinate2D(latitude: 19.0548, longitude: -98.180408), //museo de la revolucion
+        CLLocationCoordinate2D(latitude: 19.055348, longitude: -98.179562), //teleferico
+        CLLocationCoordinate2D(latitude: 19.057018, longitude: -98.181575), //planetario
+        CLLocationCoordinate2D(latitude: 19.060459, longitude: -98.184605), //monumento zaragoza
+        CLLocationCoordinate2D(latitude: 19.044109, longitude: -98.192068), //num 6
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+        //coordinatesArr.append(locationManager.location!.coordinate)
+        getDirections()
+        centerAll()
         // Do any additional setup after loading the view.
+        //let center = CLLocationCoordinate2D(latitude: 19.0492479, longitude: -98.185815)
+        //let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        //mapView.setRegion(region, animated: true)
+    }
+    
+    func centerAll() {
+        var maxLongitude = -1.0
+        var minLongitude = -1.0
+        var maxLatitude = -1.0
+        var minLatitude = -1.0
+        var index = 0
+        for coordinate in coordinatesArr {
+            if index == 0 {
+                minLongitude = coordinate.longitude
+                maxLongitude = coordinate.longitude
+                
+                minLatitude = coordinate.latitude
+                minLatitude = coordinate.latitude
+            }
+            else {
+                if coordinate.latitude < minLatitude {
+                    minLatitude = coordinate.latitude
+                }
+                if coordinate.latitude > maxLatitude {
+                    maxLatitude = coordinate.latitude
+                }
+                if coordinate.longitude < minLongitude {
+                    minLongitude = coordinate.longitude
+                }
+                if coordinate.longitude > maxLongitude {
+                    maxLongitude = coordinate.longitude
+                }
+            }
+            index += 1
+        }
+        let mediumLongitude = minLongitude + ((maxLongitude - minLongitude) / 2)
+        let mediumLatitude = minLatitude + ((maxLatitude - minLatitude) / 2)
+        
+        let center = CLLocationCoordinate2D(latitude: mediumLatitude, longitude: mediumLongitude)
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: (maxLatitude - minLatitude), longitudinalMeters: (maxLongitude - minLongitude))
+        mapView.setRegion(region, animated: true)
     }
     
     func setupLocationManager() {
@@ -29,12 +92,13 @@ class MuestraRutaActualViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    func centerViewOnUserLocation() {
+    /*func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            let center = CLLocationCoordinate2D(latitude: 19.0492479, longitude: -98.185815)
+            let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             mapView.setRegion(region, animated: true)
         }
-    }
+    }*/
     
     func checkLocationServices() {
         if(CLLocationManager.locationServicesEnabled()){
@@ -57,10 +121,8 @@ class MuestraRutaActualViewController: UIViewController {
         case .authorizedWhenInUse:
             //Map stuff
             mapView.showsUserLocation = true
-            centerViewOnUserLocation()
-            locationManager.startUpdatingLocation()
             //centerViewOnUserLocation()
-            //locationManager.startUpdatingLocation()
+            locationManager.startUpdatingLocation()
             break
         case .denied:
             // Show alert instructing them how to turn on permissions
@@ -83,6 +145,50 @@ class MuestraRutaActualViewController: UIViewController {
     }
     
 
+    func getDirections(){
+        var index = -1
+        for _ in self.coordinatesArr {
+            index += 1
+            var nextIndex = index+1
+            if(nextIndex == coordinatesArr.count){
+                nextIndex = 0
+            }
+            let start = coordinatesArr[index]
+            let end = coordinatesArr[nextIndex]
+            
+            let request = createDirectionRequest(from: start, to: end)
+            let directions = MKDirections(request: request)
+            directions.calculate { [unowned self] (response,error) in
+                if let _ = error{
+                    return
+                }
+                guard let response = response else {
+                    return
+                }
+                
+                for route in response.routes {
+                    self.mapView.addOverlay(route.polyline)
+                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                }
+            }
+        }
+        
+        
+    }
+    
+    func createDirectionRequest(from origin: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D) -> MKDirections.Request {
+        let start = MKPlacemark(coordinate: origin)
+        let end = MKPlacemark(coordinate: destination)
+        
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: start)
+        request.destination = MKMapItem(placemark: end)
+        request.transportType = .automobile
+        request.requestsAlternateRoutes = false
+        
+        return request
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -96,16 +202,29 @@ class MuestraRutaActualViewController: UIViewController {
 }
 
 extension MuestraRutaActualViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    /*func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //Something
         guard let location = locations.last else { return }
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         mapView.setRegion(region, animated: true)
+        print(locations.last)
         
-    }
+    }*/
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         //More else
         checkLocationAuthorization()
+    }
+    
+    
+}
+
+
+extension MuestraRutaActualViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        renderer.strokeColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
+        return renderer
     }
 }
