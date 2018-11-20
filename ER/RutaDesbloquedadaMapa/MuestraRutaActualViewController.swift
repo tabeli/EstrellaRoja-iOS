@@ -261,7 +261,15 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        <#code#>
+        let annView = view.annotation
+        let storyboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil)
+        let detalleVC = storyboard.instantiateViewController(withIdentifier: "Detalle") as! DetalleViewController
+        detalleVC.nombre = (annView?.title!)!
+        detalleVC.descripcion = "holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi"
+        detalleVC.latitud = (annView?.coordinate.latitude)!
+        detalleVC.longitud = (annView?.coordinate.longitude)!
+        
+        self.navigationController?.pushViewController(detalleVC, animated: true)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

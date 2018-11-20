@@ -16,6 +16,9 @@ class DetalleViewController: UIViewController {
     
     @IBAction func reproduceAudio(_ sender: UIButton) {
     }
+    @IBAction func backArrow(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     var nombre = ""
     var descripcion = ""
@@ -27,7 +30,7 @@ class DetalleViewController: UIViewController {
         
         lblnombre.text = nombre
         lblDescripcion.text = descripcion
-        lblCoordenadas.text = String(format: "Lat: %3f // Lon: %3f", latitud,longitud)
+        lblCoordenadas.text = String(format: "Lat: %4f // Lon: %4f", latitud,longitud)
         // Do any additional setup after loading the view.
     }
     
