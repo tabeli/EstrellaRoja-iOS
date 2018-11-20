@@ -10,6 +10,18 @@ import UIKit
 import MapKit
 import CoreLocation
 
+class customPin: NSObject, MKAnnotation {
+    var coordinate: CLLocationCoordinate2D
+    var title: String?
+    var subtitle: String?
+    
+    init(pinTitle:String, pinSubtitle:String, location:CLLocationCoordinate2D) {
+        self.title = pinTitle
+        self.subtitle = pinSubtitle
+        self.coordinate = location
+    }
+}
+
 class MuestraRutaActualViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
@@ -18,7 +30,7 @@ class MuestraRutaActualViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 50000
+    let regionInMeters: Double = 2500
     
     var coordinatesArr:[CLLocationCoordinate2D] = [
         CLLocationCoordinate2D(latitude: 19.0380368, longitude: -98.1919112),
@@ -37,17 +49,37 @@ class MuestraRutaActualViewController: UIViewController {
         CLLocationCoordinate2D(latitude: 19.044109, longitude: -98.192068), //num 6
     ]
     
+    var markersArr:[MKPointAnnotation] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
         //coordinatesArr.append(locationManager.location!.coordinate)
         getDirections()
+        //setMarkers()
         centerAll()
+        for coordinate in coordinatesArr {
+            let annotation = MKPointAnnotation()
+            annotation.title = "Algo"
+            annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            markersArr.append(annotation)
+            mapView.addAnnotation(annotation)
+        }
         // Do any additional setup after loading the view.
         //let center = CLLocationCoordinate2D(latitude: 19.0492479, longitude: -98.185815)
         //let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         //mapView.setRegion(region, animated: true)
     }
+    
+    
+    /*func setMarkers() {
+        
+        for coordinate in coordinatesArr {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            mapView.addAnnotation(annotation)
+        }
+    }*/
     
     func centerAll() {
         var maxLongitude = -1.0
@@ -83,7 +115,7 @@ class MuestraRutaActualViewController: UIViewController {
         let mediumLatitude = minLatitude + ((maxLatitude - minLatitude) / 2)
         
         let center = CLLocationCoordinate2D(latitude: mediumLatitude, longitude: mediumLongitude)
-        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: (maxLatitude - minLatitude), longitudinalMeters: (maxLongitude - minLongitude))
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         mapView.setRegion(region, animated: true)
     }
     
@@ -168,7 +200,7 @@ class MuestraRutaActualViewController: UIViewController {
                 
                 for route in response.routes {
                     self.mapView.addOverlay(route.polyline)
-                    self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                    //self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
                 }
             }
         }
@@ -227,4 +259,32 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
         renderer.strokeColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
         return renderer
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        
+        /*let calloutView = MKAnnotationView()
+        calloutView.translatesAutoresizingMaskIntoConstraints = false
+        calloutView.backgroundColor = UIColor.lightGray
+        view.addSubview(calloutView)
+        
+        NSLayoutConstraint.activate([
+            calloutView.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            calloutView.widthAnchor.constraint(equalToConstant: 60),
+            calloutView.heightAnchor.constraint(equalToConstant: 30),
+            calloutView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: view.calloutOffset.x)
+            ])
+        
+        print("entro")*/
+        /*for ann in mapView.annotations {
+            if ann.hash == view.annotation!.hash{
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = ann.coordinate
+                annotation.title = "Hola"
+                self.mapView.addAnnotation(annotation)
+                print("te quiero putaa")
+            }
+        }*/
+    }
 }
+
