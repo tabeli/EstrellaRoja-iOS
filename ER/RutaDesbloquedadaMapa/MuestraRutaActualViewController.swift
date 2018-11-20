@@ -62,7 +62,6 @@ class MuestraRutaActualViewController: UIViewController {
             let annotation = MKPointAnnotation()
             annotation.title = "Algo"
             annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-            
             markersArr.append(annotation)
             mapView.addAnnotation(annotation)
         }
@@ -257,29 +256,27 @@ extension MuestraRutaActualViewController: CLLocationManagerDelegate {
 extension MuestraRutaActualViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
-        renderer.strokeColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
+        renderer.strokeColor = #colorLiteral(red: 0.8829703927, green: 0.1867307127, blue: 0.4812199473, alpha: 1)
         return renderer
     }
     
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        <#code#>
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation is MKPointAnnotation else { return nil }
+        if annotation is MKAnnotationView
+            { return nil }
         
         let identifier = "Annotation"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         
-        if annotationView == nil {
-            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            annotationView!.image = UIImage(named: "pin")
-            print("holiis")
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView!.image = UIImage(named: "pindos")
+            
             annotationView!.canShowCallout = true
-        } else {
-            annotationView!.annotation = annotation
-        }
-        
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+       
         return annotationView
     }
     
