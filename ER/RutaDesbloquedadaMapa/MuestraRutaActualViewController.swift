@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class customPin: NSObject, MKAnnotation {
+/*class customPin: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var title: String?
     var subtitle: String?
@@ -20,7 +20,7 @@ class customPin: NSObject, MKAnnotation {
         self.subtitle = pinSubtitle
         self.coordinate = location
     }
-}
+}*/
 
 class MuestraRutaActualViewController: UIViewController {
 
@@ -62,6 +62,7 @@ class MuestraRutaActualViewController: UIViewController {
             let annotation = MKPointAnnotation()
             annotation.title = "Algo"
             annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            
             markersArr.append(annotation)
             mapView.addAnnotation(annotation)
         }
@@ -262,29 +263,25 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
-        
-        /*let calloutView = MKAnnotationView()
-        calloutView.translatesAutoresizingMaskIntoConstraints = false
-        calloutView.backgroundColor = UIColor.lightGray
-        view.addSubview(calloutView)
-        
-        NSLayoutConstraint.activate([
-            calloutView.bottomAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-            calloutView.widthAnchor.constraint(equalToConstant: 60),
-            calloutView.heightAnchor.constraint(equalToConstant: 30),
-            calloutView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: view.calloutOffset.x)
-            ])
-        
-        print("entro")*/
-        /*for ann in mapView.annotations {
-            if ann.hash == view.annotation!.hash{
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = ann.coordinate
-                annotation.title = "Hola"
-                self.mapView.addAnnotation(annotation)
-                print("te quiero putaa")
-            }
-        }*/
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is MKPointAnnotation else { return nil }
+        
+        let identifier = "Annotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView!.image = UIImage(named: "pin")
+            print("holiis")
+            annotationView!.canShowCallout = true
+        } else {
+            annotationView!.annotation = annotation
+        }
+        
+        return annotationView
+    }
+    
 }
 

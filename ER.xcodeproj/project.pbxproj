@@ -23,6 +23,7 @@
 		B561F45B216C66A000EB917C /* ERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F45A216C66A000EB917C /* ERTests.swift */; };
 		B561F466216C66A000EB917C /* ERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F465216C66A000EB917C /* ERUITests.swift */; };
 		B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */; };
+		B5757BB221A4864300B16E55 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5757BB121A4864300B16E55 /* DetalleViewController.swift */; };
 		B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */; };
 		B5B79F8D21794C13001AEDEE /* RutasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */; };
 		B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */; };
@@ -93,6 +94,7 @@
 		B561F465216C66A000EB917C /* ERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERUITests.swift; sourceTree = "<group>"; };
 		B561F467216C66A000EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletaPagoViewController.swift; sourceTree = "<group>"; };
+		B5757BB121A4864300B16E55 /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
 		B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresDetalleCompraViewController.swift; sourceTree = "<group>"; };
 		B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasTableViewController.swift; sourceTree = "<group>"; };
 		B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				B535C384219D1BB900D326F9 /* MuestraRutaActualViewController.swift */,
+				B5757BB121A4864300B16E55 /* DetalleViewController.swift */,
 			);
 			path = RutaDesbloquedadaMapa;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				B5B79F932179AA46001AEDEE /* RutaDetalleTableViewController.swift in Sources */,
 				B5F80E002177C83200CDB5BE /* SiguienteTableViewCell.swift in Sources */,
 				B5B79F972179AA91001AEDEE /* DetalleDescripcionRutaTableViewCell.swift in Sources */,
+				B5757BB221A4864300B16E55 /* DetalleViewController.swift in Sources */,
 				B5F80E0C2178154100CDB5BE /* SiguientesButton.swift in Sources */,
 				B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */,
 				B5F80E052178022200CDB5BE /* IniciaSesionViewController.swift in Sources */,
