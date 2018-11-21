@@ -200,16 +200,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="241.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pueblaredondo" translatesAutoresizingMaskIntoConstraints="NO" id="87l-pI-oeo">
-                                            <rect key="frame" x="59" y="20" width="296.33333333333331" height="211.66666666666666"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="87l-pI-oeo" secondAttribute="height" multiplier="7:5" id="5F4-ed-hmS"/>
-                                            </constraints>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pueblaredondo" translatesAutoresizingMaskIntoConstraints="NO" id="87l-pI-oeo">
+                                            <rect key="frame" x="50" y="5" width="314" height="231.66666666666666"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="87l-pI-oeo" secondAttribute="bottom" constant="10" id="g82-ZZ-rAa"/>
-                                        <constraint firstItem="87l-pI-oeo" firstAttribute="top" secondItem="h6y-ns-Y4t" secondAttribute="top" constant="20" id="zMJ-nx-Eal"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="87l-pI-oeo" secondAttribute="trailing" constant="30" id="BCs-cp-mCX"/>
+                                        <constraint firstItem="87l-pI-oeo" firstAttribute="leading" secondItem="h6y-ns-Y4t" secondAttribute="leadingMargin" constant="30" id="Pjm-S1-7Iv"/>
+                                        <constraint firstAttribute="bottom" secondItem="87l-pI-oeo" secondAttribute="bottom" constant="5" id="g82-ZZ-rAa"/>
+                                        <constraint firstItem="87l-pI-oeo" firstAttribute="top" secondItem="h6y-ns-Y4t" secondAttribute="top" constant="5" id="zMJ-nx-Eal"/>
                                         <constraint firstItem="87l-pI-oeo" firstAttribute="centerX" secondItem="h6y-ns-Y4t" secondAttribute="centerX" id="zsD-JH-Z4n"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -225,7 +224,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-KB-bXp">
-                                            <rect key="frame" x="20" y="10" width="374" height="186.66666666666666"/>
+                                            <rect key="frame" x="20" y="5" width="374" height="191.66666666666666"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -234,7 +233,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="6Gv-KB-bXp" firstAttribute="leading" secondItem="rTz-Cn-fGD" secondAttribute="leading" constant="20" id="2gQ-dc-deZ"/>
-                                        <constraint firstItem="6Gv-KB-bXp" firstAttribute="top" secondItem="rTz-Cn-fGD" secondAttribute="top" constant="10" id="YYC-Cx-WTj"/>
+                                        <constraint firstItem="6Gv-KB-bXp" firstAttribute="top" secondItem="rTz-Cn-fGD" secondAttribute="top" constant="5" id="YYC-Cx-WTj"/>
                                         <constraint firstAttribute="bottom" secondItem="6Gv-KB-bXp" secondAttribute="bottom" constant="10" id="hqD-Wu-pmp"/>
                                         <constraint firstItem="6Gv-KB-bXp" firstAttribute="centerX" secondItem="rTz-Cn-fGD" secondAttribute="centerX" id="pTB-ad-fBZ"/>
                                     </constraints>

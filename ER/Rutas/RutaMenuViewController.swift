@@ -22,7 +22,7 @@ class RutaMenuViewController: UIViewController {
         if segue.identifier == "detalleRutaSegue"{
             let vc = segue.destination as! RutaDetalleViewController
             let cell = sender as! RutaTableViewCell
-            vc.idRuta = cell.id
+            vc.idRuta = cell.tourIdArray
         }
         
         // Get the new view controller using segue.destination.

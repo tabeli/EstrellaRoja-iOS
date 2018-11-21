@@ -10,7 +10,7 @@ import UIKit
 
 class RutaTableViewCell: UITableViewCell {
     @IBOutlet weak var nombreRuta: UILabel!
-    var id = -1
+    var tourIdArray = -1
     
 
     

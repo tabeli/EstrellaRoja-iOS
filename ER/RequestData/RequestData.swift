@@ -19,5 +19,6 @@ class RequestData {
     let domain = "principal-arena-219118.appspot.com"
     let subdomain = "/api/"
     let loginPath = "auth/login"
-    
+    let registerPath = "user"
+    let getTourPath = "tour"
 }
