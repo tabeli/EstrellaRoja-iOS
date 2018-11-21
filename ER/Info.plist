@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Favor de dar la ubicación</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -28,14 +26,14 @@
 		<false/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>principal-arena-219118.appspot.com</key>
+			<key>iroseapps.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
-			<key>iroseapps.com</key>
+			<key>principal-arena-219118.appspot.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
@@ -44,6 +42,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Favor de dar la ubicación</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Rola la ubicación</string>
 	<key>UILaunchStoryboardName</key>

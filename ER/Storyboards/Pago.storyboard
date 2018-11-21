@@ -116,18 +116,12 @@
                                     <constraint firstItem="bMv-6w-hVg" firstAttribute="centerX" secondItem="9C6-33-0RO" secondAttribute="centerX" multiplier="0.8" id="wu5-Ly-5ky"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige tu ruta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57l-pe-MFP">
-                                <rect key="frame" x="41.333333333333343" y="246.33333333333337" width="331.33333333333326" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu ruta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57l-pe-MFP">
+                                <rect key="frame" x="41.333333333333343" y="224" width="331.33333333333326" height="44.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecciona..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gAw-KN-WYr">
-                                <rect key="frame" x="41.333333333333343" y="291.33333333333331" width="331.33333333333326" height="44.666666666666686"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige fecha para el tour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnT-0G-eS4">
                                 <rect key="frame" x="41.333333333333343" y="380.66666666666669" width="331.33333333333326" height="45"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
@@ -162,15 +156,21 @@
                                     <action selector="siguienteAction:" destination="lYd-hm-Six" eventType="touchUpInside" id="nTV-cO-AY1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de ruta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17H-xA-M92">
+                                <rect key="frame" x="0.0" y="282.33333333333331" width="414" height="62.666666666666686"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gAw-KN-WYr" firstAttribute="height" secondItem="R0E-Pp-Uwt" secondAttribute="height" multiplier="0.05" id="2ex-6r-S6e"/>
                             <constraint firstItem="fu9-gO-pKb" firstAttribute="trailing" secondItem="avM-zP-kDB" secondAttribute="trailing" id="4zm-Tp-fd7"/>
-                            <constraint firstItem="gAw-KN-WYr" firstAttribute="centerX" secondItem="R0E-Pp-Uwt" secondAttribute="centerX" id="6Xf-Nn-B8L"/>
                             <constraint firstItem="1WE-MO-KR9" firstAttribute="width" secondItem="R0E-Pp-Uwt" secondAttribute="width" multiplier="0.8" id="6er-WC-8xh"/>
                             <constraint firstItem="vp9-wD-D1U" firstAttribute="width" secondItem="R0E-Pp-Uwt" secondAttribute="width" id="7PX-lT-6J0"/>
                             <constraint firstItem="fnT-0G-eS4" firstAttribute="centerX" secondItem="R0E-Pp-Uwt" secondAttribute="centerX" id="8L6-XZ-fCj"/>
+                            <constraint firstItem="17H-xA-M92" firstAttribute="height" secondItem="R0E-Pp-Uwt" secondAttribute="height" multiplier="0.07" id="8Qe-MQ-Mwe"/>
                             <constraint firstItem="fnT-0G-eS4" firstAttribute="width" secondItem="R0E-Pp-Uwt" secondAttribute="width" multiplier="0.8" id="9eB-aQ-xdW"/>
                             <constraint firstItem="fu9-gO-pKb" firstAttribute="centerX" secondItem="3u3-6a-g1a" secondAttribute="centerX" id="BN7-s2-gLz"/>
                             <constraint firstItem="vp9-wD-D1U" firstAttribute="centerX" secondItem="R0E-Pp-Uwt" secondAttribute="centerX" id="CSN-YP-I1K"/>
@@ -184,15 +184,16 @@
                             <constraint firstItem="fu9-gO-pKb" firstAttribute="bottom" secondItem="R0E-Pp-Uwt" secondAttribute="bottom" id="RJS-Po-pg5"/>
                             <constraint firstItem="1WE-MO-KR9" firstAttribute="centerY" secondItem="R0E-Pp-Uwt" secondAttribute="centerY" multiplier="1.2" id="SgP-gG-FUw"/>
                             <constraint firstItem="9C6-33-0RO" firstAttribute="centerY" secondItem="R0E-Pp-Uwt" secondAttribute="centerY" multiplier="0.35" id="Ucd-8f-IgH"/>
+                            <constraint firstItem="17H-xA-M92" firstAttribute="centerY" secondItem="R0E-Pp-Uwt" secondAttribute="centerY" multiplier="0.7" id="Ute-aT-QPk"/>
                             <constraint firstItem="dMD-JM-9I1" firstAttribute="height" secondItem="R0E-Pp-Uwt" secondAttribute="height" multiplier="0.05" id="Wbh-Zb-DIn"/>
                             <constraint firstItem="fnT-0G-eS4" firstAttribute="height" secondItem="R0E-Pp-Uwt" secondAttribute="height" multiplier="0.05" id="XOZ-re-Tpy"/>
                             <constraint firstItem="9C6-33-0RO" firstAttribute="centerX" secondItem="R0E-Pp-Uwt" secondAttribute="centerX" id="Z51-Wu-Jjh"/>
+                            <constraint firstItem="17H-xA-M92" firstAttribute="centerX" secondItem="R0E-Pp-Uwt" secondAttribute="centerX" id="Zh9-mf-IB8"/>
                             <constraint firstItem="dMD-JM-9I1" firstAttribute="width" secondItem="R0E-Pp-Uwt" secondAttribute="width" multiplier="0.8" id="a92-NS-Dmo"/>
+                            <constraint firstItem="17H-xA-M92" firstAttribute="width" secondItem="R0E-Pp-Uwt" secondAttribute="width" id="arv-gc-inf"/>
                             <constraint firstItem="57l-pe-MFP" firstAttribute="centerX" secondItem="R0E-Pp-Uwt" secondAttribute="centerX" id="atN-P5-pxb"/>
                             <constraint firstItem="57l-pe-MFP" firstAttribute="width" secondItem="R0E-Pp-Uwt" secondAttribute="width" multiplier="0.8" id="biK-N8-alD"/>
-                            <constraint firstItem="gAw-KN-WYr" firstAttribute="centerY" secondItem="R0E-Pp-Uwt" secondAttribute="centerY" multiplier="0.7" id="dMh-Cc-oTq"/>
-                            <constraint firstItem="57l-pe-MFP" firstAttribute="centerY" secondItem="R0E-Pp-Uwt" secondAttribute="centerY" multiplier="0.6" id="faT-Fv-2Q7"/>
-                            <constraint firstItem="gAw-KN-WYr" firstAttribute="width" secondItem="R0E-Pp-Uwt" secondAttribute="width" multiplier="0.8" id="g1I-Oc-f4i"/>
+                            <constraint firstItem="57l-pe-MFP" firstAttribute="centerY" secondItem="R0E-Pp-Uwt" secondAttribute="centerY" multiplier="0.55" id="faT-Fv-2Q7"/>
                             <constraint firstItem="I8q-F8-bAq" firstAttribute="height" secondItem="R0E-Pp-Uwt" secondAttribute="height" multiplier="0.05" id="g1r-Jg-0lg"/>
                             <constraint firstItem="fnT-0G-eS4" firstAttribute="centerY" secondItem="R0E-Pp-Uwt" secondAttribute="centerY" multiplier="0.9" id="gnm-8j-AnC"/>
                             <constraint firstItem="HU0-vq-ykg" firstAttribute="centerY" secondItem="R0E-Pp-Uwt" secondAttribute="centerY" multiplier="1.6" id="iu7-Xu-Xs7"/>
@@ -214,7 +215,7 @@
                     <connections>
                         <outlet property="eligeFecha" destination="dMD-JM-9I1" id="Qle-Ce-wX4"/>
                         <outlet property="eligeHora" destination="I8q-F8-bAq" id="2sX-JC-5Bz"/>
-                        <outlet property="eligeRuta" destination="gAw-KN-WYr" id="cdv-q8-uUQ"/>
+                        <outlet property="nombreRuta" destination="17H-xA-M92" id="CbL-Pj-BxN"/>
                         <outlet property="siguienteOutlet" destination="HU0-vq-ykg" id="jG6-RQ-3z7"/>
                         <outlet property="topTitle" destination="bBF-Fe-971" id="0kY-La-6ma"/>
                         <outlet property="uno" destination="SGi-wd-jrq" id="A1u-Pj-T43"/>

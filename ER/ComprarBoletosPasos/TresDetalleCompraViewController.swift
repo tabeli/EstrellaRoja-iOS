@@ -25,7 +25,8 @@ class TresDetalleCompraViewController: UIViewController {
     var countInapam = 0
     
     //Datos: Reserva boletos
-    var ruta = ""
+    var idRuta = 0
+    var nameRuta = ""
     var fecha = Date()
     var horario = ""
     
@@ -45,7 +46,7 @@ class TresDetalleCompraViewController: UIViewController {
         cambiaFecha.text = formatoFecha()
         cambiaFecha.adjustsFontSizeToFitWidth = true
         cambiaNumeroTuristas.text = String(countAdulto + countNino + countInapam)
-        cambiaNombreRuta.text = ruta
+        cambiaNombreRuta.text = nameRuta
         cambiaNombreRuta.adjustsFontSizeToFitWidth = true
         
         topTitle.adjustsFontSizeToFitWidth = true

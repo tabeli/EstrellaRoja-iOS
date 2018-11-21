@@ -20,6 +20,7 @@ class RutaDetalleViewController: UIViewController {
     }
     override func viewDidLoad() {
         headerLabel.text = nameRuta
+        headerLabel.adjustsFontSizeToFitWidth = true
         super.viewDidLoad()
         print("-------------------------")
         print(idRuta)

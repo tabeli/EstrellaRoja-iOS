@@ -14,14 +14,14 @@ class CompraUnoReservaBoletosViewController: UIViewController {
     
     var rutaSeleccionada: String?
     
-    @IBOutlet weak var eligeRuta: UITextField!
+//    @IBOutlet weak var eligeRuta: UITextField!
     @IBOutlet weak var eligeFecha: UITextField!
     @IBOutlet weak var eligeHora: UITextField!
     @IBOutlet weak var topTitle: UILabel!
     @IBOutlet weak var siguienteOutlet: UIButton!
+    @IBOutlet weak var nombreRuta: UILabel!
     
     @IBOutlet weak var uno: UIButton!
-    
     var idRuta = -1
     var nameRuta = ""
     var ruta = ""
@@ -30,15 +30,14 @@ class CompraUnoReservaBoletosViewController: UIViewController {
     
     @IBAction func backArrow(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-    
     }
     
     @IBAction func siguienteAction(_ sender: Any) {
         
-        ruta = eligeRuta.text!
+        //eligeRuta.text = nameRuta
         //fecha = eligeFecha.text!
         horario = eligeHora.text!
-        if(ruta.isEmpty || eligeFecha.text!.isEmpty || horario.isEmpty) {
+        if(eligeFecha.text!.isEmpty || horario.isEmpty) {
             let title = "Error"
             let message = "Ingresar datos faltantes"
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -51,12 +50,16 @@ class CompraUnoReservaBoletosViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        print(nameRuta)
         super.viewDidLoad()
         crearToolbar()
-        creaRutasPicker()
+        //creaRutasPicker()
         eligeFechaPicker()
         eligeHoraPicker()
         topTitle.adjustsFontSizeToFitWidth = true
+        
+        nombreRuta.text = nameRuta
+        nombreRuta.adjustsFontSizeToFitWidth = true
         
         uno.layer.cornerRadius = 15
         siguienteOutlet.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -66,13 +69,13 @@ class CompraUnoReservaBoletosViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func creaRutasPicker() {
+    /*func creaRutasPicker() {
         let rutasPicker = UIPickerView()
         rutasPicker.delegate = self
         eligeRuta.inputView = rutasPicker
         
         rutasPicker.backgroundColor = .white
-    }
+    }*/
     
     func eligeFechaPicker() {
         let fechaPicker = UIDatePicker()
@@ -104,7 +107,7 @@ class CompraUnoReservaBoletosViewController: UIViewController {
         toolBar.setItems([doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         
-        eligeRuta.inputAccessoryView = toolBar
+        //eligeRuta.inputAccessoryView = toolBar
         eligeFecha.inputAccessoryView = toolBar
         eligeHora.inputAccessoryView = toolBar
     }
@@ -139,7 +142,8 @@ class CompraUnoReservaBoletosViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "SeleccionarPasajerosSegue") {
             let vc = segue.destination as! DosSeleccionaPasajerosViewController
-            vc.ruta = self.ruta
+            vc.idRuta = self.idRuta
+            vc.nameRuta = self.nameRuta
             vc.fecha = self.fecha
             vc.horario = self.horario
         }
@@ -163,7 +167,7 @@ extension CompraUnoReservaBoletosViewController: UIPickerViewDelegate, UIPickerV
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         rutaSeleccionada = rutas[row]
-        eligeRuta.text = rutaSeleccionada
+        //eligeRuta.text = rutaSeleccionada
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         

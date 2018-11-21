@@ -29,7 +29,8 @@ class DosSeleccionaPasajerosViewController: UIViewController {
     var precioTotal = 0
     
     //Datos: Reserva boletos
-    var ruta = ""
+    var idRuta = 0
+    var nameRuta = ""
     var fecha = Date()
     var horario = ""
     
@@ -128,7 +129,8 @@ class DosSeleccionaPasajerosViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "DetalleCompraSegue") {
             let vc = segue.destination as! TresDetalleCompraViewController
-            vc.ruta = self.ruta
+            vc.idRuta = self.idRuta
+            vc.nameRuta = self.nameRuta
             vc.fecha = self.fecha
             vc.horario = self.horario
             vc.countAdulto = self.countAdulto
