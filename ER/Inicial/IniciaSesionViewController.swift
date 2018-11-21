@@ -35,6 +35,7 @@ class IniciaSesionViewController: UIViewController {
         }
         else{
             //Muestra alerta de que los inputs estan mal
+            #warning("Implementar mostrar error de inputs")
         }
         
         
@@ -43,6 +44,7 @@ class IniciaSesionViewController: UIViewController {
     
     func verifyInputs() -> Bool {
         //Aqui verificar que la contraseña y el mail sean correctos
+        #warning("Implementar verificacion de inputs")
         
         return true
     }
