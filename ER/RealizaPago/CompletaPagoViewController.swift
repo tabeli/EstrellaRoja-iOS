@@ -30,9 +30,9 @@ class CompletaPagoViewController: UIViewController {
         super.viewDidLoad()
         topTitle.adjustsFontSizeToFitWidth = true
         uno.layer.cornerRadius = 15
-        first.layer.cornerRadius = 15
-        second.layer.cornerRadius = 15
-        third.layer.cornerRadius = 15
+        first.layer.cornerRadius = 5
+        second.layer.cornerRadius = 5
+        third.layer.cornerRadius = 5
         siguienteOutlet.titleLabel?.adjustsFontSizeToFitWidth = true
         siguienteOutlet.layer.cornerRadius = 15
         siguienteOutlet.layer.borderWidth = 2

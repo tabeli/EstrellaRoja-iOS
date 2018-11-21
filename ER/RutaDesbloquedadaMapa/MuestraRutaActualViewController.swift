@@ -281,7 +281,6 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
         
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             annotationView!.image = UIImage(named: "pindos")
-            
             annotationView!.canShowCallout = true
             annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
        
