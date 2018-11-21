@@ -10,8 +10,13 @@ import UIKit
 
 class IniciaSesionViewController: UIViewController {
     
-    let defaultSession = URLSession(configuration: .default)
-    var dataTask: URLSessionDataTask?
+    var requestResult = false {
+        didSet{
+            if(requestResult){
+                performSegue(withIdentifier: "RutaMenuSegue", sender: nil)
+            }
+        }
+    }
     
     @IBOutlet weak var head: UILabel!
     @IBOutlet weak var username: UITextField!
@@ -25,39 +30,29 @@ class IniciaSesionViewController: UIViewController {
     
     @IBAction func ingresarAction(_ sender: UIButton) {
         
-        if dataTask != nil {
-            dataTask?.cancel()
-        }
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
         let usr =
             username.text!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let pwd =
             password.text!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
-        print(usr)
-        print(password)
         
-        let url = NSURL(string: "http://www.iroseapps.com/moviles/login.php?username=\(usr)&password=\(pwd)")
-        let request = URLRequest(url: url! as URL)
-        dataTask = defaultSession.dataTask(with: request) {
-            data, response, error in
-            DispatchQueue.main.async {
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            }
-            if let error = error {
-                print(error.localizedDescription)
-            }
-            else if let httpResponse = response as? HTTPURLResponse{
-                if httpResponse.statusCode == 200 {
-                    DispatchQueue.main.async {
-                        self.showResult(data!)
-                    }
-                }
-            }
+        if self.verifyInputs() {
+            loginRequest()
         }
-        dataTask?.resume()
-        performSegue(withIdentifier: "RutaMenuSegue", sender: nil)
+        else{
+            //Muestra alerta de que los inputs estan mal
+        }
+        
+        
+        
+    }
+    
+    func verifyInputs() -> Bool {
+        //Aqui verificar que la contraseña y el mail sean correctos
+        return true
+    }
+    
+    func loginRequest(){
         
     }
     
@@ -78,7 +73,7 @@ class IniciaSesionViewController: UIViewController {
         ingresar.layer.cornerRadius = 15
         ingresar.layer.borderWidth = 2
         ingresar.layer.borderColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
-        
+        requestResult = false
         // Do any additional setup after loading the view.
     }
     

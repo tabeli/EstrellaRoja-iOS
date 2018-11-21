@@ -87,7 +87,11 @@ class RegistroViewController: UIViewController {
         phonenumber.delegate = self
         
         birthdate.delegate = self
+     
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIApplication.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIApplication.keyboardWillHideNotification, object: nil)
+    
     }
     
     func eligeFechaNacimientoPicker() {
@@ -143,6 +147,38 @@ extension RegistroViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboard = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue) else { return }
+        var textField: UITextField!
+        
+        for field in self.view.subviews{
+            if field.isFirstResponder {
+                if let fieldTemp = field as? UITextField {
+                    textField = fieldTemp
+                }
+            }
+        }
+        if textField != nil {
+            let highestDotOfTextField = textField.frame.maxY
+            var keyboardCoordinate = self.view.frame.maxY - keyboard.cgRectValue.height
+            if let accesoryView = textField.inputAccessoryView {
+                keyboardCoordinate -= accesoryView.frame.height
+            }
+            if highestDotOfTextField > keyboardCoordinate {
+                let diff = highestDotOfTextField - keyboardCoordinate
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= diff
+                }
+            }
+        }
+        
+    }
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
 }
 

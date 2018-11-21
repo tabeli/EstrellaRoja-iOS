@@ -25,6 +25,7 @@
 		B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */; };
 		B5757BB221A4864300B16E55 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5757BB121A4864300B16E55 /* DetalleViewController.swift */; };
 		B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */; };
+		B5A6441821A5197600DCF3A9 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441721A5197600DCF3A9 /* RequestData.swift */; };
 		B5B79F8D21794C13001AEDEE /* RutasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */; };
 		B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */; };
 		B5B79F912179AA14001AEDEE /* RutaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */; };
@@ -96,6 +97,7 @@
 		B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletaPagoViewController.swift; sourceTree = "<group>"; };
 		B5757BB121A4864300B16E55 /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
 		B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresDetalleCompraViewController.swift; sourceTree = "<group>"; };
+		B5A6441721A5197600DCF3A9 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasTableViewController.swift; sourceTree = "<group>"; };
 		B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaTableViewCell.swift; sourceTree = "<group>"; };
 		B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaDetalleViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		B561F444216C669D00EB917C /* ER */ = {
 			isa = PBXGroup;
 			children = (
+				B5A6441621A5193400DCF3A9 /* New Group */,
 				B5F80E01217801A400CDB5BE /* Inicial */,
 				B5F80E0A217814F900CDB5BE /* CustomClass */,
 				B5333E372178648700C0C19D /* Rutas */,
@@ -258,6 +261,14 @@
 				B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */,
 			);
 			path = RealizaPago;
+			sourceTree = "<group>";
+		};
+		B5A6441621A5193400DCF3A9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6441721A5197600DCF3A9 /* RequestData.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		B5B79F9A2179AB19001AEDEE /* RutaDetalle */ = {
@@ -560,6 +571,7 @@
 				B54B7A0A219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift in Sources */,
 				B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */,
 				B5F80E092178025200CDB5BE /* CambiaContrasenaViewController.swift in Sources */,
+				B5A6441821A5197600DCF3A9 /* RequestData.swift in Sources */,
 				B5F80E03217801FD00CDB5BE /* InicialViewController.swift in Sources */,
 				B561F446216C669D00EB917C /* AppDelegate.swift in Sources */,
 			);
