@@ -23,6 +23,10 @@ class RutaMenuViewController: UIViewController {
             let vc = segue.destination as! RutaDetalleViewController
             let cell = sender as! RutaTableViewCell
             vc.idRuta = cell.tourIdArray
+            vc.nameRuta = cell.tourNameArray
+            vc.imageRuta = cell.tourImageArray
+            vc.descriptionRuta = cell.tourDescriptionArray
+            print("uno - qwertqwertqwert")
         }
         
         // Get the new view controller using segue.destination.

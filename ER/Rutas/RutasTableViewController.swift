@@ -17,6 +17,8 @@ class RutasTableViewController: UITableViewController {
     var tourImageArray:[String] = []
     var tourDescriptionArray:[String] = []
     
+    
+    
     func tourRequest() {
         var requestResult = false // Pa' cambiar el registerResult y asegurar que todo termino
         var urlComponents = URLComponents() // Forma el url
@@ -129,13 +131,31 @@ class RutasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rutaCell", for: indexPath) as! RutaTableViewCell
         cell.tourIdArray = tourIdArray[indexPath.row]
         cell.nombreRuta.text = tourNameArray[indexPath.row]
+        cell.tourNameArray = tourNameArray[indexPath.row]
+        cell.tourImageArray = tourImageArray[indexPath.row]
+        cell.tourDescriptionArray = tourDescriptionArray[indexPath.row]
         // Configure the cell...
         cell.nombreRuta.adjustsFontSizeToFitWidth = true
+        
+        
+        /*
+         @IBOutlet weak var nombreRuta: UILabel!
+         var tourIdArray = -1
+         var tourNameArray = ""
+         var tourImageArray = ""
+         var tourDescriptionArray = ""
+         
+         
+         
+         */
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RutaTableViewCell
+        print("Hola")
+        print(cell.tourNameArray )
+        print("Hola")
         let dad = self.parent as! RutaMenuViewController
         dad.performSegue(withIdentifier: "detalleRutaSegue", sender: cell)
      }

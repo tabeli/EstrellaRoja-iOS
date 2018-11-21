@@ -11,7 +11,9 @@ import UIKit
 class RutaTableViewCell: UITableViewCell {
     @IBOutlet weak var nombreRuta: UILabel!
     var tourIdArray = -1
-    
+    var tourNameArray = ""
+    var tourImageArray = ""
+    var tourDescriptionArray = ""
 
     
     override func awakeFromNib() {

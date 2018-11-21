@@ -22,6 +22,8 @@ class CompraUnoReservaBoletosViewController: UIViewController {
     
     @IBOutlet weak var uno: UIButton!
     
+    var idRuta = -1
+    var nameRuta = ""
     var ruta = ""
     var fecha = Date()
     var horario = ""

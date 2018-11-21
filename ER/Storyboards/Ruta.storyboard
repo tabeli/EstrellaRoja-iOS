@@ -169,6 +169,7 @@
                         <viewLayoutGuide key="safeArea" id="9ZT-Q4-Kel"/>
                     </view>
                     <connections>
+                        <outlet property="headerLabel" destination="cvT-qN-7ia" id="3QT-KA-hwt"/>
                         <segue destination="48J-gq-kaW" kind="show" identifier="compraSegue" id="G0s-hy-7f5"/>
                     </connections>
                 </viewController>

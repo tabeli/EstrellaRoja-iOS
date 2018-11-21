@@ -9,7 +9,11 @@
 import UIKit
 
 class RutaDetalleTableViewController: UITableViewController {
+    
     var idRuta = -1
+    var nameRuta = ""
+    var imageRuta = ""
+    var descriptionRuta = ""
     let img = "pueblaredondo.png"
     let descripcion = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution"
     var heights:[CGFloat] = [CGFloat(0.0),CGFloat(0.0),CGFloat(0.0)]
@@ -18,6 +22,7 @@ class RutaDetalleTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.tableView.separatorStyle = .none
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -60,7 +65,7 @@ class RutaDetalleTableViewController: UITableViewController {
         else if (indexPath.row == 1) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "detalleDescripcionCell", for: indexPath) as! DetalleDescripcionRutaTableViewCell
             
-            cell.rutaDescripcion.text = descripcion
+            cell.rutaDescripcion.text = descriptionRuta
             print("PREVIOUS \(cell.rutaDescripcion.frame.height)")
             if let textView = cell.rutaDescripcion{
                 let fixedWidth = textView.frame.size.width
