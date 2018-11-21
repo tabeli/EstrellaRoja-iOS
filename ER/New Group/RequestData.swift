@@ -14,4 +14,10 @@ class RequestData {
         
     }
     static let shared = RequestData()
+    
+    let scheme = "http"
+    let domain = "principal-arena-219118.appspot.com"
+    let subdomain = "/api/"
+    let loginPath = "auth/login"
+    
 }

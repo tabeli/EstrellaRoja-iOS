@@ -10,9 +10,9 @@ import UIKit
 
 class IniciaSesionViewController: UIViewController {
     
-    var requestResult = false {
-        didSet{
-            if(requestResult){
+    var loginResult = false {
+        didSet{ //checa cada vez que cambia el valor de loginResult para que cuando sea true realice el segue
+            if(loginResult){
                 performSegue(withIdentifier: "RutaMenuSegue", sender: nil)
             }
         }
@@ -30,12 +30,6 @@ class IniciaSesionViewController: UIViewController {
     
     @IBAction func ingresarAction(_ sender: UIButton) {
         
-        let usr =
-            username.text!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let pwd =
-            password.text!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        
-        
         if self.verifyInputs() {
             loginRequest()
         }
@@ -49,11 +43,86 @@ class IniciaSesionViewController: UIViewController {
     
     func verifyInputs() -> Bool {
         //Aqui verificar que la contraseña y el mail sean correctos
+        
         return true
     }
     
     func loginRequest(){
+        var requestResult = false
+        var urlComponents = URLComponents()
+        urlComponents.scheme = RequestData.shared.scheme
+        urlComponents.host = RequestData.shared.domain
+        urlComponents.path = RequestData.shared.subdomain + RequestData.shared.loginPath
+        guard let url = urlComponents.url else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        request.allHTTPHeaderFields = headers
         
+        let jsonParams = ["email":username.text, "password":password.text]
+        
+        let encoder = JSONEncoder()
+        do {
+            let jsonData = try encoder.encode(jsonParams)
+            request.httpBody = jsonData
+        } catch { return }
+        
+        
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) {
+            (data, response, error) in
+            guard error == nil else {
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Imposible conectar al servidor", message: "Comprueba conexión a internet", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+                return
+            }
+            if let dataUnwrapped = data, let stringData = String(data: dataUnwrapped, encoding: .utf8) {
+                print(stringData)
+                do{
+                    /*{"message":"User doesn't exist"}
+                     {"id":73,"user_type":"administrator","name":"admin","last_name":"admin","email":"admin@admin.com","birthdate":"2018-01-01","password":"$2a$10$V5VrefdMkZu31i8f6KnvRuxdKBuOZHlvDADgxq3slEzekiaItPHTi","postal_code":"77777","phone_number":"2222222222","createdAt":"2018-11-09T18:42:10.000Z","updatedAt":"2018-11-14T03:55:27.000Z"}*/
+                    let dataMap = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [String: Any]
+                    if let message = dataMap["message"] as? String {
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                            self.present(alert, animated: true)
+                        }
+                    }
+                    else {
+                        UserDefaults.standard.set(dataMap["id"] as? Int, forKey: "id_user")
+                        requestResult = true
+                        //Para guardar en user default
+                        //UserDefaults.standard.set(nombre_variable, forKey: "key")
+                        
+                        //Para obtener el valor
+                        //UserDefaults.standard.tipo_de_dato(forKey: "key")
+                        
+                        //Para borrar un dato
+                        //UserDefaults.removeObject(forKey: "key")
+                    }
+                } catch {
+                    print("ERROR: \(error)")
+                }
+                DispatchQueue.main.async {
+                    self.loginResult = requestResult
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Error", message: "No hubo datos de respuesta", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
+        task.resume()
     }
     
     @IBAction func olvidarContrasena(_ sender: UIButton) {
@@ -73,7 +142,7 @@ class IniciaSesionViewController: UIViewController {
         ingresar.layer.cornerRadius = 15
         ingresar.layer.borderWidth = 2
         ingresar.layer.borderColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
-        requestResult = false
+        loginResult = false
         // Do any additional setup after loading the view.
     }
     
