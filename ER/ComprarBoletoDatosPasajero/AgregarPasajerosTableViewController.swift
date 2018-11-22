@@ -10,16 +10,40 @@ import UIKit
 
 class AgregarPasajerosTableViewController: UITableViewController {
     let userType = ["Adulto", "Niño", "INAPAM"]
-    let names = ["Tabatha A", "Paco H", "Jorge B"]
-    let ages = ["21", "22", "23"]
-    let gender = ["woman", "man", "man"]
-    var adultNum = 1;
-    var ninoNum = 1;
-    var inapamNum = 1;
+    //2,4,3
+    var countAdulto = 0
+    var countNino = 0
+    var countInapam = 0
+    
+    /*
+     
+     0 -> headerCcell "comienza tu tour"
+     1
+     2              <---aqui acaban los adultos
+     3
+     4
+     5
+     6            <-----aqui acaban los niños
+     7
+     8
+     9               <-----aqui acaban los inapam
+     10   siguiente cell
+     11
+     12
+     13
+     */
+    
+    var idRuta = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("Cuenta Adulto")
+        print(countAdulto)
+        print("Cuenta Nino")
+        print(countNino)
+        print("Cuenta Inapam")
+        print(countInapam)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,7 +61,7 @@ class AgregarPasajerosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return adultNum + ninoNum + inapamNum + 2
+        return countAdulto + countNino + countInapam + 2
     }
 
     
@@ -47,7 +71,7 @@ class AgregarPasajerosTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "comienzaTourCell", for: indexPath) as! ComenzarViajeTableViewCell
             return cell
         }
-        else if(indexPath.row == (adultNum + ninoNum + inapamNum + 1)){
+        else if(indexPath.row == (countAdulto + countNino + countInapam + 1)){
             let cell = tableView.dequeueReusableCell(withIdentifier: "siguienteCell", for: indexPath) as! SiguienteTableViewCell
         cell.linkTermsAndConditions.titleLabel?.adjustsFontSizeToFitWidth = true
             cell.nextButton.backgroundColor = .clear
@@ -59,7 +83,19 @@ class AgregarPasajerosTableViewController: UITableViewController {
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "tipoTuristaCell", for: indexPath) as! DatosPasajeroTableViewCell
-            cell.userType.text = userType[indexPath.row-1]
+            if indexPath.row <= countAdulto {
+                cell.userType.text = "Adulto"
+                print("Adulto")
+            }
+            else if indexPath.row <= countNino + countAdulto{
+                cell.userType.text = "Niño"
+                print("Niño")
+            }
+            else {
+                cell.userType.text = "INAPAM"
+                print("INAPAM")
+            }
+            //cell.userType.text = userType[indexPath.row-1]
             cell.genderButtons[0].backgroundColor = .clear
             cell.genderButtons[0].layer.cornerRadius = 5
             cell.genderButtons[0].layer.borderWidth = 2
@@ -77,7 +113,7 @@ class AgregarPasajerosTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(indexPath.row == adultNum + ninoNum + inapamNum + 1) {
+        if(indexPath.row == countAdulto + countNino + countInapam + 1) {
             let dad = self.parent as! AgregarPasajerosViewController
             dad.performSegue(withIdentifier: "CompletaPagoSegue", sender: nil)
         }

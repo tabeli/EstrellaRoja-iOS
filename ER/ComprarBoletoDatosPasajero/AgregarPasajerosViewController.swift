@@ -14,6 +14,8 @@ class AgregarPasajerosViewController: UIViewController {
     @IBOutlet weak var topTitle: UILabel!
     
     //Datos: Selecciona pasajeros
+    var idRuta = 0
+    
     var countAdulto = 0
     var countNino = 0
     var countInapam = 0    
@@ -31,14 +33,21 @@ class AgregarPasajerosViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "datosPasajeros"{
+            let vc = segue.destination as! AgregarPasajerosTableViewController
+            vc.idRuta = self.idRuta
+            vc.countAdulto = self.countAdulto
+            vc.countNino = self.countNino
+            vc.countInapam = self.countInapam
+            
+        }
     }
-    */
+
 
 }

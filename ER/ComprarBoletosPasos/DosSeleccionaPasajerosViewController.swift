@@ -18,6 +18,8 @@ class DosSeleccionaPasajerosViewController: UIViewController {
     @IBOutlet weak var nino: UILabel!
     @IBOutlet weak var inapam: UILabel!
     
+    @IBOutlet weak var inapamDesfasado: UILabel!
+    
     var countAdulto = 0
     var countNino = 0
     var countInapam = 0
@@ -112,9 +114,11 @@ class DosSeleccionaPasajerosViewController: UIViewController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         topTitle.adjustsFontSizeToFitWidth = true
+        inapamDesfasado.adjustsFontSizeToFitWidth = true
         dos.layer.cornerRadius = 15
         siguienteOutlet.titleLabel?.adjustsFontSizeToFitWidth = true
         siguienteOutlet.layer.cornerRadius = 15

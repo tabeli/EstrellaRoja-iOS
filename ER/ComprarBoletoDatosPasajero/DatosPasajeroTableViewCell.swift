@@ -20,6 +20,10 @@ class DatosPasajeroTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        touristName.keyboardType = .alphabet
+        touristName.autocapitalizationType = .words
+        touristName.returnKeyType = .done
+        touristName.delegate = self
         // Initialization code
     }
 
@@ -29,4 +33,13 @@ class DatosPasajeroTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+
+extension DatosPasajeroTableViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //self.view.endEditing(true)
+        
+        return true
+    }
+    
 }

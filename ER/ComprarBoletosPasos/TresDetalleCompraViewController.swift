@@ -146,6 +146,7 @@ class TresDetalleCompraViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "DatosPasajerosSegue") {
             let vc = segue.destination as! AgregarPasajerosViewController
+            vc.idRuta = self.idRuta
             vc.countAdulto = self.countAdulto
             vc.countNino = self.countNino
             vc.countInapam = self.countInapam

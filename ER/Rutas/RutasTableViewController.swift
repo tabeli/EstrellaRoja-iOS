@@ -20,7 +20,7 @@ class RutasTableViewController: UITableViewController {
     
     
     func tourRequest() {
-        var requestResult = false // Pa' cambiar el registerResult y asegurar que todo termino
+        //var requestResult = false // Pa' cambiar el registerResult y asegurar que todo termino
         var urlComponents = URLComponents() // Forma el url
         urlComponents.scheme = RequestData.shared.scheme
         urlComponents.host = RequestData.shared.domain

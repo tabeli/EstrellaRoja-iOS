@@ -599,6 +599,7 @@
                         <outlet property="adulto" destination="SaK-OH-bTh" id="v26-1M-9df"/>
                         <outlet property="dos" destination="ocB-I9-fHs" id="Z8I-qD-lZc"/>
                         <outlet property="inapam" destination="2zr-mx-k6W" id="y6e-1g-Ocn"/>
+                        <outlet property="inapamDesfasado" destination="0fk-LC-gCV" id="OdR-Z9-tkD"/>
                         <outlet property="nino" destination="3Rv-VH-jOp" id="W8S-2c-5wg"/>
                         <outlet property="siguienteOutlet" destination="6LR-ko-FfM" id="96d-nz-gB6"/>
                         <outlet property="topTitle" destination="68l-aP-rgz" id="30C-uy-638"/>
@@ -630,7 +631,7 @@
                                 <rect key="frame" x="0.0" y="-9" width="414" height="107.66666666666667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalles de compra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcR-0n-iwy">
-                                        <rect key="frame" x="62" y="44.666666666666671" width="290" height="39.666666666666671"/>
+                                        <rect key="frame" x="72.333333333333343" y="49.666666666666671" width="269.33333333333326" height="40.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -651,8 +652,8 @@
                                     <constraint firstItem="aO2-nY-C7d" firstAttribute="height" secondItem="ibP-4z-f3h" secondAttribute="height" multiplier="0.3" id="3H4-HC-5hb"/>
                                     <constraint firstItem="aO2-nY-C7d" firstAttribute="centerY" secondItem="ibP-4z-f3h" secondAttribute="centerY" multiplier="1.3" id="DE7-Vi-E79"/>
                                     <constraint firstItem="EcR-0n-iwy" firstAttribute="centerX" secondItem="ibP-4z-f3h" secondAttribute="centerX" id="NoB-Nr-EuR"/>
-                                    <constraint firstItem="EcR-0n-iwy" firstAttribute="width" secondItem="ibP-4z-f3h" secondAttribute="width" multiplier="0.7" id="Rgw-eN-hcb"/>
-                                    <constraint firstItem="EcR-0n-iwy" firstAttribute="centerY" secondItem="ibP-4z-f3h" secondAttribute="centerY" multiplier="1.2" id="srx-cF-q77"/>
+                                    <constraint firstItem="EcR-0n-iwy" firstAttribute="width" secondItem="ibP-4z-f3h" secondAttribute="width" multiplier="0.65" id="Rgw-eN-hcb"/>
+                                    <constraint firstItem="EcR-0n-iwy" firstAttribute="centerY" secondItem="ibP-4z-f3h" secondAttribute="centerY" multiplier="1.3" id="srx-cF-q77"/>
                                     <constraint firstItem="aO2-nY-C7d" firstAttribute="centerX" secondItem="ibP-4z-f3h" secondAttribute="centerX" multiplier="0.2" id="zQR-Az-Le2"/>
                                 </constraints>
                             </view>
@@ -1517,7 +1518,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMR-Wj-Lem">
                                 <rect key="frame" x="0.0" y="189.33333333333331" width="414" height="672.66666666666674"/>
                                 <connections>
-                                    <segue destination="2hE-M5-9se" kind="embed" id="hYR-DZ-CD5"/>
+                                    <segue destination="2hE-M5-9se" kind="embed" identifier="datosPasajeros" id="hYR-DZ-CD5"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -1555,7 +1556,7 @@
         <scene sceneID="Jbp-Ub-ZAo">
             <objects>
                 <tableViewController id="2hE-M5-9se" customClass="AgregarPasajerosTableViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dga-aV-YsY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dga-aV-YsY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672.66666666666674"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
