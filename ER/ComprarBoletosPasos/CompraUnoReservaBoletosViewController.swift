@@ -45,13 +45,6 @@ class CompraUnoReservaBoletosViewController: UIViewController {
             alert.addAction(action)
             self.present(alert, animated: true)
         } else {
-            let title = "¡Te esperamos!"
-            let message = "Nuestros horarios son de 8:00 AM a 8:00 PM"
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true)
-            
             performSegue(withIdentifier: "SeleccionarPasajerosSegue", sender: nil)
         }
     }
@@ -73,6 +66,14 @@ class CompraUnoReservaBoletosViewController: UIViewController {
         siguienteOutlet.layer.cornerRadius = 15
         siguienteOutlet.layer.borderWidth = 2
         siguienteOutlet.layer.borderColor = #colorLiteral(red: 0.1574883461, green: 0.6851269603, blue: 0.009970044717, alpha: 1)
+        
+        let title = "¡Te esperamos!"
+        let message = "Nuestros horarios son de 8:00 AM a 8:00 PM"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+        
         // Do any additional setup after loading the view.
     }
     

@@ -29,6 +29,8 @@
 		B5A6441B21A5C7EF00DCF3A9 /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */; };
 		B5A6441D21A5D19C00DCF3A9 /* UserIniciaSesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441C21A5D19C00DCF3A9 /* UserIniciaSesion.swift */; };
 		B5A6441F21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441E21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift */; };
+		B5A6442121A7C48D00DCF3A9 /* PerformPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6442021A7C48C00DCF3A9 /* PerformPurchase.swift */; };
+		B5A6442321A87DF400DCF3A9 /* AddTickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6442221A87DF400DCF3A9 /* AddTickets.swift */; };
 		B5B79F8D21794C13001AEDEE /* RutasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */; };
 		B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */; };
 		B5B79F912179AA14001AEDEE /* RutaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */; };
@@ -104,6 +106,8 @@
 		B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
 		B5A6441C21A5D19C00DCF3A9 /* UserIniciaSesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIniciaSesion.swift; sourceTree = "<group>"; };
 		B5A6441E21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosPasajerosCellDelegate.swift; sourceTree = "<group>"; };
+		B5A6442021A7C48C00DCF3A9 /* PerformPurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformPurchase.swift; sourceTree = "<group>"; };
+		B5A6442221A87DF400DCF3A9 /* AddTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTickets.swift; sourceTree = "<group>"; };
 		B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasTableViewController.swift; sourceTree = "<group>"; };
 		B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaTableViewCell.swift; sourceTree = "<group>"; };
 		B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaDetalleViewController.swift; sourceTree = "<group>"; };
@@ -283,6 +287,8 @@
 			children = (
 				B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */,
 				B5A6441C21A5D19C00DCF3A9 /* UserIniciaSesion.swift */,
+				B5A6442021A7C48C00DCF3A9 /* PerformPurchase.swift */,
+				B5A6442221A87DF400DCF3A9 /* AddTickets.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -575,8 +581,10 @@
 				B5F80E052178022200CDB5BE /* IniciaSesionViewController.swift in Sources */,
 				B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */,
 				B5A6441B21A5C7EF00DCF3A9 /* UserRegister.swift in Sources */,
+				B5A6442321A87DF400DCF3A9 /* AddTickets.swift in Sources */,
 				B5B79F952179AA79001AEDEE /* DetalleImagenRutaTableViewCell.swift in Sources */,
 				B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */,
+				B5A6442121A7C48D00DCF3A9 /* PerformPurchase.swift in Sources */,
 				B5333E39217864E800C0C19D /* RutaMenuViewController.swift in Sources */,
 				B5B79F8D21794C13001AEDEE /* RutasTableViewController.swift in Sources */,
 				B5F80E072178023800CDB5BE /* RegistroViewController.swift in Sources */,

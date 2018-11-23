@@ -21,4 +21,6 @@ class RequestData {
     let loginPath = "auth/login"
     let registerPath = "user"
     let getTourPath = "tour"
+    let performPurchasePath = "purchase"
+    let addTicketPath = "ticket"
 }

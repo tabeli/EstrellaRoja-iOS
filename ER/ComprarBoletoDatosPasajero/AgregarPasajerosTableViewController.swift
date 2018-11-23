@@ -19,8 +19,7 @@ class AgregarPasajerosTableViewController: UITableViewController {
     var touristAgeArray:[String] = []
     var touristGenderArray:[String] = []
     
-    /*
-     
+     /*
      0 -> headerCcell "comienza tu tour"
      1
      2              <---aqui acaban los adultos
@@ -62,6 +61,22 @@ class AgregarPasajerosTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    func addTicketsRequest() {
+        var requestResult = false // Pa' cambiar el registerResult y asegurar que todo termino
+        var urlComponents = URLComponents() // Forma el url
+        urlComponents.scheme = RequestData.shared.scheme
+        urlComponents.host = RequestData.shared.domain
+        urlComponents.path = RequestData.shared.subdomain + RequestData.shared.addTicketPath
+        guard let url = urlComponents.url else { return } // guard para ver si se hace, si no, se muere el metodo
+        var request = URLRequest(url: url) // Crea opeticion a partir del url
+        request.httpMethod = "POST" // Le dices que tipo de metodo es
+        var headers = request.allHTTPHeaderFields ?? [:] // Es como esto: x-www-form-urlencoded
+        headers["Content-Type"] = "application/json" // Tiene que ser un json porque recibe un json
+        request.allHTTPHeaderFields = headers // Se lo asignas el arreglo del url
+        
+        //let addTickets = AddTickets(purchase_id: )
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -176,17 +191,39 @@ extension AgregarPasajerosTableViewController: DatosPasajerosCellDelegate {
 }
 
 extension AgregarPasajerosTableViewController: SiguienteTableViewCellDelegate {
-    func didTapAcceptTerms() {
     
+    func didTapAcceptTerms(cell: UITableViewCell) {
+        if let celda = cell as? SiguienteTableViewCell {
+            celda.didAcceptTerms.toggle()
+            if celda.didAcceptTerms {
+                celda.selectTerms.backgroundColor = #colorLiteral(red: 0.1574883461, green: 0.6851269603, blue: 0.009970044717, alpha: 1)
+                celda.selectTerms.layer.cornerRadius = 5
+            } else {
+                celda.selectTerms.backgroundColor = .clear
+                celda.selectTerms.layer.cornerRadius = 5
+                celda.selectTerms.layer.borderWidth = 2
+                celda.selectTerms.layer.borderColor = #colorLiteral(red: 0.1574883461, green: 0.6851269603, blue: 0.009970044717, alpha: 1)
+            }
+            
+        }
     }
     func didTapSeeTerms(url: String) {
         let webPageURL = URL(string: url)!
         let safariVC = SFSafariViewController(url: webPageURL)
         present(safariVC, animated: true, completion: nil)
     }
-    func didTapContinueWithPayment() {
-        let dad = self.parent as! AgregarPasajerosViewController
-        dad.performSegue(withIdentifier: "CompletaPagoSegue", sender: nil)
+    func didTapContinueWithPayment(cell: UITableViewCell) {
+        if let celda = cell as? SiguienteTableViewCell {
+            if celda.didAcceptTerms == false {
+                let alert = UIAlertController(title: "Error", message: "Favor de aceptar los términos y condiciones", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                self.present(alert, animated: true)
+            }
+            else {
+                let dad = self.parent as! AgregarPasajerosViewController
+                dad.performSegue(withIdentifier: "CompletaPagoSegue", sender: nil)
+            }
+        }
     }
     
 }

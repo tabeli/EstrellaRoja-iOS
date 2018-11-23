@@ -30,7 +30,9 @@ class TresDetalleCompraViewController: UIViewController {
     var fecha = Date()
     var horario = ""
     
-    var precioTotal = 0
+    var precioTotal = 0.0
+    
+    var purchaseId = 0
     
     @IBAction func backArrow(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -43,6 +45,7 @@ class TresDetalleCompraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        purchaseRequest()
         cambiaFecha.text = formatoFecha()
         cambiaFecha.adjustsFontSizeToFitWidth = true
         cambiaNumeroTuristas.text = String(countAdulto + countNino + countInapam)
@@ -65,13 +68,101 @@ class TresDetalleCompraViewController: UIViewController {
         }
         if(countInapam != 0) {
             str += String(countInapam) + " INAPAM "
+            let title = "Aviso"
+            let message = "No olvides traer tu tarjeta INAPAM"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true)
         }
         cambiaTipoTurista.text = str
         cambiaTipoTurista.adjustsFontSizeToFitWidth = true
         
-        cambiaTotal.text = "$\(precioTotal)"
+        cambiaTotal.text = "$\((precioTotal * 0.16)+precioTotal)"
         
         // Do any additional setup after loading the view.
+    }
+    
+    func purchaseRequest() {
+        var requestResult = false // Pa' cambiar el registerResult y asegurar que todo termino
+        var urlComponents = URLComponents() // Forma el url
+        urlComponents.scheme = RequestData.shared.scheme
+        urlComponents.host = RequestData.shared.domain
+        urlComponents.path = RequestData.shared.subdomain + RequestData.shared.performPurchasePath
+        guard let url = urlComponents.url else { return } // guard para ver si se hace, si no, se muere el metodo
+        var request = URLRequest(url: url) // Crea opeticion a partir del url
+        request.httpMethod = "POST" // Le dices que tipo de metodo es
+        var headers = request.allHTTPHeaderFields ?? [:] // Es como esto: x-www-form-urlencoded
+        headers["Content-Type"] = "application/json" // Tiene que ser un json porque recibe un json
+        request.allHTTPHeaderFields = headers // Se lo asignas el arreglo del url
+        let userId = UserDefaults.standard.integer(forKey: "id_user")
+        
+        let usrPurchase = PerformPurchase(company_id: "1", user_id: String(userId), sub_total: String(precioTotal), total: String((precioTotal*0.16)+precioTotal))
+        
+        let encoder = JSONEncoder() // Instancias el encoder
+        do {
+            let jsonData = try encoder.encode(usrPurchase)  // Lo encodea a tipo dato (lo parsea)
+            request.httpBody = jsonData // Le metes el json parseado en la peticion
+            print("ESTO ESTOY MANDANDO")
+            print(usrPurchase)
+        } catch { return }
+        //Esto inicia una task que ejecuta la peticion
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) {
+            (data, response, error) in // Los datos que responde, response es la respuesta http completa, o el erroe
+            guard error == nil else { //Si no es nulo manda una alerta
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Imposible conectar al servidor", message: "Comprueba conexión a internet", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+                return
+            }
+            // Te aseguras que data no sea nulo y toma la respuesta y la pasa a un string para que la puedas imprimir
+            if let dataUnwrapped = data, let stringData = String(data: dataUnwrapped, encoding: .utf8) {
+                print(stringData)
+                do{
+                    /*{
+                        "id": 28,
+                        "company_id": "1",
+                        "user_id": "81",
+                        "sub_total": "100",
+                        "total": "110",
+                        "updatedAt": "2018-11-23T05:45:15.543Z",
+                        "createdAt": "2018-11-23T05:45:15.543Z"
+                    }*/
+                    
+                    // Casteas el dataMap de un data a un json de tipo string a cualquier cosa
+                    let dataMap = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [String: Any]
+                    
+                    print("HAGO ALGO")
+                    
+                    if let id = dataMap["id"] as? Int {
+                        self.purchaseId = id
+                    }
+                    // Checas si el valor con se agrego el id
+                    
+                } catch {
+                    print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
+                }
+                DispatchQueue.main.async {
+                    //Le dices que se ponga true si se pudo hacer la peticion y jalo al usuario pa que haga el segue
+                    //self.registerResult = requestResult
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    // Este solo sale si la peticion no te dice nada
+                    let alert = UIAlertController(title: "Error", message: "No hubo datos de respuesta", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
+        // Ejecutas el task
+        task.resume()
+        
     }
     
     func formatoFecha() -> String{

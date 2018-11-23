@@ -141,7 +141,7 @@ class DosSeleccionaPasajerosViewController: UIViewController {
             vc.countNino = self.countNino
             vc.countInapam = self.countInapam
             
-            vc.precioTotal = (countAdulto * costoTotalAdulto) + (countNino * costoTotalNino) + (countInapam * costoTotalInapam)
+            vc.precioTotal = Double((countAdulto * costoTotalAdulto) + (countNino * costoTotalNino) + (countInapam * costoTotalInapam))
             
         }
         // Get the new view controller using segue.destination.

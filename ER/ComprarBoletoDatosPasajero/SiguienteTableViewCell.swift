@@ -9,9 +9,9 @@
 import UIKit
 
 protocol SiguienteTableViewCellDelegate {
-    func didTapAcceptTerms()
+    func didTapAcceptTerms(cell: UITableViewCell)
     func didTapSeeTerms(url: String)
-    func didTapContinueWithPayment()
+    func didTapContinueWithPayment(cell: UITableViewCell)
 }
 
 class SiguienteTableViewCell: UITableViewCell {
@@ -20,17 +20,19 @@ class SiguienteTableViewCell: UITableViewCell {
     @IBOutlet weak var linkTermsAndConditions: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    var didAcceptTerms = false
+    
     var delegate: SiguienteTableViewCellDelegate?
     var url = "https://www.tourister.com.mx/aviso-privacidad"
     
     @IBAction func acceptTerms(_ sender: UIButton) {
-        delegate?.didTapAcceptTerms()
+        delegate?.didTapAcceptTerms(cell: self)
     }
     @IBAction func seeTerms(_ sender: UIButton) {
         delegate?.didTapSeeTerms(url: url)
     }
     @IBAction func continueWithPayment(_ sender: UIButton) {
-        delegate?.didTapContinueWithPayment()
+        delegate?.didTapContinueWithPayment(cell: self)
     }
     
     override func awakeFromNib() {
