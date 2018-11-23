@@ -58,8 +58,10 @@ class RutaDetalleTableViewController: UITableViewController {
                 height += view.frame.height
             }
             heights.append(height)
-
+            
             cell.heightAnchor.constraint(equalToConstant: height).isActive = true
+            
+            cell.selectionStyle = .none
             return cell
         }
         else if (indexPath.row == 1) {
@@ -83,6 +85,8 @@ class RutaDetalleTableViewController: UITableViewController {
             heights.append(height)
             
             cell.heightAnchor.constraint(equalToConstant: height).isActive = true
+            cell.selectionStyle = .none
+            
             return cell
         }
         else {
@@ -93,21 +97,22 @@ class RutaDetalleTableViewController: UITableViewController {
                 height += view.frame.height
             }
             heights.append(height)
-            
+            cell.selectionStyle = .none
             cell.heightAnchor.constraint(equalToConstant: height).isActive = true
+            cell.delegate = self
+            
             return cell
         }
-        
 
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row == 2) {
             let dad = self.parent as! RutaDetalleViewController
             dad.performSegue(withIdentifier: "compraSegue", sender: nil)
         }
         
-    }
+    }*/
 
     /*
     // Override to support conditional editing of the table view.
@@ -154,4 +159,11 @@ class RutaDetalleTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension RutaDetalleTableViewController: DetalleComprarRutaTableViewCellDelegate {
+    func didTapRutaCompra() {
+        let dad = self.parent as! RutaDetalleViewController
+        dad.performSegue(withIdentifier: "compraSegue", sender: nil)
+    }
 }

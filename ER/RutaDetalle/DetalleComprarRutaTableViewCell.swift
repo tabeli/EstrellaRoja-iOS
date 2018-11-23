@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol DetalleComprarRutaTableViewCellDelegate {
+    func didTapRutaCompra()
+}
+
 class DetalleComprarRutaTableViewCell: UITableViewCell {
 
     var rutaId = -1
+    var delegate: DetalleComprarRutaTableViewCellDelegate?
     
     @IBAction func rutaCompra(_ sender: UIButton) {
-        
+        delegate?.didTapRutaCompra()
     }
     
     override func awakeFromNib() {

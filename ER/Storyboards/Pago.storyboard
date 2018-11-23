@@ -1704,7 +1704,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="age" destination="Zos-n5-GRM" id="F0A-z3-tjZ"/>
+                                    <outlet property="touristAge" destination="Zos-n5-GRM" id="uNV-v1-Qtb"/>
                                     <outlet property="touristName" destination="OK7-Iy-7kA" id="vbs-9E-nGQ"/>
                                     <outlet property="userType" destination="Byh-3h-qFS" id="EdL-9S-vJ2"/>
                                     <outletCollection property="genderButtons" destination="UcL-dS-x0O" collectionClass="NSMutableArray" id="RoU-Ey-6C1"/>

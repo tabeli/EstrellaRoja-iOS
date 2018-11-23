@@ -11,30 +11,47 @@ import UIKit
 class DatosPasajeroTableViewCell: UITableViewCell {
     @IBOutlet weak var userType: UILabel!
     @IBOutlet weak var touristName: UITextField!
-    @IBOutlet weak var age: UITextField!
+    @IBOutlet weak var touristAge: UITextField!
     @IBOutlet var genderButtons: [UIButton]!
+    var delegate: DatosPasajerosCellDelegate!
+    var name = ""
+    var age = ""
+    var gender = ""
+    
+    var cellId = -1
     
     @IBAction func chooseGender(_ sender: UIButton) {
         for button in genderButtons {
             button.backgroundColor = .clear
-            button.layer.cornerRadius = 5
+            /*button.layer.cornerRadius = 5
             button.layer.borderWidth = 2
-            button.layer.borderColor = #colorLiteral(red: 0.1574883461, green: 0.6851269603, blue: 0.009970044717, alpha: 1)
+            button.layer.borderColor = #colorLiteral(red: 0.1574883461, green: 0.6851269603, blue: 0.009970044717, alpha: 1)*/
         }
         sender.backgroundColor = #colorLiteral(red: 0.1574883461, green: 0.6851269603, blue: 0.009970044717, alpha: 1)
+        
+        if sender == genderButtons[0] {
+            delegate?.didSelectGender(cellId: cellId, gender: "male")
+            self.gender = "male"
+        }
+        else if sender == genderButtons[1] {
+            delegate?.didSelectGender(cellId: cellId, gender: "female")
+            self.gender = "female"
+        }
+        
         //cell.genderButtons[0].layer.borderColor = #colorLiteral(red: 0.1574883461, green: 0.6851269603, blue: 0.009970044717, alpha: 1)
     }
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         touristName.keyboardType = .alphabet
         touristName.autocapitalizationType = .words
         touristName.returnKeyType = .done
         touristName.delegate = self
         
-        age.keyboardType = .numberPad
-        age.delegate = self
+        touristAge.keyboardType = .numberPad
+        touristAge.delegate = self
         // Initialization code
     }
 
@@ -56,7 +73,7 @@ class DatosPasajeroTableViewCell: UITableViewCell {
         
         toolBar.setItems([doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
-        age.inputAccessoryView = toolBar
+        touristAge.inputAccessoryView = toolBar
         
     }
 
@@ -67,6 +84,14 @@ extension DatosPasajeroTableViewCell: UITextFieldDelegate {
         //self.view.endEditing(true)
         
         return true
+    }
+    
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        name = touristName.text!
+        age = touristAge.text!
+        
+        delegate?.didUpdateTextFields(cellId: cellId, name: name, age: age)
     }
     
 }

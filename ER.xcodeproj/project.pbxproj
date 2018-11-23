@@ -28,6 +28,7 @@
 		B5A6441821A5197600DCF3A9 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441721A5197600DCF3A9 /* RequestData.swift */; };
 		B5A6441B21A5C7EF00DCF3A9 /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */; };
 		B5A6441D21A5D19C00DCF3A9 /* UserIniciaSesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441C21A5D19C00DCF3A9 /* UserIniciaSesion.swift */; };
+		B5A6441F21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441E21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift */; };
 		B5B79F8D21794C13001AEDEE /* RutasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */; };
 		B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */; };
 		B5B79F912179AA14001AEDEE /* RutaDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */; };
@@ -102,6 +103,7 @@
 		B5A6441721A5197600DCF3A9 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
 		B5A6441C21A5D19C00DCF3A9 /* UserIniciaSesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIniciaSesion.swift; sourceTree = "<group>"; };
+		B5A6441E21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosPasajerosCellDelegate.swift; sourceTree = "<group>"; };
 		B5B79F8C21794C13001AEDEE /* RutasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutasTableViewController.swift; sourceTree = "<group>"; };
 		B5B79F8E21794C43001AEDEE /* RutaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaTableViewCell.swift; sourceTree = "<group>"; };
 		B5B79F902179AA14001AEDEE /* RutaDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaDetalleViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */,
 				B5F80DFD2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift */,
 				B5F80DFF2177C83200CDB5BE /* SiguienteTableViewCell.swift */,
+				B5A6441E21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift */,
 			);
 			path = ComprarBoletoDatosPasajero;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				B54B7A0A219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift in Sources */,
 				B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */,
 				B5F80E092178025200CDB5BE /* CambiaContrasenaViewController.swift in Sources */,
+				B5A6441F21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift in Sources */,
 				B5A6441821A5197600DCF3A9 /* RequestData.swift in Sources */,
 				B5F80E03217801FD00CDB5BE /* InicialViewController.swift in Sources */,
 				B561F446216C669D00EB917C /* AppDelegate.swift in Sources */,
