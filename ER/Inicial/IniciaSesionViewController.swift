@@ -150,6 +150,12 @@ class IniciaSesionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK: - BORRA-ENTRADA
+        username.text? = "admin@admin.com"
+        password.text? = "admin"
+        
+        
         ingresar.layer.cornerRadius = 15
         ingresar.layer.borderWidth = 2
         ingresar.layer.borderColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)

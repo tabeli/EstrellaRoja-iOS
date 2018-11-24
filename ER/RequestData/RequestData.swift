@@ -23,4 +23,6 @@ class RequestData {
     let getTourPath = "tour"
     let performPurchasePath = "purchase"
     let addTicketPath = "ticket"
+    let getAllPlacesPath = "place"
+    let getAllTourPlacesPath = "tour_place"
 }

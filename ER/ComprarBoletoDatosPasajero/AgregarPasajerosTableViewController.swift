@@ -60,10 +60,11 @@ class AgregarPasajerosTableViewController: UITableViewController {
         super.viewDidLoad()
         let sumOfTouristRows = countAdulto + countNino + countInapam
         for i in 0..<sumOfTouristRows {
+            //MARK: - BORRA-ENTRADA
             print("\(i) ->\(sumOfTouristRows) ")
-            touristNameArray.append("")
-            touristAgeArray.append("")
-            touristGenderArray.append("")
+            touristNameArray.append("a")
+            touristAgeArray.append("12")
+            touristGenderArray.append("male")
         }
         print("Cuenta Adulto")
         print(countAdulto)

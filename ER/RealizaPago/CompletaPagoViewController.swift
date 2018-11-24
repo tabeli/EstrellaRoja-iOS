@@ -40,6 +40,8 @@ class CompletaPagoViewController: UIViewController {
     
     
     @IBAction func siguienteAction(_ sender: UIButton) {
+        UserDefaults.standard.set(idRuta, forKey: "idRuta")
+        
         performSegue(withIdentifier: "RutaDesbloqueadaSegue", sender: nil)
     }
     
@@ -105,15 +107,20 @@ class CompletaPagoViewController: UIViewController {
         view.endEditing(true)
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    #warning("Hay que ver un video de como arreglar el paso de datos hacia un Tab Bar Controller")
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "RutaDesbloqueadaSegue"{
+            let vc = segue.destination as! MuestraRutaActualViewController
+            vc.idRuta = self.idRuta
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
+    }*/
+    
 
 }
 
