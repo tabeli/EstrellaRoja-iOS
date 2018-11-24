@@ -18,7 +18,11 @@ class AgregarPasajerosViewController: UIViewController {
     
     var countAdulto = 0
     var countNino = 0
-    var countInapam = 0    
+    var countInapam = 0
+    
+    var purchaseId = -1
+    var tourDate = ""
+    var totalPurchase = 0.0
     
     @IBAction func backArrow(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -46,8 +50,26 @@ class AgregarPasajerosViewController: UIViewController {
             vc.countNino = self.countNino
             vc.countInapam = self.countInapam
             
+            vc.purchaseId = self.purchaseId
+            vc.tourDate = self.tourDate
+            vc.totalPurchase = self.totalPurchase
         }
+        
+        if segue.identifier == "CompletaPagoSegue"{
+            let vc = segue.destination as! CompletaPagoViewController
+            vc.idRuta = self.idRuta
+        }
+        
+        /*if segue.identifier == "CompletaPagoSegue"{
+            let vc = segue.destination as! CompletaPagoViewController
+            vc.idRuta = self.idRuta
+            vc.countAdulto = self.countAdulto
+            vc.countNino = self.countNino
+            vc.countInapam = self.countInapam
+            
+            vc.purchaseId = self.purchaseId
+            vc.tourDate = self.tourDate
+            
+        }*/
     }
-
-
 }

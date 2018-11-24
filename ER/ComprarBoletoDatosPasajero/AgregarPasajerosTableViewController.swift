@@ -19,6 +19,24 @@ class AgregarPasajerosTableViewController: UITableViewController {
     var touristAgeArray:[String] = []
     var touristGenderArray:[String] = []
     
+    var purchaseId = -1
+    var tourDate = ""
+    var totalPurchase = 0.0
+    
+    var totalPassenger = 0
+    var currentPassenger = 0 {
+        didSet {
+            if(currentPassenger < totalPassenger) {
+                print("\(currentPassenger) -> \(totalPassenger)")
+                creaTicket()
+            }
+            else{
+                currentPassenger = 0
+                let dad = self.parent as! AgregarPasajerosViewController
+                dad.performSegue(withIdentifier: "CompletaPagoSegue", sender: nil)
+            }
+        }
+    }
      /*
      0 -> headerCcell "comienza tu tour"
      1
@@ -41,7 +59,8 @@ class AgregarPasajerosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let sumOfTouristRows = countAdulto + countNino + countInapam
-        for _ in 0...sumOfTouristRows {
+        for i in 0..<sumOfTouristRows {
+            print("\(i) ->\(sumOfTouristRows) ")
             touristNameArray.append("")
             touristAgeArray.append("")
             touristGenderArray.append("")
@@ -52,6 +71,8 @@ class AgregarPasajerosTableViewController: UITableViewController {
         print(countNino)
         print("Cuenta Inapam")
         print(countInapam)
+        
+        totalPassenger = countAdulto + countNino + countInapam
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -61,21 +82,7 @@ class AgregarPasajerosTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    func addTicketsRequest() {
-        var requestResult = false // Pa' cambiar el registerResult y asegurar que todo termino
-        var urlComponents = URLComponents() // Forma el url
-        urlComponents.scheme = RequestData.shared.scheme
-        urlComponents.host = RequestData.shared.domain
-        urlComponents.path = RequestData.shared.subdomain + RequestData.shared.addTicketPath
-        guard let url = urlComponents.url else { return } // guard para ver si se hace, si no, se muere el metodo
-        var request = URLRequest(url: url) // Crea opeticion a partir del url
-        request.httpMethod = "POST" // Le dices que tipo de metodo es
-        var headers = request.allHTTPHeaderFields ?? [:] // Es como esto: x-www-form-urlencoded
-        headers["Content-Type"] = "application/json" // Tiene que ser un json porque recibe un json
-        request.allHTTPHeaderFields = headers // Se lo asignas el arreglo del url
-        
-        //let addTickets = AddTickets(purchase_id: )
-    }
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -88,6 +95,102 @@ class AgregarPasajerosTableViewController: UITableViewController {
         return countAdulto + countNino + countInapam + 2
     }
 
+    func validaCampos() -> Bool {
+        for index in 0..<touristNameArray.count {
+            print("NOMBRE")
+            print(touristNameArray[index])
+            print("AGE")
+            print(touristAgeArray[index])
+            print("GENDER")
+            print(touristGenderArray[index])
+            
+            if (touristNameArray[index].isEmpty) || (touristAgeArray[index].isEmpty) || (touristGenderArray[index].isEmpty){
+                
+                return false
+            }
+            
+        }
+        return true
+    }
+    
+    func creaTicket() {
+        print("CPASSANGER")
+        print(currentPassenger)
+        //var requestResult = false // Pa' cambiar el registerResult y asegurar que todo termino
+        var urlComponents = URLComponents() // Forma el url
+        urlComponents.scheme = RequestData.shared.scheme
+        urlComponents.host = RequestData.shared.domain
+        urlComponents.path = RequestData.shared.subdomain + RequestData.shared.addTicketPath
+        guard let url = urlComponents.url else { return } // guard para ver si se hace, si no, se muere el metodo
+        var request = URLRequest(url: url) // Crea opeticion a partir del url
+        request.httpMethod = "POST" // Le dices que tipo de metodo es
+        var headers = request.allHTTPHeaderFields ?? [:] // Es como esto: x-www-form-urlencoded
+        headers["Content-Type"] = "application/json" // Tiene que ser un json porque recibe un json
+        request.allHTTPHeaderFields = headers // Se lo asignas el arreglo del url
+        
+        
+        let addTickets = AddTickets(purchase_id: String(purchaseId), client_name: touristNameArray[currentPassenger], client_age: touristAgeArray[currentPassenger], client_genre: touristGenderArray[currentPassenger], tour_date: tourDate, total: String(totalPurchase))
+        //aqui va la peticion
+        currentPassenger += 1
+        
+        let encoder = JSONEncoder() // Instancias el encoder
+        do {
+            let jsonData = try encoder.encode(addTickets)  // Lo encodea a tipo dato (lo parsea)
+            request.httpBody = jsonData // Le metes el json parseado en la peticion
+            print(addTickets)
+        } catch { return }
+        //Esto inicia una task que ejecuta la peticion
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) {
+            (data, response, error) in // Los datos que responde, response es la respuesta http completa, o el erroe
+            guard error == nil else { //Si no es nulo manda una alerta
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Imposible conectar al servidor", message: "Comprueba conexión a internet", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+                return
+            }
+            // Te aseguras que data no sea nulo y toma la respuesta y la pasa a un string para que la puedas imprimir
+            if let dataUnwrapped = data, let stringData = String(data: dataUnwrapped, encoding: .utf8) {
+                print(stringData)
+                do{
+                    
+                    // Casteas el dataMap de un data a un json de tipo string a cualquier cosa
+                    let dataMap = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [String: Any]
+                    
+                    print("HAGO ALGO")
+                    
+                    /*if let id = dataMap["id"] as? Int {
+                        let alert = UIAlertController(title: "Aviso", message: "Se han generado tus tickets", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                        self.present(alert, animated: true)
+                        //self.ticketId = id
+                        
+                    }*/
+                    // Checas si el valor con se agrego el id
+                    
+                } catch {
+                    print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
+                }
+                DispatchQueue.main.async {
+                    //Le dices que se ponga true si se pudo hacer la peticion y jalo al usuario pa que haga el segue
+                    //self.registerResult = requestResult
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    // Este solo sale si la peticion no te dice nada
+                    let alert = UIAlertController(title: "Error", message: "No hubo datos de respuesta", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
+        // Ejecutas el task
+        task.resume()
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print(indexPath.row)
@@ -168,6 +271,8 @@ class AgregarPasajerosTableViewController: UITableViewController {
         
     }
     
+    
+    
     /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row == countAdulto + countNino + countInapam + 1) {
             let dad = self.parent as! AgregarPasajerosViewController
@@ -214,14 +319,22 @@ extension AgregarPasajerosTableViewController: SiguienteTableViewCellDelegate {
     }
     func didTapContinueWithPayment(cell: UITableViewCell) {
         if let celda = cell as? SiguienteTableViewCell {
+            
             if celda.didAcceptTerms == false {
                 let alert = UIAlertController(title: "Error", message: "Favor de aceptar los términos y condiciones", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
                 self.present(alert, animated: true)
             }
             else {
-                let dad = self.parent as! AgregarPasajerosViewController
-                dad.performSegue(withIdentifier: "CompletaPagoSegue", sender: nil)
+                if validaCampos() {
+                    creaTicket()
+                }
+                else{
+                    let alert = UIAlertController(title: "Error", message: "Faltan campos por llenar", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+                
             }
         }
     }

@@ -20,6 +20,7 @@ class CompletaPagoViewController: UIViewController {
     @IBOutlet weak var anioVencimiento: UITextField!
     @IBOutlet weak var codigoSeguridad: UITextField!
     
+    var idRuta = 0
     
     @IBOutlet var pagosOutlet: [UIButton]!
     
