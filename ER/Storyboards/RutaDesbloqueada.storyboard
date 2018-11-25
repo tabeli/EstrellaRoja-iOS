@@ -198,7 +198,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="107.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enp-FJ-XD4">
-                                        <rect key="frame" x="0.0" y="43.5" width="414" height="53"/>
+                                        <rect key="frame" x="72.5" y="52.5" width="269" height="34.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="enp-FJ-XD4" secondAttribute="height" multiplier="70:9" id="L7p-tg-Xfx"/>
@@ -223,7 +223,7 @@
                                     <constraint firstItem="enp-FJ-XD4" firstAttribute="centerX" secondItem="6bs-NT-0ff" secondAttribute="centerX" id="DBn-Pg-Byo"/>
                                     <constraint firstItem="hd2-RH-dRd" firstAttribute="centerX" secondItem="6bs-NT-0ff" secondAttribute="centerX" multiplier="0.2" id="VmM-UY-95y"/>
                                     <constraint firstItem="enp-FJ-XD4" firstAttribute="centerY" secondItem="6bs-NT-0ff" secondAttribute="centerY" multiplier="1.3" id="Xbj-2j-MM4"/>
-                                    <constraint firstItem="enp-FJ-XD4" firstAttribute="width" secondItem="6bs-NT-0ff" secondAttribute="width" id="bPE-hd-KYF"/>
+                                    <constraint firstItem="enp-FJ-XD4" firstAttribute="width" secondItem="6bs-NT-0ff" secondAttribute="width" multiplier="0.65" id="bPE-hd-KYF"/>
                                     <constraint firstItem="hd2-RH-dRd" firstAttribute="centerY" secondItem="6bs-NT-0ff" secondAttribute="centerY" multiplier="1.3" id="g5n-8G-Jyl"/>
                                     <constraint firstItem="hd2-RH-dRd" firstAttribute="height" secondItem="6bs-NT-0ff" secondAttribute="height" multiplier="0.3" id="wuU-ta-xZV"/>
                                 </constraints>

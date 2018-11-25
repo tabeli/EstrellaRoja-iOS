@@ -326,9 +326,11 @@ class MuestraRutaActualViewController: UIViewController {
                     
                     var indice = -1
                     for coordinate in self.coordinatesMarkersArr {
+                        print("Hago puntitos")
                         indice += 1
                         let annotation = MKPointAnnotation()
-                        annotation.title = self.placeName[indice]
+                        annotation.title = self.placeDescription[indice]
+                        annotation.subtitle = self.placeName[indice]
                         annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
                         self.markersArr.append(annotation)
                         self.mapView.addAnnotation(annotation)
@@ -691,7 +693,7 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
         let storyboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil)
         let detalleVC = storyboard.instantiateViewController(withIdentifier: "Detalle") as! DetalleViewController
         detalleVC.nombre = (annView?.title!)!
-        detalleVC.descripcion = "holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi holiholiholi"
+        detalleVC.descripcion = (annView?.subtitle!)!
         detalleVC.latitud = (annView?.coordinate.latitude)!
         detalleVC.longitud = (annView?.coordinate.longitude)!
         

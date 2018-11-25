@@ -27,9 +27,10 @@ class DetalleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        lblnombre.adjustsFontSizeToFitWidth = true
         lblnombre.text = nombre
         lblDescripcion.text = descripcion
+        lblCoordenadas.adjustsFontSizeToFitWidth = true
         lblCoordenadas.text = String(format: "Lat: %4f // Lon: %4f", latitud,longitud)
         // Do any additional setup after loading the view.
     }
