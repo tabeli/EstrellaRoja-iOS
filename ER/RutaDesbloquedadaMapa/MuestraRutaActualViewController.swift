@@ -72,6 +72,7 @@ class MuestraRutaActualViewController: UIViewController {
     ]
     
     var markersArr:[MKPointAnnotation] = []
+    var coordinatesMarkersArr:[CLLocationCoordinate2D] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,16 +80,16 @@ class MuestraRutaActualViewController: UIViewController {
         obtenerPlaceRequest()
         checkLocationServices()
         //coordinatesArr.append(locationManager.location!.coordinate)
-       //getDirections()
+        getDirections()
         //setMarkers()
         centerAll()
-//        for coordinate in coordinatesArr {
-//            let annotation = MKPointAnnotation()
-//            annotation.title = "Algo"
-//            annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-//            markersArr.append(annotation)
-//            mapView.addAnnotation(annotation)
-//        }
+        /*for coordinate in coordinatesArr {
+            let annotation = MKPointAnnotation()
+            annotation.title = "Algo"
+            annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            markersArr.append(annotation)
+            mapView.addAnnotation(annotation)
+        }*/
         // Do any additional setup after loading the view.
         //let center = CLLocationCoordinate2D(latitude: 19.0492479, longitude: -98.185815)
         //let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
@@ -309,7 +310,7 @@ class MuestraRutaActualViewController: UIViewController {
                         self.obtenerTourPlaceRequest()
                     }
                     
-                    /*self.coordinatesArr = []
+                    self.coordinatesMarkersArr = []
                     for tourPlaceId in self.tourPlaceId {
                         var index = -1
                         for placeId in self.placeId {
@@ -317,14 +318,25 @@ class MuestraRutaActualViewController: UIViewController {
                             if (placeId == tourPlaceId) && (self.placeTypeId[index] == 20) {
                                 let latitud = self.placeLatitud[index]
                                 let longitud = self.placeLongitud[index]
-                                self.coordinatesArr.append(CLLocationCoordinate2DMake(latitud, longitud))
+                                self.coordinatesMarkersArr.append(CLLocationCoordinate2DMake(latitud, longitud))
                                 
                             }
                         }
                     }
+                    
+                    var indice = -1
+                    for coordinate in self.coordinatesMarkersArr {
+                        indice += 1
+                        let annotation = MKPointAnnotation()
+                        annotation.title = self.placeName[indice]
+                        annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+                        self.markersArr.append(annotation)
+                        self.mapView.addAnnotation(annotation)
+                    }
+                    
                     print(self.placeTypeId)
                     print("A VER QUE SALE")
-                    print(self.placeLatitud)*/
+                    print(self.placeLatitud)
                     
                     /*for i in 0..<self.placeLatitud.count{
                         if self.placeTypeId[i] == 20 {
@@ -332,7 +344,7 @@ class MuestraRutaActualViewController: UIViewController {
                         }
                     }*/
                     
-                    self.getDirections()
+                    //self.getDirections()
                     /*
                      coordinatesArr:[CLLocationCoordinate2D] = [
                      CLLocationCoordinate2D(latitude: 19.0380368, longitude: -98.1919112),
