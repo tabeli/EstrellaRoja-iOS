@@ -39,6 +39,14 @@ class MuestraRutaActualViewController: UIViewController {
     var tourId:[Int] = []
     var tourPlaceId:[Int] = []
     
+    var stopId:[Int] = []
+    var stopName:[String] = []
+    var stopLongitud:[Double] = []
+    var stopLatitud:[Double] = []
+    var stopDescription:[String] = []
+    
+    var stopTourId:[Int] = []
+    var stopStopId:[Int] = []
    
     @IBAction func backArrow(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -267,17 +275,6 @@ class MuestraRutaActualViewController: UIViewController {
                 /*print("DATOS QUE JALE")
                 print(stringData)*/
                 do{
-                    /*{
-                     "id": 2,
-                     "place_type_id": 20,
-                     "narrative_id": 2,
-                     "name": "1 punto analco puebla fascinante",
-                     "longitude": -98.1919112,
-                     "latitude": 19.0380368,
-                     "description": "Analco",
-                     "createdAt": "2018-10-29T19:08:38.000Z",
-                     "updatedAt": "2018-11-21T16:08:55.000Z"
-                     },*/
                     
                     // Casteas el dataMap de un data a un json de tipo string a cualquier cosa
                     let dataArr = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [Any]
@@ -312,12 +309,12 @@ class MuestraRutaActualViewController: UIViewController {
                         self.obtenerTourPlaceRequest()
                     }
                     
-                    self.coordinatesArr = []
+                    /*self.coordinatesArr = []
                     for tourPlaceId in self.tourPlaceId {
                         var index = -1
                         for placeId in self.placeId {
                             index += 1
-                            if placeId == tourPlaceId {
+                            if (placeId == tourPlaceId) && (self.placeTypeId[index] == 20) {
                                 let latitud = self.placeLatitud[index]
                                 let longitud = self.placeLongitud[index]
                                 self.coordinatesArr.append(CLLocationCoordinate2DMake(latitud, longitud))
@@ -325,8 +322,9 @@ class MuestraRutaActualViewController: UIViewController {
                             }
                         }
                     }
+                    print(self.placeTypeId)
                     print("A VER QUE SALE")
-                    print(self.placeLatitud)
+                    print(self.placeLatitud)*/
                     
                     /*for i in 0..<self.placeLatitud.count{
                         if self.placeTypeId[i] == 20 {
@@ -394,18 +392,6 @@ class MuestraRutaActualViewController: UIViewController {
                 /*print("TAMBIEN REGRESO ESTOS DE TOUR_PLACES DATOS QUE JALE")
                 print(stringData)*/
                 do{
-                    /*{
-                     "id": 2,
-                     "place_type_id": 20,
-                     "narrative_id": 2,
-                     "name": "1 punto analco puebla fascinante",
-                     "longitude": -98.1919112,
-                     "latitude": 19.0380368,
-                     "description": "Analco",
-                     "createdAt": "2018-10-29T19:08:38.000Z",
-                     "updatedAt": "2018-11-21T16:08:55.000Z"
-                     },*/
-                    
                     // Casteas el dataMap de un data a un json de tipo string a cualquier cosa
                     let dataArr = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [Any]
                     // Checas si el valor con se agrego el id
@@ -420,27 +406,6 @@ class MuestraRutaActualViewController: UIViewController {
                         }
                     }
                     
-                    DispatchQueue.main.async {
-                        for coordinate in self.coordinatesArr {
-                            let annotation = MKPointAnnotation()
-                            annotation.title = "Algo"
-                            annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-                            self.markersArr.append(annotation)
-                            self.mapView.addAnnotation(annotation)
-                        }
-                    }
-                    /*self.coordinatesArr = []
-                    for i in 0..<self.placeLatitud.count{
-                        if self.placeTypeId[i] == 20 {
-                            self.coordinatesArr.append(CLLocationCoordinate2D(latitude: self.placeLatitud[i], longitude: self.placeLongitud[i]))
-                        }
-                        
-                    }
-                    self.getDirections()*/
-                    /*
-                     coordinatesArr:[CLLocationCoordinate2D] = [
-                     CLLocationCoordinate2D(latitude: 19.0380368, longitude: -98.1919112),
-                     */
                     
                     print("ACABE DE JALAR LOS DATOS")
                 } catch {
@@ -450,6 +415,180 @@ class MuestraRutaActualViewController: UIViewController {
                     //self.tableView.reloadData()
                     //Le dices que se ponga true si se pudo hacer la peticion y jalo al usuario pa que haga el segue
                     //self.registerResult = requestResult
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    // Este solo sale si la peticion no te dice nada
+                    let alert = UIAlertController(title: "Error", message: "No hubo datos de respuesta", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
+        // Ejecutas el task
+        task.resume()
+        
+    }
+    
+    
+    func obtenerStopRequest() {
+        var urlComponents = URLComponents() // Forma el url
+        urlComponents.scheme = RequestData.shared.scheme
+        urlComponents.host = RequestData.shared.domain
+        urlComponents.path = RequestData.shared.subdomain + RequestData.shared.getAllStopPath
+        guard let url = urlComponents.url else { return } // guard para ver si se hace, si no, se muere el metodo
+        var request = URLRequest(url: url) // Crea opeticion a partir del url
+        request.httpMethod = "GET" // Le dices que tipo de metodo es
+        var headers = request.allHTTPHeaderFields ?? [:] // Es como esto: x-www-form-urlencoded
+        headers["Content-Type"] = "application/json" // Tiene que ser un json porque recibe un json
+        request.allHTTPHeaderFields = headers // Se lo asignas el arreglo del url
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) {
+            (data, response, error) in // Los datos que responde, response es la respuesta http completa, o el erroe
+            guard error == nil else { //Si no es nulo manda una alerta
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Imposible conectar al servidor", message: "Comprueba conexión a internet", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+                return
+            }
+            // Te aseguras que data no sea nulo y toma la respuesta y la pasa a un string para que la puedas imprimir
+            if let dataUnwrapped = data, let stringData = String(data: dataUnwrapped, encoding: .utf8) {
+                
+                /*print("TAMBIEN REGRESO ESTOS DE TOUR_PLACES DATOS QUE JALE")
+                 print(stringData)*/
+                do{
+                    // Casteas el dataMap de un data a un json de tipo string a cualquier cosa
+                    let dataArr = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [Any]
+                    // Checas si el valor con se agrego el id
+                    for element in dataArr {
+                        if let mapElement = element as? [String:Any] {
+                            if let id = mapElement["id"] as? Int {
+                                self.stopId.append(id)
+                            }
+                            if let name = mapElement["name"] as? String {
+                                self.stopName.append(name)
+                            }
+                            if let longitude = mapElement["longitude"] as? Double {
+                                self.stopLongitud.append(longitude)
+                            }
+                            if let latitude = mapElement["latitude"] as? Double {
+                                self.stopLatitud.append(latitude)
+                            }
+                            if let description = mapElement["description"] as? String {
+                                self.stopDescription.append(description)
+                            }
+                        }
+                    }
+                    
+                    
+                    DispatchQueue.main.async {
+                        self.obtenerTourPlaceRequest()
+                    }
+                    
+                    self.coordinatesArr = []
+                    for stopStopId in self.stopStopId {
+                        var index = -1
+                        for stopId in self.stopId {
+                            index += 1
+                            if (stopStopId == stopId) && (self.stopTourId[index] == 17) {
+                                let latitud = self.stopLatitud[index]
+                                let longitud = self.stopLongitud[index]
+                                self.coordinatesArr.append(CLLocationCoordinate2DMake(latitud, longitud))
+                                
+                            }
+                        }
+                    }
+                    
+                    
+                    /*self.coordinatesArr = []
+                    for i in 0..<self.stopLatitud.count{
+                        self.coordinatesArr.append(CLLocationCoordinate2D(latitude: self.stopLatitud[i], longitude: self.stopLongitud[i]))
+                    }*/
+                    self.getDirections()
+                    
+                    
+                    print("ESTO TIENE QUE JALAR")
+                    print(self.stopLatitud)
+                    /*
+                     coordinatesArr:[CLLocationCoordinate2D] = [
+                     CLLocationCoordinate2D(latitude: 19.0380368, longitude: -98.1919112),
+                     */
+                    
+                } catch {
+                    print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    // Este solo sale si la peticion no te dice nada
+                    let alert = UIAlertController(title: "Error", message: "No hubo datos de respuesta", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
+        // Ejecutas el task
+        task.resume()
+        
+    }
+    
+    
+    func obtenerTourStopRequest() {
+        var urlComponents = URLComponents() // Forma el url
+        urlComponents.scheme = RequestData.shared.scheme
+        urlComponents.host = RequestData.shared.domain
+        urlComponents.path = RequestData.shared.subdomain + RequestData.shared.getAllTourStopPath
+        guard let url = urlComponents.url else { return } // guard para ver si se hace, si no, se muere el metodo
+        var request = URLRequest(url: url) // Crea opeticion a partir del url
+        request.httpMethod = "GET" // Le dices que tipo de metodo es
+        var headers = request.allHTTPHeaderFields ?? [:] // Es como esto: x-www-form-urlencoded
+        headers["Content-Type"] = "application/json" // Tiene que ser un json porque recibe un json
+        request.allHTTPHeaderFields = headers // Se lo asignas el arreglo del url
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) {
+            (data, response, error) in // Los datos que responde, response es la respuesta http completa, o el erroe
+            guard error == nil else { //Si no es nulo manda una alerta
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Imposible conectar al servidor", message: "Comprueba conexión a internet", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+                return
+            }
+            // Te aseguras que data no sea nulo y toma la respuesta y la pasa a un string para que la puedas imprimir
+            if let dataUnwrapped = data, let stringData = String(data: dataUnwrapped, encoding: .utf8) {
+                
+                /*print("TAMBIEN REGRESO ESTOS DE TOUR_PLACES DATOS QUE JALE")
+                 print(stringData)*/
+                do{
+                    // Casteas el dataMap de un data a un json de tipo string a cualquier cosa
+                    let dataArr = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [Any]
+                    // Checas si el valor con se agrego el id
+                    for element in dataArr {
+                        if let mapElement = element as? [String:Any] {
+                            if let tourId = mapElement["tour_id"] as? Int {
+                                self.stopTourId.append(tourId)
+                            }
+                            if let stopId = mapElement["stop_id"] as? Int {
+                                self.stopStopId.append(stopId)
+                            }
+                        }
+                    }
+                    
+                    /*
+                     coordinatesArr:[CLLocationCoordinate2D] = [
+                     CLLocationCoordinate2D(latitude: 19.0380368, longitude: -98.1919112),
+                     */
+                    
+                } catch {
+                    print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
                 }
             }
             else {
@@ -505,7 +644,7 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
         let rand = Int.random(in: 0...10)
         
         
-        switch rand {
+       /* switch rand {
         case 0:
             renderer.strokeColor = #colorLiteral(red: 0.8829703927, green: 0.1867307127, blue: 0.4812199473, alpha: 1)
         case 1:
@@ -531,7 +670,7 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
 
         default:
             renderer.strokeColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        }
+        }*/
         return renderer
     }
     
