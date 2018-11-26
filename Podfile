@@ -7,10 +7,10 @@ target 'ER' do
 
   # Pods for ER
 
-  target 'ERTests' do
-    inherit! :search_paths
+  #  target 'ERTests' do
+  #  inherit! :search_paths
     # Pods for testing
-  end
+    #end
 
   target 'ERUITests' do
     inherit! :search_paths

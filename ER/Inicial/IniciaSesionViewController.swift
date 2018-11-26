@@ -30,7 +30,7 @@ class IniciaSesionViewController: UIViewController {
     
     @IBAction func ingresarAction(_ sender: UIButton) {
         
-        if self.verifyInputs() {
+        if self.verifyUsernameInput(usernameStr: self.username.text!) && self.verifyPasswordInput(passwordStr: self.password.text!) {
             loginRequest()
         }
         else{
@@ -42,11 +42,13 @@ class IniciaSesionViewController: UIViewController {
         
     }
     
-    func verifyInputs() -> Bool {
-        //Aqui verificar que la contraseña y el mail sean correctos
-        #warning("Implementar verificacion de inputs")
-        
-        return true
+    func verifyUsernameInput(usernameStr: String) -> Bool {
+        return usernameStr.count > 5
+    }
+    
+    func verifyPasswordInput(passwordStr: String) -> Bool {
+        //Aqui verificar que la contraseña sea correcta
+        return passwordStr.count > 3
     }
     
     func loginRequest(){

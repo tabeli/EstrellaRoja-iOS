@@ -20,7 +20,6 @@
 		B561F44B216C669D00EB917C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F449216C669D00EB917C /* Main.storyboard */; };
 		B561F44D216C669F00EB917C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B561F44C216C669F00EB917C /* Assets.xcassets */; };
 		B561F450216C669F00EB917C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F44E216C669F00EB917C /* LaunchScreen.storyboard */; };
-		B561F45B216C66A000EB917C /* ERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F45A216C66A000EB917C /* ERTests.swift */; };
 		B561F466216C66A000EB917C /* ERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F465216C66A000EB917C /* ERUITests.swift */; };
 		B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */; };
 		B5757BB221A4864300B16E55 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5757BB121A4864300B16E55 /* DetalleViewController.swift */; };
@@ -42,6 +41,10 @@
 		B5D6BD3D21740021004CDCC2 /* Pago.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3C21740021004CDCC2 /* Pago.storyboard */; };
 		B5D6BD3F2174004A004CDCC2 /* RutaDesbloqueada.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */; };
 		B5D6BD4121740090004CDCC2 /* Opciones.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD4021740090004CDCC2 /* Opciones.storyboard */; };
+		B5D9454621AB82CB0048C68E /* IniciaSesionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9454521AB82CA0048C68E /* IniciaSesionViewControllerTests.swift */; };
+		B5D9456A21ABEAEA0048C68E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456921ABEAEA0048C68E /* TutorialViewController.swift */; };
+		B5D9456C21ABEB280048C68E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456B21ABEB280048C68E /* TutorialPageViewController.swift */; };
+		B5D9456E21ABEB4F0048C68E /* TutorialDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456D21ABEB4F0048C68E /* TutorialDetalleViewController.swift */; };
 		B5F80DF82177C78600CDB5BE /* AgregarPasajerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DF72177C78600CDB5BE /* AgregarPasajerosViewController.swift */; };
 		B5F80DFA2177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DF92177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift */; };
 		B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */; };
@@ -52,17 +55,9 @@
 		B5F80E072178023800CDB5BE /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80E062178023800CDB5BE /* RegistroViewController.swift */; };
 		B5F80E092178025200CDB5BE /* CambiaContrasenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80E082178025200CDB5BE /* CambiaContrasenaViewController.swift */; };
 		B5F80E0C2178154100CDB5BE /* SiguientesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80E0B2178154100CDB5BE /* SiguientesButton.swift */; };
-		E618C26D500CD337FD701CF6 /* Pods_ERTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D917CC519EF67026A8F529 /* Pods_ERTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B561F457216C66A000EB917C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B561F43A216C669D00EB917C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B561F441216C669D00EB917C;
-			remoteInfo = ER;
-		};
 		B561F462216C66A000EB917C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B561F43A216C669D00EB917C /* Project object */;
@@ -93,7 +88,6 @@
 		B561F44C216C669F00EB917C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B561F44F216C669F00EB917C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B561F451216C669F00EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B561F456216C66A000EB917C /* ERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B561F45A216C66A000EB917C /* ERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERTests.swift; sourceTree = "<group>"; };
 		B561F45C216C66A000EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B561F461216C66A000EB917C /* ERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +113,10 @@
 		B5D6BD3C21740021004CDCC2 /* Pago.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pago.storyboard; sourceTree = "<group>"; };
 		B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RutaDesbloqueada.storyboard; sourceTree = "<group>"; };
 		B5D6BD4021740090004CDCC2 /* Opciones.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Opciones.storyboard; sourceTree = "<group>"; };
+		B5D9454521AB82CA0048C68E /* IniciaSesionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniciaSesionViewControllerTests.swift; sourceTree = "<group>"; };
+		B5D9456921ABEAEA0048C68E /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		B5D9456B21ABEB280048C68E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		B5D9456D21ABEB4F0048C68E /* TutorialDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDetalleViewController.swift; sourceTree = "<group>"; };
 		B5F80DF72177C78600CDB5BE /* AgregarPasajerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarPasajerosViewController.swift; sourceTree = "<group>"; };
 		B5F80DF92177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarPasajerosTableViewController.swift; sourceTree = "<group>"; };
 		B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComenzarViajeTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,14 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19CB5B3476F45C4F5C878632 /* Pods_ER.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B561F453216C66A000EB917C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E618C26D500CD337FD701CF6 /* Pods_ERTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				B561F442216C669D00EB917C /* ER.app */,
-				B561F456216C66A000EB917C /* ERTests.xctest */,
 				B561F461216C66A000EB917C /* ERUITests.xctest */,
 			);
 			name = Products;
@@ -232,6 +221,7 @@
 				B5A6441621A5193400DCF3A9 /* RequestData */,
 				B5F80E01217801A400CDB5BE /* Inicial */,
 				B5F80E0A217814F900CDB5BE /* CustomClass */,
+				B5D9456821ABEA9D0048C68E /* Tutorial */,
 				B5333E372178648700C0C19D /* Rutas */,
 				B5B79F9A2179AB19001AEDEE /* RutaDetalle */,
 				B54B7A06219A435A008DBE6A /* ComprarBoletosPasos */,
@@ -262,6 +252,7 @@
 			children = (
 				B561F465216C66A000EB917C /* ERUITests.swift */,
 				B561F467216C66A000EB917C /* Info.plist */,
+				B5D9454521AB82CA0048C68E /* IniciaSesionViewControllerTests.swift */,
 			);
 			path = ERUITests;
 			sourceTree = "<group>";
@@ -317,6 +308,16 @@
 				030706082178E5E40071E0A0 /* EscanearPulsera.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B5D9456821ABEA9D0048C68E /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				B5D9456921ABEAEA0048C68E /* TutorialViewController.swift */,
+				B5D9456B21ABEB280048C68E /* TutorialPageViewController.swift */,
+				B5D9456D21ABEB4F0048C68E /* TutorialDetalleViewController.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		B5F80DF62177C71700CDB5BE /* ComprarBoletoDatosPasajero */ = {
@@ -382,25 +383,6 @@
 			productReference = B561F442216C669D00EB917C /* ER.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B561F455216C66A000EB917C /* ERTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B561F46D216C66A000EB917C /* Build configuration list for PBXNativeTarget "ERTests" */;
-			buildPhases = (
-				B3ED257916F43D01AD0AA098 /* [CP] Check Pods Manifest.lock */,
-				B561F452216C66A000EB917C /* Sources */,
-				B561F453216C66A000EB917C /* Frameworks */,
-				B561F454216C66A000EB917C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B561F458216C66A000EB917C /* PBXTargetDependency */,
-			);
-			name = ERTests;
-			productName = ERTests;
-			productReference = B561F456216C66A000EB917C /* ERTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		B561F460216C66A000EB917C /* ERUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B561F470216C66A000EB917C /* Build configuration list for PBXNativeTarget "ERUITests" */;
@@ -433,10 +415,6 @@
 					B561F441216C669D00EB917C = {
 						CreatedOnToolsVersion = 10.0;
 					};
-					B561F455216C66A000EB917C = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = B561F441216C669D00EB917C;
-					};
 					B561F460216C66A000EB917C = {
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = B561F441216C669D00EB917C;
@@ -457,7 +435,6 @@
 			projectRoot = "";
 			targets = (
 				B561F441216C669D00EB917C /* ER */,
-				B561F455216C66A000EB917C /* ERTests */,
 				B561F460216C66A000EB917C /* ERUITests */,
 			);
 		};
@@ -477,13 +454,6 @@
 				030706092178E5E40071E0A0 /* EscanearPulsera.storyboard in Resources */,
 				B561F44B216C669D00EB917C /* Main.storyboard in Resources */,
 				B5D6BD3D21740021004CDCC2 /* Pago.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B561F454216C66A000EB917C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,28 +511,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B3ED257916F43D01AD0AA098 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ERTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -572,6 +520,7 @@
 			files = (
 				B5B79F912179AA14001AEDEE /* RutaDetalleViewController.swift in Sources */,
 				B5B79F932179AA46001AEDEE /* RutaDetalleTableViewController.swift in Sources */,
+				B5D9456C21ABEB280048C68E /* TutorialPageViewController.swift in Sources */,
 				B5F80E002177C83200CDB5BE /* SiguienteTableViewCell.swift in Sources */,
 				B5B79F972179AA91001AEDEE /* DetalleDescripcionRutaTableViewCell.swift in Sources */,
 				B5A6441D21A5D19C00DCF3A9 /* UserIniciaSesion.swift in Sources */,
@@ -582,6 +531,7 @@
 				B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */,
 				B5A6441B21A5C7EF00DCF3A9 /* UserRegister.swift in Sources */,
 				B5A6442321A87DF400DCF3A9 /* AddTickets.swift in Sources */,
+				B5D9456E21ABEB4F0048C68E /* TutorialDetalleViewController.swift in Sources */,
 				B5B79F952179AA79001AEDEE /* DetalleImagenRutaTableViewCell.swift in Sources */,
 				B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */,
 				B5A6442121A7C48D00DCF3A9 /* PerformPurchase.swift in Sources */,
@@ -601,15 +551,8 @@
 				B5A6441F21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift in Sources */,
 				B5A6441821A5197600DCF3A9 /* RequestData.swift in Sources */,
 				B5F80E03217801FD00CDB5BE /* InicialViewController.swift in Sources */,
+				B5D9456A21ABEAEA0048C68E /* TutorialViewController.swift in Sources */,
 				B561F446216C669D00EB917C /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B561F452216C66A000EB917C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B561F45B216C66A000EB917C /* ERTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D9454621AB82CB0048C68E /* IniciaSesionViewControllerTests.swift in Sources */,
 				B561F466216C66A000EB917C /* ERUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,11 +568,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B561F458216C66A000EB917C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B561F441216C669D00EB917C /* ER */;
-			targetProxy = B561F457216C66A000EB917C /* PBXContainerItemProxy */;
-		};
 		B561F463216C66A000EB917C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B561F441216C669D00EB917C /* ER */;
@@ -810,54 +749,13 @@
 			};
 			name = Release;
 		};
-		B561F46E216C66A000EB917C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DF54CD8DB9F7051A6F30AF6 /* Pods-ERTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ERTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.ERTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ER.app/ER";
-			};
-			name = Debug;
-		};
-		B561F46F216C66A000EB917C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF2D4523EF10845D40CCD2DE /* Pods-ERTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ERTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.ERTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ER.app/ER";
-			};
-			name = Release;
-		};
 		B561F471216C66A000EB917C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 053DA7D936B5A0946064E440 /* Pods-ERUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
 				INFOPLIST_FILE = ERUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -878,6 +776,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
 				INFOPLIST_FILE = ERUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -909,15 +808,6 @@
 			buildConfigurations = (
 				B561F46B216C66A000EB917C /* Debug */,
 				B561F46C216C66A000EB917C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B561F46D216C66A000EB917C /* Build configuration list for PBXNativeTarget "ERTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B561F46E216C66A000EB917C /* Debug */,
-				B561F46F216C66A000EB917C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

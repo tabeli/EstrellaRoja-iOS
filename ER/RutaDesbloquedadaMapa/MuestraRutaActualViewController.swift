@@ -442,7 +442,9 @@ class MuestraRutaActualViewController: UIViewController {
         }
         // Ejecutas el task
         task.resume()
-        
+    }
+    
+    func obtenerPlaceImageRequest() {
     }
     
     
