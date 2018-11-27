@@ -58,7 +58,7 @@ class SideBarViewController: UIViewController {
     }
     
     @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
-        if sender.direction == .right{
+        if sender.direction == .left{
             dismissView(closeSession: false)
         }
     }
@@ -68,7 +68,7 @@ class SideBarViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.constraintImportante.constant = self.backgroudBar.frame.width
+        self.constraintImportante.constant = self.backgroudBar.frame.width-5
         UIView.animate(withDuration: 0.25, animations: {
             self.view.layoutIfNeeded()
         })

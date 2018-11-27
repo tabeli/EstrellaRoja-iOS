@@ -120,7 +120,20 @@
                     <view key="view" contentMode="scaleToFill" id="39g-92-JkT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.15748834610000001" green="0.68512696029999998" blue="0.0099700447170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comingSoon" translatesAutoresizingMaskIntoConstraints="NO" id="PeP-Lt-LON">
+                                <rect key="frame" x="20.5" y="220" width="373" height="373"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PeP-Lt-LON" secondAttribute="height" multiplier="1:1" id="Oqm-QD-M9t"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PeP-Lt-LON" firstAttribute="centerY" secondItem="39g-92-JkT" secondAttribute="centerY" id="LOC-xs-vnv"/>
+                            <constraint firstItem="PeP-Lt-LON" firstAttribute="width" secondItem="39g-92-JkT" secondAttribute="width" multiplier="0.9" id="apm-Ph-0k6"/>
+                            <constraint firstItem="PeP-Lt-LON" firstAttribute="centerX" secondItem="39g-92-JkT" secondAttribute="centerX" id="bKh-fw-T4h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xgU-gx-9JA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lugares" image="importantplaces" id="Wpb-Wy-nOW"/>
@@ -138,22 +151,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8RJ-vl-sfx">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="97.5" width="414" height="715.5"/>
                                 <connections>
                                     <segue destination="8JU-aF-jHH" kind="embed" identifier="seleccionaCamion" id="Rpu-KJ-dNd"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wih-O9-NXI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="97.5"/>
+                                <color key="backgroundColor" red="0.78677542099999997" green="0.1943393403" blue="0.1217412519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsn-ga-ElN">
+                                <rect key="frame" x="10" y="27.5" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rsn-ga-ElN" secondAttribute="height" multiplier="1:1" id="1zq-l3-9zP"/>
+                                </constraints>
+                                <state key="normal" image="menuBurger"/>
+                                <connections>
+                                    <action selector="showSideBar:" destination="Sgs-Ha-o4V" eventType="touchUpInside" id="82W-yp-Gl7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona tu camión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y1-3N-RVB">
+                                <rect key="frame" x="93" y="34" width="228" height="49"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98905342819999997" green="0.71650582549999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Wih-O9-NXI" firstAttribute="centerY" secondItem="GSN-8G-6Yb" secondAttribute="centerY" multiplier="0.12" id="1OI-W5-6dY"/>
+                            <constraint firstItem="Wih-O9-NXI" firstAttribute="height" secondItem="GSN-8G-6Yb" secondAttribute="height" multiplier="0.12" id="2UI-aV-8mv"/>
+                            <constraint firstItem="9y1-3N-RVB" firstAttribute="height" secondItem="Wih-O9-NXI" secondAttribute="height" multiplier="0.5" id="35Q-xo-VJm"/>
                             <constraint firstItem="8RJ-vl-sfx" firstAttribute="leading" secondItem="4A5-Nh-XQs" secondAttribute="leading" id="4qr-oQ-9UM"/>
-                            <constraint firstItem="8RJ-vl-sfx" firstAttribute="top" secondItem="4A5-Nh-XQs" secondAttribute="top" id="FwO-xg-EXc"/>
+                            <constraint firstItem="Rsn-ga-ElN" firstAttribute="centerY" secondItem="Wih-O9-NXI" secondAttribute="centerY" multiplier="1.2" id="5Fp-Ss-kec"/>
+                            <constraint firstItem="9y1-3N-RVB" firstAttribute="centerX" secondItem="Wih-O9-NXI" secondAttribute="centerX" id="C4E-AU-Ubj"/>
+                            <constraint firstItem="Wih-O9-NXI" firstAttribute="centerX" secondItem="GSN-8G-6Yb" secondAttribute="centerX" id="IJz-1s-bUc"/>
+                            <constraint firstItem="Rsn-ga-ElN" firstAttribute="width" secondItem="GSN-8G-6Yb" secondAttribute="width" multiplier="0.15" id="IVe-bJ-MuL"/>
                             <constraint firstAttribute="bottomMargin" secondItem="8RJ-vl-sfx" secondAttribute="bottom" id="LCm-Qo-1us"/>
+                            <constraint firstItem="Wih-O9-NXI" firstAttribute="width" secondItem="GSN-8G-6Yb" secondAttribute="width" id="N3I-jO-gsj"/>
+                            <constraint firstItem="Rsn-ga-ElN" firstAttribute="leading" secondItem="4A5-Nh-XQs" secondAttribute="leading" constant="10" id="NJg-SO-WR4"/>
+                            <constraint firstItem="9y1-3N-RVB" firstAttribute="width" secondItem="Wih-O9-NXI" secondAttribute="width" multiplier="0.55" id="Uom-gH-7Xd"/>
+                            <constraint firstItem="9y1-3N-RVB" firstAttribute="centerY" secondItem="Wih-O9-NXI" secondAttribute="centerY" multiplier="1.2" id="YPc-pq-at9"/>
                             <constraint firstItem="4A5-Nh-XQs" firstAttribute="trailing" secondItem="8RJ-vl-sfx" secondAttribute="trailing" id="lbf-Ax-xhh"/>
+                            <constraint firstItem="8RJ-vl-sfx" firstAttribute="top" secondItem="Wih-O9-NXI" secondAttribute="bottom" id="nvu-PZ-6bk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4A5-Nh-XQs"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Información" image="busdata" id="mfg-cU-com"/>
+                    <connections>
+                        <outlet property="selectionaCamion" destination="9y1-3N-RVB" id="5yY-F4-v7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgG-4Z-PiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +211,7 @@
             <objects>
                 <tableViewController id="8JU-aF-jHH" customClass="SeleccionaCamionTableViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4xV-lX-42K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="715.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -373,7 +420,7 @@
                                     <outlet property="delegate" destination="ebv-GM-tiQ" id="2lb-LD-Epe"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIG-vK-W7i">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIG-vK-W7i">
                                 <rect key="frame" x="142" y="61" width="47.5" height="40.5"/>
                                 <color key="backgroundColor" red="0.8829703927" green="0.1867307127" blue="0.48121994730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -386,14 +433,27 @@
                                     <action selector="backArrow:" destination="ebv-GM-tiQ" eventType="touchUpInside" id="B6F-wJ-5Og"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlu-en-RWj">
+                                <rect key="frame" x="10" y="50.5" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rlu-en-RWj" secondAttribute="height" multiplier="1:1" id="isv-CI-BAG"/>
+                                </constraints>
+                                <state key="normal" image="menuBurger"/>
+                                <connections>
+                                    <action selector="showSideBar:" destination="ebv-GM-tiQ" eventType="touchUpInside" id="9qO-r6-4HH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rlu-en-RWj" firstAttribute="width" secondItem="ISQ-m8-kAC" secondAttribute="width" multiplier="0.15" id="2ue-X7-PG8"/>
                             <constraint firstItem="ISQ-m8-kAC" firstAttribute="bottom" secondItem="brf-we-uik" secondAttribute="bottom" id="Cyh-cd-2Nj"/>
                             <constraint firstItem="zIG-vK-W7i" firstAttribute="height" secondItem="ISQ-m8-kAC" secondAttribute="height" multiplier="0.05" id="IiL-SS-fA6"/>
                             <constraint firstItem="zIG-vK-W7i" firstAttribute="centerX" secondItem="1ix-8e-RL5" secondAttribute="centerX" multiplier="0.8" id="SwO-Np-Zk5"/>
                             <constraint firstItem="zIG-vK-W7i" firstAttribute="centerY" secondItem="1ix-8e-RL5" secondAttribute="centerY" multiplier="0.2" id="mDd-n2-pYL"/>
                             <constraint firstItem="ISQ-m8-kAC" firstAttribute="leading" secondItem="brf-we-uik" secondAttribute="leading" id="mdz-o5-HQT"/>
+                            <constraint firstItem="rlu-en-RWj" firstAttribute="leading" secondItem="brf-we-uik" secondAttribute="leading" constant="10" id="njJ-mZ-y7j"/>
+                            <constraint firstItem="rlu-en-RWj" firstAttribute="centerY" secondItem="1ix-8e-RL5" secondAttribute="centerY" multiplier="0.2" id="roB-aB-Ps6"/>
                             <constraint firstItem="ISQ-m8-kAC" firstAttribute="top" secondItem="1ix-8e-RL5" secondAttribute="top" id="uwR-Jo-4bF"/>
                             <constraint firstItem="ISQ-m8-kAC" firstAttribute="trailing" secondItem="brf-we-uik" secondAttribute="trailing" id="vC0-OR-r9Y"/>
                         </constraints>
@@ -432,7 +492,7 @@
         <!--Side Bar View Controller-->
         <scene sceneID="lLA-zw-2Ak">
             <objects>
-                <viewController id="1nt-IF-yW1" customClass="SideBarViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideBar" id="1nt-IF-yW1" customClass="SideBarViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LMt-lF-VVG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -620,7 +680,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="19D-cE-CRI" firstAttribute="width" secondItem="LMt-lF-VVG" secondAttribute="width" multiplier="0.75" id="CDS-di-FwW"/>
                             <constraint firstItem="19D-cE-CRI" firstAttribute="height" secondItem="LMt-lF-VVG" secondAttribute="height" id="NP4-2v-vgU"/>
@@ -801,10 +860,12 @@
         <image name="busicon" width="31.5" height="31.5"/>
         <image name="cholula" width="655" height="436"/>
         <image name="closeSesion" width="247.5" height="247.5"/>
+        <image name="comingSoon" width="562" height="556"/>
         <image name="help" width="49.5" height="49.5"/>
         <image name="icon" width="165" height="102"/>
         <image name="importantplaces" width="31.5" height="31.5"/>
         <image name="left-arrow" width="980" height="840"/>
+        <image name="menuBurger" width="85" height="79"/>
         <image name="playAudio" width="149" height="150"/>
         <image name="route" width="31.5" height="31.5"/>
         <image name="schedule" width="49.5" height="49.5"/>

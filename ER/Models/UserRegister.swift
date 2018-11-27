@@ -13,7 +13,7 @@ struct UserRegister: Codable {
     var name: String
     var last_name: String
     var email: String
-    var birthdate: String
+    //var birthdate: String
     var password: String
     var postal_code: String
     var phone_number: String

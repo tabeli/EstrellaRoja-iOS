@@ -225,7 +225,7 @@
         <!--Registro-->
         <scene sceneID="rCZ-Oe-ybC">
             <objects>
-                <viewController title="Registro" id="DQN-1K-Z9I" customClass="RegistroViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Registro" title="Registro" id="DQN-1K-Z9I" customClass="RegistroViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9tl-pl-8yI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

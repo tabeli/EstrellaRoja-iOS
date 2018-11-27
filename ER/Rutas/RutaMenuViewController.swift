@@ -10,6 +10,19 @@ import UIKit
 
 class RutaMenuViewController: UIViewController {
     
+    
+    @IBAction func showSideBar(_ sender: Any) {
+        let modularStoryboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil);
+        if let customAlert = modularStoryboard.instantiateViewController(withIdentifier: "SideBar") as? SideBarViewController {
+            customAlert.providesPresentationContextTransitionStyle = true    //I don't know
+            customAlert.definesPresentationContext = true                     //what this guys do
+            customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            customAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            customAlert.delegate = (self as! SideBarDelegate)
+            self.present(customAlert, animated: false, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,4 +56,14 @@ class RutaMenuViewController: UIViewController {
     }
     */
 
+}
+
+extension RutaMenuViewController: SideBarDelegate{
+    func closeSession() {
+        /*let removeSuccessful: Bool = KeychainWrapper.standard.removeObject(forKey: "accessToken")*/
+        let removeSuccessful = true
+        if(removeSuccessful){
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
 }

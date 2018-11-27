@@ -12,7 +12,7 @@ class SeleccionaCamionTableViewController: UITableViewController {
 
     var busId:[Int] = []
     var busMuralId:[Int] = []
-    var tourId = 17
+    var tourId = 2
     
     func obtenerBusesRequest() {
         var urlComponents = URLComponents() // Forma el url
@@ -46,9 +46,12 @@ class SeleccionaCamionTableViewController: UITableViewController {
                     let dataArr = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [Any]
                     // Checas si el valor con se agrego el id
                     for element in dataArr {
+                        print("SI ENTRO A CHECAR LOS BUSES")
                         if let mapElement = element as? [String:Any] {
                             if let tourId = mapElement["tour_id"] as? Int, let status = mapElement["status"] as? String {
+                                print(self.tourId)
                                 if tourId == self.tourId && status == "in_service" {
+                                    print("Alguno cumple con esto")
                                     if let id = mapElement["id"] as? Int {
                                         self.busId.append(id)
                                     }
@@ -59,7 +62,9 @@ class SeleccionaCamionTableViewController: UITableViewController {
                             }
                         }
                     }
-                    print("ACABE DE JALAR LOS DATOS")
+                    
+                    print("ACABE DE JALAR LOS DATOS DE LOS ID DEL MURAL")
+                    print(self.busId)
                 } catch {
                     print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
                 }
@@ -85,7 +90,7 @@ class SeleccionaCamionTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        obtenerBusesRequest()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -107,6 +112,7 @@ class SeleccionaCamionTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SeccionCamionesTableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "busData", for: indexPath) as! SeccionCamionesTableViewCell
         cell.numeroCamionOutlet.titleLabel?.text = String(self.busId[indexPath.row])
         // Configure the cell...

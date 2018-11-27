@@ -26,11 +26,24 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMc-XG-yiD">
+                                        <rect key="frame" x="10" y="33.666666666666671" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dMc-XG-yiD" secondAttribute="height" multiplier="1:1" id="z6K-33-j1o"/>
+                                        </constraints>
+                                        <state key="normal" image="menuBurger"/>
+                                        <connections>
+                                            <action selector="showSideBar:" destination="wko-k3-Flk" eventType="touchUpInside" id="U9S-Mg-DNa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.07928534597158432" green="0.44520735740661621" blue="0.82666951417922974" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="dMc-XG-yiD" firstAttribute="leading" secondItem="zB3-n9-gcI" secondAttribute="leading" constant="10" id="EhA-yG-xsl"/>
                                     <constraint firstItem="KzS-Yf-O4L" firstAttribute="width" secondItem="zB3-n9-gcI" secondAttribute="width" id="JYC-qe-Nua"/>
                                     <constraint firstItem="KzS-Yf-O4L" firstAttribute="centerY" secondItem="zB3-n9-gcI" secondAttribute="centerY" multiplier="1.2" id="M8O-Wa-VpW"/>
+                                    <constraint firstItem="dMc-XG-yiD" firstAttribute="width" secondItem="zB3-n9-gcI" secondAttribute="width" multiplier="0.15" id="Ryp-d3-ljg"/>
+                                    <constraint firstItem="dMc-XG-yiD" firstAttribute="centerY" secondItem="zB3-n9-gcI" secondAttribute="centerY" multiplier="1.2" id="WrI-f8-5R1"/>
                                     <constraint firstItem="KzS-Yf-O4L" firstAttribute="centerX" secondItem="zB3-n9-gcI" secondAttribute="centerX" id="hUk-jf-Avf"/>
                                 </constraints>
                             </view>
@@ -417,6 +430,7 @@
     <resources>
         <image name="cart" width="630" height="630"/>
         <image name="left-arrow" width="980" height="840"/>
+        <image name="menuBurger" width="129" height="120"/>
         <image name="pueblaredondo" width="1100" height="733"/>
     </resources>
 </document>

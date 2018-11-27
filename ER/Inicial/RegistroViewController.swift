@@ -70,7 +70,7 @@ class RegistroViewController: UIViewController {
         headers["Content-Type"] = "application/json" // Tiene que ser un json porque recibe un json
         request.allHTTPHeaderFields = headers // Se lo asignas el arreglo del url
         
-        let usrRegister = UserRegister(name: name.text!, last_name: lastname.text!, email: email.text!, birthdate: birthdate.text!, password: pwd.text!, postal_code: postalCode.text!, phone_number: phonenumber.text!, user_type: "client")
+        let usrRegister = UserRegister(name: name.text!, last_name: lastname.text!, email: email.text!, password: pwd.text!, postal_code: postalCode.text!, phone_number: phonenumber.text!, user_type: "client")
         //let jsonParams = ["name":name.text, "last_name":lastname.text, "email":email.text, "birthdate":birthdate.text, "password":pwd.text, "postal_code": postalCode.text, "phone_number":phonenumber.text]
         let encoder = JSONEncoder() // Instancias el encoder
         do {

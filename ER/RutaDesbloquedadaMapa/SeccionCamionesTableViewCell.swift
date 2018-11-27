@@ -14,6 +14,10 @@ class SeccionCamionesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        numeroCamionOutlet.titleLabel?.adjustsFontSizeToFitWidth = true
+        numeroCamionOutlet.layer.cornerRadius = 15
+        numeroCamionOutlet.layer.borderWidth = 2
+        numeroCamionOutlet.layer.borderColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
         // Initialization code
     }
 

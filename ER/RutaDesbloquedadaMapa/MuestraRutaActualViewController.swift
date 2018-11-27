@@ -57,6 +57,20 @@ class MuestraRutaActualViewController: UIViewController {
     @IBAction func backArrow(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func showSideBar(_ sender: Any) {
+        let modularStoryboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil);
+        if let customAlert = modularStoryboard.instantiateViewController(withIdentifier: "SideBar") as? SideBarViewController {
+            customAlert.providesPresentationContextTransitionStyle = true    //I don't know
+            customAlert.definesPresentationContext = true                     //what this guys do
+            customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            customAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            customAlert.delegate = (self as! SideBarDelegate)
+            self.present(customAlert, animated: false, completion: nil)
+        }
+    }
+    
+    
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 2500
     
@@ -321,14 +335,17 @@ class MuestraRutaActualViewController: UIViewController {
                         var index = -1
                         for placeId in self.placeId {
                             index += 1
-                            if (placeId == tourPlaceId) && (self.placeTypeId[index] == 20) {
+                            if (placeId == tourPlaceId) && (self.placeTypeId[index] == 1) {
                                 let latitud = self.placeLatitud[index]
                                 let longitud = self.placeLongitud[index]
                                 self.coordinatesMarkersArr.append(CLLocationCoordinate2DMake(latitud, longitud))
+                                print("AGREGO");
                                 
                             }
                         }
                     }
+                    print("MARKERS ARRAY")
+                    print(self.coordinatesMarkersArr)
                     
                     var indice = -1
                     for coordinate in self.coordinatesMarkersArr {
@@ -775,6 +792,8 @@ extension MuestraRutaActualViewController: CLLocationManagerDelegate {
     }
     
     
+    
+    
 }
 
 
@@ -842,5 +861,15 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
         return annotationView
     }
     
+}
+
+extension MuestraRutaActualViewController: SideBarDelegate{
+    func closeSession() {
+        /*let removeSuccessful: Bool = KeychainWrapper.standard.removeObject(forKey: "accessToken")*/
+        let removeSuccessful = true
+        if(removeSuccessful){
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
 }
 

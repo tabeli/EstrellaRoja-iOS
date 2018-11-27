@@ -2,12 +2,11 @@
 //  ERUITests.swift
 //  ERUITests
 //
-//  Created by Tabatha Acosta on 10/8/18.
+//  Created by Tabatha Acosta on 11/27/18.
 //  Copyright © 2018 Tabatha Acosta. All rights reserved.
 //
 
 import XCTest
-@testable import ER
 
 class ERUITests: XCTestCase {
 

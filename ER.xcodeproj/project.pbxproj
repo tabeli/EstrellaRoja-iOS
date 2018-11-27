@@ -10,9 +10,10 @@
 		030706072178E5CF0071E0A0 /* BoletosAdquiridos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030706062178E5CF0071E0A0 /* BoletosAdquiridos.storyboard */; };
 		030706092178E5E40071E0A0 /* EscanearPulsera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030706082178E5E40071E0A0 /* EscanearPulsera.storyboard */; };
 		19CB5B3476F45C4F5C878632 /* Pods_ER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3742A633FBF236C70C65B /* Pods_ER.framework */; };
-		9579897EF38F39E231EDFFEE /* Pods_ERUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C24F642BC86D73EC2465E02 /* Pods_ERUITests.framework */; };
 		B5333E39217864E800C0C19D /* RutaMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5333E38217864E800C0C19D /* RutaMenuViewController.swift */; };
 		B535C385219D1BBA00D326F9 /* MuestraRutaActualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535C384219D1BB900D326F9 /* MuestraRutaActualViewController.swift */; };
+		B540456821ADEF4100033B50 /* ERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540456721ADEF4100033B50 /* ERTests.swift */; };
+		B540457021ADF01800033B50 /* TestRegistrateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540456F21ADF01800033B50 /* TestRegistrateViewController.swift */; };
 		B54B7A08219A4420008DBE6A /* CompraUnoReservaBoletosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B7A07219A441F008DBE6A /* CompraUnoReservaBoletosViewController.swift */; };
 		B54B7A0A219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B7A09219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift */; };
 		B561F446216C669D00EB917C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F445216C669D00EB917C /* AppDelegate.swift */; };
@@ -20,7 +21,6 @@
 		B561F44B216C669D00EB917C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F449216C669D00EB917C /* Main.storyboard */; };
 		B561F44D216C669F00EB917C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B561F44C216C669F00EB917C /* Assets.xcassets */; };
 		B561F450216C669F00EB917C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F44E216C669F00EB917C /* LaunchScreen.storyboard */; };
-		B561F466216C66A000EB917C /* ERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F465216C66A000EB917C /* ERUITests.swift */; };
 		B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */; };
 		B5757BB221A4864300B16E55 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5757BB121A4864300B16E55 /* DetalleViewController.swift */; };
 		B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */; };
@@ -41,7 +41,6 @@
 		B5D6BD3D21740021004CDCC2 /* Pago.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3C21740021004CDCC2 /* Pago.storyboard */; };
 		B5D6BD3F2174004A004CDCC2 /* RutaDesbloqueada.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */; };
 		B5D6BD4121740090004CDCC2 /* Opciones.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D6BD4021740090004CDCC2 /* Opciones.storyboard */; };
-		B5D9454621AB82CB0048C68E /* IniciaSesionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9454521AB82CA0048C68E /* IniciaSesionViewControllerTests.swift */; };
 		B5D9456A21ABEAEA0048C68E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456921ABEAEA0048C68E /* TutorialViewController.swift */; };
 		B5D9456C21ABEB280048C68E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456B21ABEB280048C68E /* TutorialPageViewController.swift */; };
 		B5D9456E21ABEB4F0048C68E /* TutorialDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456D21ABEB4F0048C68E /* TutorialDetalleViewController.swift */; };
@@ -64,7 +63,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B561F462216C66A000EB917C /* PBXContainerItemProxy */ = {
+		B540456A21ADEF4100033B50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B561F43A216C669D00EB917C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B561F441216C669D00EB917C;
+			remoteInfo = ER;
+		};
+		B57A783921ADECB300E1AF85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B561F43A216C669D00EB917C /* Project object */;
 			proxyType = 1;
@@ -85,6 +91,10 @@
 		AD1F8C527D2E9E6BF9705E49 /* Pods-ERUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ERUITests/Pods-ERUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B5333E38217864E800C0C19D /* RutaMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RutaMenuViewController.swift; sourceTree = "<group>"; };
 		B535C384219D1BB900D326F9 /* MuestraRutaActualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuestraRutaActualViewController.swift; sourceTree = "<group>"; };
+		B540456521ADEF4000033B50 /* ERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B540456721ADEF4100033B50 /* ERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERTests.swift; sourceTree = "<group>"; };
+		B540456921ADEF4100033B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B540456F21ADF01800033B50 /* TestRegistrateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRegistrateViewController.swift; sourceTree = "<group>"; };
 		B54B7A07219A441F008DBE6A /* CompraUnoReservaBoletosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompraUnoReservaBoletosViewController.swift; sourceTree = "<group>"; };
 		B54B7A09219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosSeleccionaPasajerosViewController.swift; sourceTree = "<group>"; };
 		B561F442216C669D00EB917C /* ER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ER.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,13 +104,9 @@
 		B561F44C216C669F00EB917C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B561F44F216C669F00EB917C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B561F451216C669F00EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B561F45A216C66A000EB917C /* ERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERTests.swift; sourceTree = "<group>"; };
-		B561F45C216C66A000EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B561F461216C66A000EB917C /* ERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B561F465216C66A000EB917C /* ERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERUITests.swift; sourceTree = "<group>"; };
-		B561F467216C66A000EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletaPagoViewController.swift; sourceTree = "<group>"; };
 		B5757BB121A4864300B16E55 /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
+		B57A783421ADECB300E1AF85 /* ERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresDetalleCompraViewController.swift; sourceTree = "<group>"; };
 		B5A6441721A5197600DCF3A9 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
@@ -119,7 +125,6 @@
 		B5D6BD3C21740021004CDCC2 /* Pago.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pago.storyboard; sourceTree = "<group>"; };
 		B5D6BD3E2174004A004CDCC2 /* RutaDesbloqueada.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RutaDesbloqueada.storyboard; sourceTree = "<group>"; };
 		B5D6BD4021740090004CDCC2 /* Opciones.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Opciones.storyboard; sourceTree = "<group>"; };
-		B5D9454521AB82CA0048C68E /* IniciaSesionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniciaSesionViewControllerTests.swift; sourceTree = "<group>"; };
 		B5D9456921ABEAEA0048C68E /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		B5D9456B21ABEB280048C68E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		B5D9456D21ABEB4F0048C68E /* TutorialDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDetalleViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +149,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B540456221ADEF4000033B50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B561F43F216C669D00EB917C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,11 +164,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B561F45E216C66A000EB917C /* Frameworks */ = {
+		B57A783121ADECB300E1AF85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9579897EF38F39E231EDFFEE /* Pods_ERUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +209,16 @@
 			path = RutaDesbloquedadaMapa;
 			sourceTree = "<group>";
 		};
+		B540456621ADEF4100033B50 /* ERTests */ = {
+			isa = PBXGroup;
+			children = (
+				B540456F21ADF01800033B50 /* TestRegistrateViewController.swift */,
+				B540456721ADEF4100033B50 /* ERTests.swift */,
+				B540456921ADEF4100033B50 /* Info.plist */,
+			);
+			path = ERTests;
+			sourceTree = "<group>";
+		};
 		B54B7A06219A435A008DBE6A /* ComprarBoletosPasos */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,8 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				B561F444216C669D00EB917C /* ER */,
-				B561F459216C66A000EB917C /* ERTests */,
-				B561F464216C66A000EB917C /* ERUITests */,
+				B540456621ADEF4100033B50 /* ERTests */,
 				B561F443216C669D00EB917C /* Products */,
 				B714B4D2230DF3B178AFA4C6 /* Frameworks */,
 				4C074ADE596EA12A244606A0 /* Pods */,
@@ -224,7 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				B561F442216C669D00EB917C /* ER.app */,
-				B561F461216C66A000EB917C /* ERUITests.xctest */,
+				B57A783421ADECB300E1AF85 /* ERUITests.xctest */,
+				B540456521ADEF4000033B50 /* ERTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,25 +273,6 @@
 				B561F451216C669F00EB917C /* Info.plist */,
 			);
 			path = ER;
-			sourceTree = "<group>";
-		};
-		B561F459216C66A000EB917C /* ERTests */ = {
-			isa = PBXGroup;
-			children = (
-				B561F45A216C66A000EB917C /* ERTests.swift */,
-				B561F45C216C66A000EB917C /* Info.plist */,
-			);
-			path = ERTests;
-			sourceTree = "<group>";
-		};
-		B561F464216C66A000EB917C /* ERUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B561F465216C66A000EB917C /* ERUITests.swift */,
-				B561F467216C66A000EB917C /* Info.plist */,
-				B5D9454521AB82CA0048C68E /* IniciaSesionViewControllerTests.swift */,
-			);
-			path = ERUITests;
 			sourceTree = "<group>";
 		};
 		B56C8E51219C14EE00C0EA61 /* RealizaPago */ = {
@@ -391,6 +393,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B540456421ADEF4000033B50 /* ERTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B540456E21ADEF4100033B50 /* Build configuration list for PBXNativeTarget "ERTests" */;
+			buildPhases = (
+				B540456121ADEF4000033B50 /* Sources */,
+				B540456221ADEF4000033B50 /* Frameworks */,
+				B540456321ADEF4000033B50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B540456B21ADEF4100033B50 /* PBXTargetDependency */,
+			);
+			name = ERTests;
+			productName = ERTests;
+			productReference = B540456521ADEF4000033B50 /* ERTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B561F441216C669D00EB917C /* ER */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B561F46A216C66A000EB917C /* Build configuration list for PBXNativeTarget "ER" */;
@@ -409,23 +429,22 @@
 			productReference = B561F442216C669D00EB917C /* ER.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B561F460216C66A000EB917C /* ERUITests */ = {
+		B57A783321ADECB300E1AF85 /* ERUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B561F470216C66A000EB917C /* Build configuration list for PBXNativeTarget "ERUITests" */;
+			buildConfigurationList = B57A783D21ADECB300E1AF85 /* Build configuration list for PBXNativeTarget "ERUITests" */;
 			buildPhases = (
-				A129829861A6A1BA860E92C2 /* [CP] Check Pods Manifest.lock */,
-				B561F45D216C66A000EB917C /* Sources */,
-				B561F45E216C66A000EB917C /* Frameworks */,
-				B561F45F216C66A000EB917C /* Resources */,
+				B57A783021ADECB300E1AF85 /* Sources */,
+				B57A783121ADECB300E1AF85 /* Frameworks */,
+				B57A783221ADECB300E1AF85 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B561F463216C66A000EB917C /* PBXTargetDependency */,
+				B57A783A21ADECB300E1AF85 /* PBXTargetDependency */,
 			);
 			name = ERUITests;
 			productName = ERUITests;
-			productReference = B561F461216C66A000EB917C /* ERUITests.xctest */;
+			productReference = B57A783421ADECB300E1AF85 /* ERUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -434,15 +453,19 @@
 		B561F43A216C669D00EB917C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Tabatha Acosta";
 				TargetAttributes = {
+					B540456421ADEF4000033B50 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B561F441216C669D00EB917C;
+					};
 					B561F441216C669D00EB917C = {
 						CreatedOnToolsVersion = 10.0;
 					};
-					B561F460216C66A000EB917C = {
-						CreatedOnToolsVersion = 10.0;
+					B57A783321ADECB300E1AF85 = {
+						CreatedOnToolsVersion = 10.1;
 						TestTargetID = B561F441216C669D00EB917C;
 					};
 				};
@@ -461,12 +484,20 @@
 			projectRoot = "";
 			targets = (
 				B561F441216C669D00EB917C /* ER */,
-				B561F460216C66A000EB917C /* ERUITests */,
+				B57A783321ADECB300E1AF85 /* ERUITests */,
+				B540456421ADEF4000033B50 /* ERTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B540456321ADEF4000033B50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B561F440216C669D00EB917C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,7 +514,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B561F45F216C66A000EB917C /* Resources */ = {
+		B57A783221ADECB300E1AF85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -515,31 +546,18 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A129829861A6A1BA860E92C2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ERUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B540456121ADEF4000033B50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B540457021ADF01800033B50 /* TestRegistrateViewController.swift in Sources */,
+				B540456821ADEF4100033B50 /* ERTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B561F43E216C669D00EB917C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -588,22 +606,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B561F45D216C66A000EB917C /* Sources */ = {
+		B57A783021ADECB300E1AF85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5D9454621AB82CB0048C68E /* IniciaSesionViewControllerTests.swift in Sources */,
-				B561F466216C66A000EB917C /* ERUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B561F463216C66A000EB917C /* PBXTargetDependency */ = {
+		B540456B21ADEF4100033B50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B561F441216C669D00EB917C /* ER */;
-			targetProxy = B561F462216C66A000EB917C /* PBXContainerItemProxy */;
+			targetProxy = B540456A21ADEF4100033B50 /* PBXContainerItemProxy */;
+		};
+		B57A783A21ADECB300E1AF85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B561F441216C669D00EB917C /* ER */;
+			targetProxy = B57A783921ADECB300E1AF85 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -627,6 +648,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B540456C21ADEF4100033B50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
+				INFOPLIST_FILE = ERTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = taba.ERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ER.app/ER";
+			};
+			name = Debug;
+		};
+		B540456D21ADEF4100033B50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
+				INFOPLIST_FILE = ERTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = taba.ERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ER.app/ER";
+			};
+			name = Release;
+		};
 		B561F468216C66A000EB917C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -750,6 +813,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -759,6 +823,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -769,6 +834,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -778,23 +844,24 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B561F471216C66A000EB917C /* Debug */ = {
+		B57A783B21ADECB300E1AF85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053DA7D936B5A0946064E440 /* Pods-ERUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ERUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.ERUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = taba.ERUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -802,20 +869,20 @@
 			};
 			name = Debug;
 		};
-		B561F472216C66A000EB917C /* Release */ = {
+		B57A783C21ADECB300E1AF85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD1F8C527D2E9E6BF9705E49 /* Pods-ERUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ERUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.ERUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = taba.ERUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -826,6 +893,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B540456E21ADEF4100033B50 /* Build configuration list for PBXNativeTarget "ERTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B540456C21ADEF4100033B50 /* Debug */,
+				B540456D21ADEF4100033B50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B561F43D216C669D00EB917C /* Build configuration list for PBXProject "ER" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -844,11 +920,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B561F470216C66A000EB917C /* Build configuration list for PBXNativeTarget "ERUITests" */ = {
+		B57A783D21ADECB300E1AF85 /* Build configuration list for PBXNativeTarget "ERUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B561F471216C66A000EB917C /* Debug */,
-				B561F472216C66A000EB917C /* Release */,
+				B57A783B21ADECB300E1AF85 /* Debug */,
+				B57A783C21ADECB300E1AF85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
