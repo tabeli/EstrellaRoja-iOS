@@ -39,6 +39,12 @@ class MuestraRutaActualViewController: UIViewController {
     var tourId:[Int] = []
     var tourPlaceId:[Int] = []
     
+    var imageIdArr:[Int] = []
+    var imagePathArr:[String] = []
+    
+    var placeImageIdArr:[Int] = []
+    var imageId:[Int] = []
+    
     var stopId:[Int] = []
     var stopName:[String] = []
     var stopLongitud:[Double] = []
@@ -444,7 +450,126 @@ class MuestraRutaActualViewController: UIViewController {
         task.resume()
     }
     
+    func obtenerImagesRequest() {
+        var urlComponents = URLComponents() // Forma el url
+        urlComponents.scheme = RequestData.shared.scheme
+        urlComponents.host = RequestData.shared.domain
+        urlComponents.path = RequestData.shared.subdomain + RequestData.shared.getAllImagesPath
+        guard let url = urlComponents.url else { return } // guard para ver si se hace, si no, se muere el metodo
+        var request = URLRequest(url: url) // Crea opeticion a partir del url
+        request.httpMethod = "GET" // Le dices que tipo de metodo es
+        var headers = request.allHTTPHeaderFields ?? [:] // Es como esto: x-www-form-urlencoded
+        headers["Content-Type"] = "application/json" // Tiene que ser un json porque recibe un json
+        request.allHTTPHeaderFields = headers // Se lo asignas el arreglo del url
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) {
+            (data, response, error) in // Los datos que responde, response es la respuesta http completa, o el erroe
+            guard error == nil else { //Si no es nulo manda una alerta
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Imposible conectar al servidor", message: "Comprueba conexión a internet", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+                return
+            }
+            // Te aseguras que data no sea nulo y toma la respuesta y la pasa a un string para que la puedas imprimir
+            if let dataUnwrapped = data, let stringData = String(data: dataUnwrapped, encoding: .utf8) {
+                
+                /*print("TAMBIEN REGRESO ESTOS DE TOUR_PLACES DATOS QUE JALE")
+                 print(stringData)*/
+                do{
+                    // Casteas el dataMap de un data a un json de tipo string a cualquier cosa
+                    let dataArr = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [Any]
+                    // Checas si el valor con se agrego el id
+                    for element in dataArr {
+                        if let mapElement = element as? [String:Any] {
+                            if let imageId = mapElement["id"] as? Int {
+                                self.imageIdArr.append(imageId)
+                            }
+                            if let imagePath = mapElement["image_path"] as? String {
+                                self.imagePathArr.append(imagePath)
+                            }
+                        }
+                    }
+                    
+                } catch {
+                    print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    // Este solo sale si la peticion no te dice nada
+                    let alert = UIAlertController(title: "Error", message: "No hubo datos de respuesta", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
+        // Ejecutas el task
+        task.resume()
+    }
+        
     func obtenerPlaceImageRequest() {
+        var urlComponents = URLComponents() // Forma el url
+        urlComponents.scheme = RequestData.shared.scheme
+        urlComponents.host = RequestData.shared.domain
+        urlComponents.path = RequestData.shared.subdomain + RequestData.shared.getAllPlaceImagePath
+        guard let url = urlComponents.url else { return } // guard para ver si se hace, si no, se muere el metodo
+        var request = URLRequest(url: url) // Crea opeticion a partir del url
+        request.httpMethod = "GET" // Le dices que tipo de metodo es
+        var headers = request.allHTTPHeaderFields ?? [:] // Es como esto: x-www-form-urlencoded
+        headers["Content-Type"] = "application/json" // Tiene que ser un json porque recibe un json
+        request.allHTTPHeaderFields = headers // Se lo asignas el arreglo del url
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let task = session.dataTask(with: request) {
+            (data, response, error) in // Los datos que responde, response es la respuesta http completa, o el erroe
+            guard error == nil else { //Si no es nulo manda una alerta
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Imposible conectar al servidor", message: "Comprueba conexión a internet", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+                return
+            }
+            // Te aseguras que data no sea nulo y toma la respuesta y la pasa a un string para que la puedas imprimir
+            if let dataUnwrapped = data, let stringData = String(data: dataUnwrapped, encoding: .utf8) {
+                
+                /*print("TAMBIEN REGRESO ESTOS DE TOUR_PLACES DATOS QUE JALE")
+                 print(stringData)*/
+                do{
+                    // Casteas el dataMap de un data a un json de tipo string a cualquier cosa
+                    let dataArr = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [Any]
+                    // Checas si el valor con se agrego el id
+                    for element in dataArr {
+                        if let mapElement = element as? [String:Any] {
+                            if let placeId = mapElement["place_id"] as? Int {
+                                self.placeImageIdArr.append(placeId)
+                            }
+                            if let imageId = mapElement["image_id"] as? Int {
+                                self.imageId.append(imageId)
+                            }
+                        }
+                    }
+                    
+                } catch {
+                    print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    // Este solo sale si la peticion no te dice nada
+                    let alert = UIAlertController(title: "Error", message: "No hubo datos de respuesta", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
+        // Ejecutas el task
+        task.resume()
     }
     
     

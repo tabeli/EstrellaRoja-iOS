@@ -45,6 +45,12 @@
 		B5D9456A21ABEAEA0048C68E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456921ABEAEA0048C68E /* TutorialViewController.swift */; };
 		B5D9456C21ABEB280048C68E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456B21ABEB280048C68E /* TutorialPageViewController.swift */; };
 		B5D9456E21ABEB4F0048C68E /* TutorialDetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456D21ABEB4F0048C68E /* TutorialDetalleViewController.swift */; };
+		B5D9457021AC6BA70048C68E /* CamionesMuralesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9456F21AC6BA60048C68E /* CamionesMuralesViewController.swift */; };
+		B5D9457221AC74A40048C68E /* SeleccionaCamionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9457121AC74A40048C68E /* SeleccionaCamionTableViewController.swift */; };
+		B5D9457A21AC7BC50048C68E /* SeccionCamionesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9457921AC7BC50048C68E /* SeccionCamionesTableViewCell.swift */; };
+		B5D9457D21ACDB150048C68E /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9457C21ACDB150048C68E /* SideBarViewController.swift */; };
+		B5D9457F21ACE08B0048C68E /* SideBarMisBoletosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9457E21ACE08B0048C68E /* SideBarMisBoletosViewController.swift */; };
+		B5D9458121ACE5190048C68E /* SideBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D9458021ACE5190048C68E /* SideBarDelegate.swift */; };
 		B5F80DF82177C78600CDB5BE /* AgregarPasajerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DF72177C78600CDB5BE /* AgregarPasajerosViewController.swift */; };
 		B5F80DFA2177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DF92177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift */; };
 		B5F80DFC2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */; };
@@ -117,6 +123,12 @@
 		B5D9456921ABEAEA0048C68E /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		B5D9456B21ABEB280048C68E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		B5D9456D21ABEB4F0048C68E /* TutorialDetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDetalleViewController.swift; sourceTree = "<group>"; };
+		B5D9456F21AC6BA60048C68E /* CamionesMuralesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamionesMuralesViewController.swift; sourceTree = "<group>"; };
+		B5D9457121AC74A40048C68E /* SeleccionaCamionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionaCamionTableViewController.swift; sourceTree = "<group>"; };
+		B5D9457921AC7BC50048C68E /* SeccionCamionesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeccionCamionesTableViewCell.swift; sourceTree = "<group>"; };
+		B5D9457C21ACDB150048C68E /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		B5D9457E21ACE08B0048C68E /* SideBarMisBoletosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarMisBoletosViewController.swift; sourceTree = "<group>"; };
+		B5D9458021ACE5190048C68E /* SideBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarDelegate.swift; sourceTree = "<group>"; };
 		B5F80DF72177C78600CDB5BE /* AgregarPasajerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarPasajerosViewController.swift; sourceTree = "<group>"; };
 		B5F80DF92177C7D000CDB5BE /* AgregarPasajerosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarPasajerosTableViewController.swift; sourceTree = "<group>"; };
 		B5F80DFB2177C7FE00CDB5BE /* ComenzarViajeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComenzarViajeTableViewCell.swift; sourceTree = "<group>"; };
@@ -179,6 +191,9 @@
 			children = (
 				B535C384219D1BB900D326F9 /* MuestraRutaActualViewController.swift */,
 				B5757BB121A4864300B16E55 /* DetalleViewController.swift */,
+				B5D9456F21AC6BA60048C68E /* CamionesMuralesViewController.swift */,
+				B5D9457121AC74A40048C68E /* SeleccionaCamionTableViewController.swift */,
+				B5D9457921AC7BC50048C68E /* SeccionCamionesTableViewCell.swift */,
 			);
 			path = RutaDesbloquedadaMapa;
 			sourceTree = "<group>";
@@ -228,6 +243,7 @@
 				B5F80DF62177C71700CDB5BE /* ComprarBoletoDatosPasajero */,
 				B56C8E51219C14EE00C0EA61 /* RealizaPago */,
 				B535C383219D08CF00D326F9 /* RutaDesbloquedadaMapa */,
+				B5D9457B21ACDA630048C68E /* SideBar */,
 				B5D6BD392173FFA3004CDCC2 /* Storyboards */,
 				B561F445216C669D00EB917C /* AppDelegate.swift */,
 				B561F447216C669D00EB917C /* ViewController.swift */,
@@ -318,6 +334,16 @@
 				B5D9456D21ABEB4F0048C68E /* TutorialDetalleViewController.swift */,
 			);
 			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		B5D9457B21ACDA630048C68E /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				B5D9457C21ACDB150048C68E /* SideBarViewController.swift */,
+				B5D9457E21ACE08B0048C68E /* SideBarMisBoletosViewController.swift */,
+				B5D9458021ACE5190048C68E /* SideBarDelegate.swift */,
+			);
+			path = SideBar;
 			sourceTree = "<group>";
 		};
 		B5F80DF62177C71700CDB5BE /* ComprarBoletoDatosPasajero */ = {
@@ -520,11 +546,15 @@
 			files = (
 				B5B79F912179AA14001AEDEE /* RutaDetalleViewController.swift in Sources */,
 				B5B79F932179AA46001AEDEE /* RutaDetalleTableViewController.swift in Sources */,
+				B5D9457F21ACE08B0048C68E /* SideBarMisBoletosViewController.swift in Sources */,
 				B5D9456C21ABEB280048C68E /* TutorialPageViewController.swift in Sources */,
 				B5F80E002177C83200CDB5BE /* SiguienteTableViewCell.swift in Sources */,
 				B5B79F972179AA91001AEDEE /* DetalleDescripcionRutaTableViewCell.swift in Sources */,
+				B5D9458121ACE5190048C68E /* SideBarDelegate.swift in Sources */,
 				B5A6441D21A5D19C00DCF3A9 /* UserIniciaSesion.swift in Sources */,
 				B5757BB221A4864300B16E55 /* DetalleViewController.swift in Sources */,
+				B5D9457D21ACDB150048C68E /* SideBarViewController.swift in Sources */,
+				B5D9457A21AC7BC50048C68E /* SeccionCamionesTableViewCell.swift in Sources */,
 				B5F80E0C2178154100CDB5BE /* SiguientesButton.swift in Sources */,
 				B5B79F8F21794C43001AEDEE /* RutaTableViewCell.swift in Sources */,
 				B5F80E052178022200CDB5BE /* IniciaSesionViewController.swift in Sources */,
@@ -547,9 +577,11 @@
 				B561F448216C669D00EB917C /* ViewController.swift in Sources */,
 				B54B7A0A219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift in Sources */,
 				B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */,
+				B5D9457021AC6BA70048C68E /* CamionesMuralesViewController.swift in Sources */,
 				B5F80E092178025200CDB5BE /* CambiaContrasenaViewController.swift in Sources */,
 				B5A6441F21A67A2700DCF3A9 /* DatosPasajerosCellDelegate.swift in Sources */,
 				B5A6441821A5197600DCF3A9 /* RequestData.swift in Sources */,
+				B5D9457221AC74A40048C68E /* SeleccionaCamionTableViewController.swift in Sources */,
 				B5F80E03217801FD00CDB5BE /* InicialViewController.swift in Sources */,
 				B5D9456A21ABEAEA0048C68E /* TutorialViewController.swift in Sources */,
 				B561F446216C669D00EB917C /* AppDelegate.swift in Sources */,

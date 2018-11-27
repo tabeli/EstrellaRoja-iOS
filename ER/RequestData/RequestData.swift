@@ -27,4 +27,8 @@ class RequestData {
     let getAllTourPlacesPath = "tour_place"
     let getAllStopPath = "stop"
     let getAllTourStopPath = "tour_stop"
+    let getAllPlaceImagePath = "place_image"
+    let getAllImagesPath = "image"
+    let getAllBusesPath = "bus"
+    let getAllMuralPath = "mural"
 }
