@@ -353,8 +353,8 @@ class MuestraRutaActualViewController: UIViewController {
                         print("Hago puntitos")
                         indice += 1
                         let annotation = MKPointAnnotation()
-                        annotation.title = self.placeDescription[indice]
-                        annotation.subtitle = self.placeName[indice]
+                        annotation.title = self.placeName[indice]
+                        annotation.subtitle = self.placeDescription[indice]
                         annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
                         self.markersArr.append(annotation)
                         self.mapView.addAnnotation(annotation)

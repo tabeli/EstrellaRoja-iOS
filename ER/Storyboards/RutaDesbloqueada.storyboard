@@ -556,7 +556,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Maj-vw-VjU">
                                         <rect key="frame" x="0.0" y="269.5" width="310.5" height="100"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Put-it-jpO" userLabel="ButtonHorarios">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Put-it-jpO" userLabel="ButtonHorarios">
                                                 <rect key="frame" x="0.0" y="0.0" width="310.5" height="100"/>
                                                 <connections>
                                                     <action selector="horariosAction:" destination="1nt-IF-yW1" eventType="touchUpInside" id="VKo-za-zex"/>
@@ -575,7 +575,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.91313055200000004" green="0.56086821669999998" blue="0.049566051350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.82715339470000004" green="0.50805884040000004" blue="0.044899086499999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="hsd-P4-Pyy" firstAttribute="centerX" secondItem="Maj-vw-VjU" secondAttribute="centerX" multiplier="0.8" id="84F-9g-L0X"/>
                                             <constraint firstItem="hsd-P4-Pyy" firstAttribute="width" secondItem="Maj-vw-VjU" secondAttribute="width" multiplier="0.7" id="Auu-YQ-2Lq"/>
