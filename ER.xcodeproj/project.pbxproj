@@ -28,6 +28,8 @@
 		B57CEF4221AE194000B8C2F8 /* TestReservaBoletosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CEF4121AE194000B8C2F8 /* TestReservaBoletosViewController.swift */; };
 		B57CEF4421AE252200B8C2F8 /* TestNumeroPasajerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CEF4321AE252200B8C2F8 /* TestNumeroPasajerosViewController.swift */; };
 		B57CEF4621AE2C0800B8C2F8 /* TestCompletaPagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CEF4521AE2C0800B8C2F8 /* TestCompletaPagoViewController.swift */; };
+		B57CEF4821AE763C00B8C2F8 /* MisBoletosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CEF4721AE763C00B8C2F8 /* MisBoletosTableViewController.swift */; };
+		B57CEF4A21AE76BA00B8C2F8 /* MisBoletosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CEF4921AE76BA00B8C2F8 /* MisBoletosTableViewCell.swift */; };
 		B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */; };
 		B5A6441821A5197600DCF3A9 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441721A5197600DCF3A9 /* RequestData.swift */; };
 		B5A6441B21A5C7EF00DCF3A9 /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */; };
@@ -118,6 +120,8 @@
 		B57CEF4121AE194000B8C2F8 /* TestReservaBoletosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReservaBoletosViewController.swift; sourceTree = "<group>"; };
 		B57CEF4321AE252200B8C2F8 /* TestNumeroPasajerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNumeroPasajerosViewController.swift; sourceTree = "<group>"; };
 		B57CEF4521AE2C0800B8C2F8 /* TestCompletaPagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompletaPagoViewController.swift; sourceTree = "<group>"; };
+		B57CEF4721AE763C00B8C2F8 /* MisBoletosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisBoletosTableViewController.swift; sourceTree = "<group>"; };
+		B57CEF4921AE76BA00B8C2F8 /* MisBoletosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisBoletosTableViewCell.swift; sourceTree = "<group>"; };
 		B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresDetalleCompraViewController.swift; sourceTree = "<group>"; };
 		B5A6441721A5197600DCF3A9 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
@@ -369,6 +373,8 @@
 				B5D9457C21ACDB150048C68E /* SideBarViewController.swift */,
 				B5D9457E21ACE08B0048C68E /* SideBarMisBoletosViewController.swift */,
 				B5D9458021ACE5190048C68E /* SideBarDelegate.swift */,
+				B57CEF4721AE763C00B8C2F8 /* MisBoletosTableViewController.swift */,
+				B57CEF4921AE76BA00B8C2F8 /* MisBoletosTableViewCell.swift */,
 			);
 			path = SideBar;
 			sourceTree = "<group>";
@@ -600,6 +606,7 @@
 				B5D9458121ACE5190048C68E /* SideBarDelegate.swift in Sources */,
 				B5A6441D21A5D19C00DCF3A9 /* UserIniciaSesion.swift in Sources */,
 				B5757BB221A4864300B16E55 /* DetalleViewController.swift in Sources */,
+				B57CEF4A21AE76BA00B8C2F8 /* MisBoletosTableViewCell.swift in Sources */,
 				B5D9457D21ACDB150048C68E /* SideBarViewController.swift in Sources */,
 				B5D9457A21AC7BC50048C68E /* SeccionCamionesTableViewCell.swift in Sources */,
 				B5F80E0C2178154100CDB5BE /* SiguientesButton.swift in Sources */,
@@ -621,6 +628,7 @@
 				B5F80DFE2177C81B00CDB5BE /* DatosPasajeroTableViewCell.swift in Sources */,
 				B5B79F992179AAA6001AEDEE /* DetalleComprarRutaTableViewCell.swift in Sources */,
 				B5F80DF82177C78600CDB5BE /* AgregarPasajerosViewController.swift in Sources */,
+				B57CEF4821AE763C00B8C2F8 /* MisBoletosTableViewController.swift in Sources */,
 				B561F448216C669D00EB917C /* ViewController.swift in Sources */,
 				B54B7A0A219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift in Sources */,
 				B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */,

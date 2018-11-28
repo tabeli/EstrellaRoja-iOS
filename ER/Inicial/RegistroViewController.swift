@@ -52,10 +52,36 @@ class RegistroViewController: UIViewController {
     
     func verifyInputs() -> Bool {
         //Aqui verificar que la contraseña y el mail sean correctos
+        if self.verifyUsernameInput(usernameStr: self.name.text!) && self.verifyLastnameInput(lastnameStr: self.lastname.text!) {
+            
+            return true
+        }
         #warning("Implementar verificacion de inputs")
         
         return true
     }
+    
+    func verifyUsernameInput(usernameStr: String) -> Bool {
+        return usernameStr.count > 1
+    }
+    
+    func verifyLastnameInput(lastnameStr: String) -> Bool {
+        return lastnameStr.count > 1
+    }
+    
+    func verifyEmailInput(emailStr: String) -> Bool {
+        return emailStr.count > 3
+    }
+    
+    func equalPasswordInput(pwdOne: String, pwdTwo: String) -> Bool {
+        return pwdOne == pwdTwo
+    }
+    
+    func verifyPostalCodeInput(postalcodeStr: String) -> Bool {
+        return postalcodeStr.count > 3
+    }
+    
+    
     
     func registerRequest() {
         var requestResult = false // Pa' cambiar el registerResult y asegurar que todo termino

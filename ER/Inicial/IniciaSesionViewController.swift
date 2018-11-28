@@ -24,6 +24,7 @@ class IniciaSesionViewController: UIViewController {
     @IBOutlet weak var ingresar: UIButton!
     
     
+    
     @IBAction func backArrow(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -35,11 +36,10 @@ class IniciaSesionViewController: UIViewController {
         }
         else{
             //Muestra alerta de que los inputs estan mal
-            #warning("Implementar mostrar error de inputs")
+            let alert = UIAlertController(title: "Error", message: "Correo o contraseña inválido", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+            self.present(alert, animated: true)
         }
-        
-        
-        
     }
     
     func verifyUsernameInput(usernameStr: String) -> Bool {
@@ -48,7 +48,7 @@ class IniciaSesionViewController: UIViewController {
     
     func verifyPasswordInput(passwordStr: String) -> Bool {
         //Aqui verificar que la contraseña sea correcta
-        return passwordStr.count > 3
+        return passwordStr.count > 4
     }
     
     func loginRequest(){

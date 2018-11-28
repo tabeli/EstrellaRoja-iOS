@@ -12,6 +12,7 @@ class SideBarMisBoletosViewController: UIViewController {
 
     
     @IBAction func backArrow(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {

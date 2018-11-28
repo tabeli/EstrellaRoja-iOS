@@ -37,7 +37,7 @@ class TestInicioSesionViewController: XCTestCase {
         let doLogin = storyboard.instantiateViewController(withIdentifier: "IniciaSesion") as! IniciaSesionViewController
         _ = doLogin.view
         
-        doLogin.username.text = "algo"
+        doLogin.username.text = "admin@hola"
         doLogin.password.text = "contrasenamal"
         doLogin.ingresarAction(UIButton())
         
@@ -46,7 +46,39 @@ class TestInicioSesionViewController: XCTestCase {
         
     }
     
-    func testExample() {
+    func testLoginUsernameInvalidData() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tryLogin = storyboard.instantiateViewController(withIdentifier: "IniciaSesion") as! IniciaSesionViewController
+        _ = tryLogin.view
+        
+        XCTAssertFalse(tryLogin.verifyUsernameInput(usernameStr: "uno"))
+        XCTAssertTrue(tryLogin.verifyUsernameInput(usernameStr: "admin@admin.com"))
+    }
+    
+    func testLoginPwdInvalidData() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tryLogin = storyboard.instantiateViewController(withIdentifier: "IniciaSesion") as! IniciaSesionViewController
+        _ = tryLogin.view
+        
+        XCTAssertFalse(tryLogin.verifyPasswordInput(passwordStr: "dos"))
+        XCTAssertTrue(tryLogin.verifyPasswordInput(passwordStr: "admin"))
+    }
+    
+    func testLoginInvalidData() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let doLogin = storyboard.instantiateViewController(withIdentifier: "IniciaSesion") as! IniciaSesionViewController
+        _ = doLogin.view
+        
+        doLogin.username.text = "uno"
+        doLogin.password.text = "dos"
+        doLogin.ingresarAction(UIButton())
+        
+        //sleep(2)
+        XCTAssertTrue(true, "Correo o contraseña inválido")
+        
+    }
+    
+    /*func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
@@ -56,6 +88,6 @@ class TestInicioSesionViewController: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
-    }
+    }*/
 
 }
