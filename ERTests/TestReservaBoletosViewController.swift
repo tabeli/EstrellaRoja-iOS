@@ -1,5 +1,5 @@
 //
-//  TestRegistrateViewController.swift
+//  TestReservaBoletosViewController.swift
 //  ERTests
 //
 //  Created by Tabatha Acosta on 11/27/18.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import ER
 
-class TestRegistrateViewController: XCTestCase {
+class TestReservaBoletosViewController: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,28 +19,20 @@ class TestRegistrateViewController: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testSucessRegister() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let createAccount = storyboard.instantiateViewController(withIdentifier: "Registro") as! RegistroViewController
-        _ = createAccount.view
+    func testSuccessfulReservaBoleto() {
+        let storyboard = UIStoryboard(name: "Ruta", bundle: nil)
+        let firstBuy = storyboard.instantiateViewController(withIdentifier: "CompraUno") as! CompraUnoReservaBoletosViewController
+        _ = firstBuy.view
         
-        createAccount.name.text = "Taba"
-        createAccount.lastname.text = "Acosta"
-        createAccount.email.text = "tabeli.acs@gmail.com"
-        createAccount.pwd.text = "admin"
-        createAccount.pwdRepetido.text = "admin"
-        createAccount.postalCode.text = "7572"
-        createAccount.birthdate.text = "07/09/1997"
-        createAccount.phonenumber.text = "9221957732"
-        createAccount.registrateAction(UIButton())
+        firstBuy.eligeFecha.text = "23/12/2018"
+        firstBuy.eligeHora.text = "08:00"
         
         sleep(3)
         XCTAssert(true)
-        
     }
     
-    func testRejectedRegister() {
-    
+    func testRejectedReservaBoleto() {
+        
     }
     
     func testExample() {

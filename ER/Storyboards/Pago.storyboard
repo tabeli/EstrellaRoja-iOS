@@ -229,7 +229,7 @@
         <!--SeleccionaPasajeros-->
         <scene sceneID="Bvu-kW-JNK">
             <objects>
-                <viewController title="SeleccionaPasajeros" id="DtM-Kf-sTW" userLabel="SeleccionaPasajeros" customClass="DosSeleccionaPasajerosViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompraDos" title="SeleccionaPasajeros" id="DtM-Kf-sTW" userLabel="SeleccionaPasajeros" customClass="DosSeleccionaPasajerosViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ab-F5-QxR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -613,7 +613,7 @@
         <!--DetalleCompra-->
         <scene sceneID="Eq8-hj-JNP">
             <objects>
-                <viewController title="DetalleCompra" id="CDS-h6-Gbd" userLabel="DetalleCompra" customClass="TresDetalleCompraViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompraTres" title="DetalleCompra" id="CDS-h6-Gbd" userLabel="DetalleCompra" customClass="TresDetalleCompraViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tf5-wo-EM5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -951,7 +951,7 @@
         <!--Completa pago-->
         <scene sceneID="9aN-8o-aqy">
             <objects>
-                <viewController title="Registro" id="Icy-at-Ypd" userLabel="Completa pago" customClass="CompletaPagoViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompletaPago" title="Registro" id="Icy-at-Ypd" userLabel="Completa pago" customClass="CompletaPagoViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LHZ-QL-L7H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

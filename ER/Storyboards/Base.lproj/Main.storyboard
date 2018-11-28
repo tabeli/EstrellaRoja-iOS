@@ -73,7 +73,7 @@
         <!--iniciaSesion-->
         <scene sceneID="gfj-kw-szK">
             <objects>
-                <viewController title="iniciaSesion" id="fQF-v8-bkp" customClass="IniciaSesionViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IniciaSesion" title="iniciaSesion" id="fQF-v8-bkp" customClass="IniciaSesionViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gVe-LB-SPu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -550,6 +550,6 @@
         <image name="splashscreen" width="273" height="591"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dS9-kq-yRZ"/>
+        <segue reference="fdY-jk-K1x"/>
     </inferredMetricsTieBreakers>
 </document>

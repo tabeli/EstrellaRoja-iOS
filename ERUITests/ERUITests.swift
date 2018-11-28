@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import ER
 
 class ERUITests: XCTestCase {
 
@@ -21,9 +22,21 @@ class ERUITests: XCTestCase {
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
-
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    func testSuccessfulOperation() {
+        let app = XCUIApplication()
+        app.tables/*@START_MENU_TOKEN@*/.cells.containing(.button, identifier:"Acepto terminos y condiciones")/*[[".cells.containing(.button, identifier:\"Siguiente\")",".cells.containing(.button, identifier:\"Acepto terminos y condiciones\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.children(matching: .button).element(boundBy: 0).tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        app.buttons["Siguiente"].tap()
+        //algo
+    }
+    
+    func testGoToMap() {
+        
     }
 
     func testExample() {

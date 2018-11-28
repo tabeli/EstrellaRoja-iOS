@@ -14,6 +14,7 @@
 		B535C385219D1BBA00D326F9 /* MuestraRutaActualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535C384219D1BB900D326F9 /* MuestraRutaActualViewController.swift */; };
 		B540456821ADEF4100033B50 /* ERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540456721ADEF4100033B50 /* ERTests.swift */; };
 		B540457021ADF01800033B50 /* TestRegistrateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540456F21ADF01800033B50 /* TestRegistrateViewController.swift */; };
+		B540457221ADF4CC00033B50 /* TestInicioSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540457121ADF4CC00033B50 /* TestInicioSesionViewController.swift */; };
 		B54B7A08219A4420008DBE6A /* CompraUnoReservaBoletosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B7A07219A441F008DBE6A /* CompraUnoReservaBoletosViewController.swift */; };
 		B54B7A0A219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B7A09219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift */; };
 		B561F446216C669D00EB917C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F445216C669D00EB917C /* AppDelegate.swift */; };
@@ -23,6 +24,10 @@
 		B561F450216C669F00EB917C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F44E216C669F00EB917C /* LaunchScreen.storyboard */; };
 		B56C8E53219C155B00C0EA61 /* CompletaPagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */; };
 		B5757BB221A4864300B16E55 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5757BB121A4864300B16E55 /* DetalleViewController.swift */; };
+		B57CEF3A21AE0BBA00B8C2F8 /* ERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CEF3921AE0BBA00B8C2F8 /* ERUITests.swift */; };
+		B57CEF4221AE194000B8C2F8 /* TestReservaBoletosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CEF4121AE194000B8C2F8 /* TestReservaBoletosViewController.swift */; };
+		B57CEF4421AE252200B8C2F8 /* TestNumeroPasajerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CEF4321AE252200B8C2F8 /* TestNumeroPasajerosViewController.swift */; };
+		B57CEF4621AE2C0800B8C2F8 /* TestCompletaPagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57CEF4521AE2C0800B8C2F8 /* TestCompletaPagoViewController.swift */; };
 		B58E129D219BC7AB00883E3F /* TresDetalleCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */; };
 		B5A6441821A5197600DCF3A9 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441721A5197600DCF3A9 /* RequestData.swift */; };
 		B5A6441B21A5C7EF00DCF3A9 /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */; };
@@ -70,7 +75,7 @@
 			remoteGlobalIDString = B561F441216C669D00EB917C;
 			remoteInfo = ER;
 		};
-		B57A783921ADECB300E1AF85 /* PBXContainerItemProxy */ = {
+		B57CEF3C21AE0BBA00B8C2F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B561F43A216C669D00EB917C /* Project object */;
 			proxyType = 1;
@@ -95,6 +100,7 @@
 		B540456721ADEF4100033B50 /* ERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERTests.swift; sourceTree = "<group>"; };
 		B540456921ADEF4100033B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B540456F21ADF01800033B50 /* TestRegistrateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRegistrateViewController.swift; sourceTree = "<group>"; };
+		B540457121ADF4CC00033B50 /* TestInicioSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInicioSesionViewController.swift; sourceTree = "<group>"; };
 		B54B7A07219A441F008DBE6A /* CompraUnoReservaBoletosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompraUnoReservaBoletosViewController.swift; sourceTree = "<group>"; };
 		B54B7A09219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosSeleccionaPasajerosViewController.swift; sourceTree = "<group>"; };
 		B561F442216C669D00EB917C /* ER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ER.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +112,12 @@
 		B561F451216C669F00EB917C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletaPagoViewController.swift; sourceTree = "<group>"; };
 		B5757BB121A4864300B16E55 /* DetalleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
-		B57A783421ADECB300E1AF85 /* ERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57CEF3721AE0BB900B8C2F8 /* ERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57CEF3921AE0BBA00B8C2F8 /* ERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERUITests.swift; sourceTree = "<group>"; };
+		B57CEF3B21AE0BBA00B8C2F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B57CEF4121AE194000B8C2F8 /* TestReservaBoletosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReservaBoletosViewController.swift; sourceTree = "<group>"; };
+		B57CEF4321AE252200B8C2F8 /* TestNumeroPasajerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNumeroPasajerosViewController.swift; sourceTree = "<group>"; };
+		B57CEF4521AE2C0800B8C2F8 /* TestCompletaPagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompletaPagoViewController.swift; sourceTree = "<group>"; };
 		B58E129C219BC7AB00883E3F /* TresDetalleCompraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresDetalleCompraViewController.swift; sourceTree = "<group>"; };
 		B5A6441721A5197600DCF3A9 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
 		B5A6441A21A5C7EF00DCF3A9 /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
@@ -164,7 +175,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B57A783121ADECB300E1AF85 /* Frameworks */ = {
+		B57CEF3421AE0BB900B8C2F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,6 +223,10 @@
 		B540456621ADEF4100033B50 /* ERTests */ = {
 			isa = PBXGroup;
 			children = (
+				B57CEF4521AE2C0800B8C2F8 /* TestCompletaPagoViewController.swift */,
+				B57CEF4321AE252200B8C2F8 /* TestNumeroPasajerosViewController.swift */,
+				B57CEF4121AE194000B8C2F8 /* TestReservaBoletosViewController.swift */,
+				B540457121ADF4CC00033B50 /* TestInicioSesionViewController.swift */,
 				B540456F21ADF01800033B50 /* TestRegistrateViewController.swift */,
 				B540456721ADEF4100033B50 /* ERTests.swift */,
 				B540456921ADEF4100033B50 /* Info.plist */,
@@ -234,6 +249,7 @@
 			children = (
 				B561F444216C669D00EB917C /* ER */,
 				B540456621ADEF4100033B50 /* ERTests */,
+				B57CEF3821AE0BBA00B8C2F8 /* ERUITests */,
 				B561F443216C669D00EB917C /* Products */,
 				B714B4D2230DF3B178AFA4C6 /* Frameworks */,
 				4C074ADE596EA12A244606A0 /* Pods */,
@@ -244,8 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				B561F442216C669D00EB917C /* ER.app */,
-				B57A783421ADECB300E1AF85 /* ERUITests.xctest */,
 				B540456521ADEF4000033B50 /* ERTests.xctest */,
+				B57CEF3721AE0BB900B8C2F8 /* ERUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +297,15 @@
 				B56C8E52219C155B00C0EA61 /* CompletaPagoViewController.swift */,
 			);
 			path = RealizaPago;
+			sourceTree = "<group>";
+		};
+		B57CEF3821AE0BBA00B8C2F8 /* ERUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B57CEF3921AE0BBA00B8C2F8 /* ERUITests.swift */,
+				B57CEF3B21AE0BBA00B8C2F8 /* Info.plist */,
+			);
+			path = ERUITests;
 			sourceTree = "<group>";
 		};
 		B5A6441621A5193400DCF3A9 /* RequestData */ = {
@@ -429,22 +454,22 @@
 			productReference = B561F442216C669D00EB917C /* ER.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B57A783321ADECB300E1AF85 /* ERUITests */ = {
+		B57CEF3621AE0BB900B8C2F8 /* ERUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B57A783D21ADECB300E1AF85 /* Build configuration list for PBXNativeTarget "ERUITests" */;
+			buildConfigurationList = B57CEF3E21AE0BBA00B8C2F8 /* Build configuration list for PBXNativeTarget "ERUITests" */;
 			buildPhases = (
-				B57A783021ADECB300E1AF85 /* Sources */,
-				B57A783121ADECB300E1AF85 /* Frameworks */,
-				B57A783221ADECB300E1AF85 /* Resources */,
+				B57CEF3321AE0BB900B8C2F8 /* Sources */,
+				B57CEF3421AE0BB900B8C2F8 /* Frameworks */,
+				B57CEF3521AE0BB900B8C2F8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B57A783A21ADECB300E1AF85 /* PBXTargetDependency */,
+				B57CEF3D21AE0BBA00B8C2F8 /* PBXTargetDependency */,
 			);
 			name = ERUITests;
 			productName = ERUITests;
-			productReference = B57A783421ADECB300E1AF85 /* ERUITests.xctest */;
+			productReference = B57CEF3721AE0BB900B8C2F8 /* ERUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -464,7 +489,7 @@
 					B561F441216C669D00EB917C = {
 						CreatedOnToolsVersion = 10.0;
 					};
-					B57A783321ADECB300E1AF85 = {
+					B57CEF3621AE0BB900B8C2F8 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = B561F441216C669D00EB917C;
 					};
@@ -484,8 +509,8 @@
 			projectRoot = "";
 			targets = (
 				B561F441216C669D00EB917C /* ER */,
-				B57A783321ADECB300E1AF85 /* ERUITests */,
 				B540456421ADEF4000033B50 /* ERTests */,
+				B57CEF3621AE0BB900B8C2F8 /* ERUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -514,7 +539,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B57A783221ADECB300E1AF85 /* Resources */ = {
+		B57CEF3521AE0BB900B8C2F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -553,7 +578,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57CEF4621AE2C0800B8C2F8 /* TestCompletaPagoViewController.swift in Sources */,
 				B540457021ADF01800033B50 /* TestRegistrateViewController.swift in Sources */,
+				B57CEF4421AE252200B8C2F8 /* TestNumeroPasajerosViewController.swift in Sources */,
+				B57CEF4221AE194000B8C2F8 /* TestReservaBoletosViewController.swift in Sources */,
+				B540457221ADF4CC00033B50 /* TestInicioSesionViewController.swift in Sources */,
 				B540456821ADEF4100033B50 /* ERTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,10 +635,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B57A783021ADECB300E1AF85 /* Sources */ = {
+		B57CEF3321AE0BB900B8C2F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57CEF3A21AE0BBA00B8C2F8 /* ERUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,10 +651,10 @@
 			target = B561F441216C669D00EB917C /* ER */;
 			targetProxy = B540456A21ADEF4100033B50 /* PBXContainerItemProxy */;
 		};
-		B57A783A21ADECB300E1AF85 /* PBXTargetDependency */ = {
+		B57CEF3D21AE0BBA00B8C2F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B561F441216C669D00EB917C /* ER */;
-			targetProxy = B57A783921ADECB300E1AF85 /* PBXContainerItemProxy */;
+			targetProxy = B57CEF3C21AE0BBA00B8C2F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -654,6 +684,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ERTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -675,6 +706,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ERTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -848,12 +880,11 @@
 			};
 			name = Release;
 		};
-		B57A783B21ADECB300E1AF85 /* Debug */ = {
+		B57CEF3F21AE0BBA00B8C2F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
-				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ERUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -869,12 +900,11 @@
 			};
 			name = Debug;
 		};
-		B57A783C21ADECB300E1AF85 /* Release */ = {
+		B57CEF4021AE0BBA00B8C2F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
-				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ERUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -920,11 +950,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B57A783D21ADECB300E1AF85 /* Build configuration list for PBXNativeTarget "ERUITests" */ = {
+		B57CEF3E21AE0BBA00B8C2F8 /* Build configuration list for PBXNativeTarget "ERUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B57A783B21ADECB300E1AF85 /* Debug */,
-				B57A783C21ADECB300E1AF85 /* Release */,
+				B57CEF3F21AE0BBA00B8C2F8 /* Debug */,
+				B57CEF4021AE0BBA00B8C2F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

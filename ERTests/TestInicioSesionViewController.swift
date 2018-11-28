@@ -1,5 +1,5 @@
 //
-//  TestRegistrateViewController.swift
+//  TestInicioSesionViewController.swift
 //  ERTests
 //
 //  Created by Tabatha Acosta on 11/27/18.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import ER
 
-class TestRegistrateViewController: XCTestCase {
+class TestInicioSesionViewController: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,28 +19,31 @@ class TestRegistrateViewController: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testSucessRegister() {
+    func testSucessLogin() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let createAccount = storyboard.instantiateViewController(withIdentifier: "Registro") as! RegistroViewController
-        _ = createAccount.view
+        let doLogin = storyboard.instantiateViewController(withIdentifier: "IniciaSesion") as! IniciaSesionViewController
+        _ = doLogin.view
         
-        createAccount.name.text = "Taba"
-        createAccount.lastname.text = "Acosta"
-        createAccount.email.text = "tabeli.acs@gmail.com"
-        createAccount.pwd.text = "admin"
-        createAccount.pwdRepetido.text = "admin"
-        createAccount.postalCode.text = "7572"
-        createAccount.birthdate.text = "07/09/1997"
-        createAccount.phonenumber.text = "9221957732"
-        createAccount.registrateAction(UIButton())
+        doLogin.username.text = "admin@admin.com"
+        doLogin.password.text = "admin"
+        doLogin.ingresarAction(UIButton())
         
         sleep(3)
         XCTAssert(true)
-        
     }
     
-    func testRejectedRegister() {
-    
+    func testLoginRefused() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let doLogin = storyboard.instantiateViewController(withIdentifier: "IniciaSesion") as! IniciaSesionViewController
+        _ = doLogin.view
+        
+        doLogin.username.text = "algo"
+        doLogin.password.text = "contrasenamal"
+        doLogin.ingresarAction(UIButton())
+        
+        //sleep(2)
+        XCTAssertTrue(true, "User doesn't exist")
+        
     }
     
     func testExample() {
