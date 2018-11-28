@@ -1544,7 +1544,7 @@
         <!--Agregar Pasajeros Table View Controller-->
         <scene sceneID="Jbp-Ub-ZAo">
             <objects>
-                <tableViewController id="2hE-M5-9se" customClass="AgregarPasajerosTableViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableAddPassengers" id="2hE-M5-9se" customClass="AgregarPasajerosTableViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dga-aV-YsY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672.66666666666674"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -32,7 +32,15 @@ class TestReservaBoletosViewController: XCTestCase {
     }
     
     func testRejectedReservaBoleto() {
+        let storyboard = UIStoryboard(name: "Ruta", bundle: nil)
+        let firstBuy = storyboard.instantiateViewController(withIdentifier: "CompraUno") as! CompraUnoReservaBoletosViewController
+        _ = firstBuy.view
         
+        firstBuy.eligeFecha.text = ""
+        firstBuy.eligeHora.text = ""
+        firstBuy.siguienteAction(UIButton())
+        
+        XCTAssert(true, "Ingresar datos faltantes")
     }
     
     /*func testExample() {

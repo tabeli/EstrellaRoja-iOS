@@ -40,9 +40,65 @@ class CompletaPagoViewController: UIViewController {
     
     
     @IBAction func siguienteAction(_ sender: UIButton) {
-        UserDefaults.standard.set(idRuta, forKey: "idRuta")
-        
-        performSegue(withIdentifier: "RutaDesbloqueadaSegue", sender: nil)
+        if self.verifyInputs() {
+            UserDefaults.standard.set(idRuta, forKey: "idRuta")
+            performSegue(withIdentifier: "RutaDesbloqueadaSegue", sender: nil)
+        }
+        else if (nombreUsuario.text?.isEmpty)! || (numeroTarjeta.text?.isEmpty)! || (mesVencimiento.text?.isEmpty)! || (anioVencimiento.text?.isEmpty)! || (codigoSeguridad.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Error", message: "Datos faltantes", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+            self.present(alert, animated: true)
+            
+        }
+        else {
+            let alert = UIAlertController(title: "Error", message: "Datos incorrectos", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func verifyInputs() -> Bool {
+        if self.verifyUsernameInput(usernameStr: self.nombreUsuario.text!) && self.verifyCardNumberInput(cardnumberStr: self.numeroTarjeta.text!) && self.verifyMesVencimientoInput(mesVencimiento: self.mesVencimiento.text!) && self.verifyAnioVencimientoInput(anioVencimiento: self.anioVencimiento.text!) && self.verifySecureCodeInput(secureCode: self.codigoSeguridad.text!) {
+            return true
+        }
+        else {
+            print("Error")
+            return false
+        }
+    }
+    
+    func verifyUsernameInput(usernameStr: String) -> Bool {
+        return usernameStr.count > 8
+    }
+    
+    func verifyCardNumberInput(cardnumberStr: String) -> Bool {
+        if cardnumberStr.count > 9 && cardnumberStr.count < 12 {
+            return true
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Tarjeta Inválida", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+            self.present(alert, animated: true)
+            return false
+        }
+    }
+    
+    func verifyMesVencimientoInput(mesVencimiento: String) -> Bool {
+        return mesVencimiento.count == 2
+    }
+    
+    func verifyAnioVencimientoInput(anioVencimiento: String) -> Bool {
+        return anioVencimiento.count == 2
+    }
+    
+    func verifySecureCodeInput(secureCode: String) -> Bool {
+        if secureCode.count < 5 && secureCode.count > 2 {
+            return true
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Código de seguridad inválido", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+            self.present(alert, animated: true)
+            return false
+        }
     }
     
     override func viewDidLoad() {
@@ -111,7 +167,6 @@ class CompletaPagoViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    #warning("Hay que ver un video de como arreglar el paso de datos hacia un Tab Bar Controller")
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RutaDesbloqueadaSegue"{
             let vc = segue.destination as! MuestraRutaActualViewController

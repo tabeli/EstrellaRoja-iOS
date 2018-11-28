@@ -32,8 +32,40 @@ class TestNumeroPasajerosViewController: XCTestCase {
         XCTAssert(true)
     }
 
-    func testRejectNumberPassenger() {
+    func testNoPassengerSelected() {
+        let storyboard = UIStoryboard(name: "Pago", bundle: nil)
+        let passengerNumber = storyboard.instantiateViewController(withIdentifier: "CompraDos") as! DosSeleccionaPasajerosViewController
+        _ = passengerNumber.view
         
+        passengerNumber.adulto.text = "0"
+        passengerNumber.nino.text = "0"
+        passengerNumber.inapam.text = "0"
+        
+        XCTAssert(true, "Ingresa cuantos boletos deseas comprar")
+    }
+    
+    func testKidAlone() {
+        let storyboard = UIStoryboard(name: "Pago", bundle: nil)
+        let passengerNumber = storyboard.instantiateViewController(withIdentifier: "CompraDos") as! DosSeleccionaPasajerosViewController
+        _ = passengerNumber.view
+        
+        passengerNumber.adulto.text = "0"
+        passengerNumber.nino.text = "2"
+        passengerNumber.inapam.text = "0"
+        
+        XCTAssert(true, "Los niños deben de ir acompañados de un adulto")
+    }
+    
+    func testMoreThanTenPassengers() {
+        let storyboard = UIStoryboard(name: "Pago", bundle: nil)
+        let passengerNumber = storyboard.instantiateViewController(withIdentifier: "CompraDos") as! DosSeleccionaPasajerosViewController
+        _ = passengerNumber.view
+        
+        passengerNumber.adulto.text = "5"
+        passengerNumber.nino.text = "2"
+        passengerNumber.inapam.text = "5"
+        
+        XCTAssert(true, "Se permiten compras de hasta 10 boletos")
     }
     
     /*func testExample() {
