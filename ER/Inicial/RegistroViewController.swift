@@ -46,19 +46,23 @@ class RegistroViewController: UIViewController {
         }
         else{
             //Muestra alerta de que los inputs estan mal
-            #warning("Implementar mostrar error de inputs")
+            let alert = UIAlertController(title: "Error", message: "Algún dato ha sido incorrecto", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+            self.present(alert, animated: true)
         }
     }
     
     func verifyInputs() -> Bool {
         //Aqui verificar que la contraseña y el mail sean correctos
-        if self.verifyUsernameInput(usernameStr: self.name.text!) && self.verifyLastnameInput(lastnameStr: self.lastname.text!) {
+        if self.verifyUsernameInput(usernameStr: self.name.text!) && self.verifyLastnameInput(lastnameStr: self.lastname.text!) && self.verifyEmailInput(emailStr: self.email.text!) && equalPasswordInput(pwdOne: self.pwd.text!, pwdTwo: self.pwdRepetido.text!) && self.verifyPostalCodeInput(postalcodeStr: self.postalCode.text!) {
             
             return true
         }
-        #warning("Implementar verificacion de inputs")
+        else{
+            print("Error")
+            return false
+        }
         
-        return true
     }
     
     func verifyUsernameInput(usernameStr: String) -> Bool {
@@ -74,7 +78,15 @@ class RegistroViewController: UIViewController {
     }
     
     func equalPasswordInput(pwdOne: String, pwdTwo: String) -> Bool {
-        return pwdOne == pwdTwo
+        if pwdOne == pwdTwo {
+            return true
+        }
+        else {
+            let alert = UIAlertController(title: "Error", message: "Las contraseñas no coinciden", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(action) in }))
+            self.present(alert, animated: true)
+            return false
+        }
     }
     
     func verifyPostalCodeInput(postalcodeStr: String) -> Bool {
