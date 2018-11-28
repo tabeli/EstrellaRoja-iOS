@@ -10,15 +10,14 @@ import UIKit
 
 class MisBoletosTableViewController: UITableViewController {
 
-    var purchaseId:[Int] = []
+    var purchaseIdArray:[Int] = []
     var userId = 0
-    var purchaseIdArr:[Int] = []
-    var tourDateArr:[Int] = []
-    
+    var tourDateArr:[String] = []
+    var folios:[Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         userId = UserDefaults.standard.integer(forKey: "id_user")
-
+        getPurchasesRequest()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,16 +28,17 @@ class MisBoletosTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return folios.count
     }
     
     func getPurchasesRequest() {
+        
         var urlComponents = URLComponents() // Forma el url
         urlComponents.scheme = RequestData.shared.scheme
         urlComponents.host = RequestData.shared.domain
@@ -70,12 +70,8 @@ class MisBoletosTableViewController: UITableViewController {
                     // Checas si el valor con se agrego el id
                     for element in dataArr {
                         if let mapElement = element as? [String:Any] {
-                            if let id = mapElement["user_id"] as? Int {
-                                if id == self.userId {
-                                    if let purchaseId = mapElement["id"] as? Int {
-                                        self.purchaseId.append(purchaseId)
-                                    }
-                                }
+                            if let id = mapElement["user_id"] as? Int, id == self.userId, let purchaseId = mapElement["id"] as? Int {
+                                self.purchaseIdArray.append(purchaseId)
                             }
                         }
                     }
@@ -111,6 +107,7 @@ class MisBoletosTableViewController: UITableViewController {
     }
     
     func getTicketsRequest() {
+        
         var urlComponents = URLComponents() // Forma el url
         urlComponents.scheme = RequestData.shared.scheme
         urlComponents.host = RequestData.shared.domain
@@ -143,17 +140,21 @@ class MisBoletosTableViewController: UITableViewController {
                     for element in dataArr {
                         if let mapElement = element as? [String:Any] {
                             if let purchaseId = mapElement["purchase_id"] as? Int {
-                                self.purchaseIdArr.append(purchaseId)
+                                if self.purchaseIdArray.contains(purchaseId) {
+                                    if let ticketId = mapElement["id"] as? Int, let tourDate = mapElement["tour_date"] as? String{
+                                        self.folios.append(ticketId)
+                                        self.tourDateArr.append(tourDate)
+                                    }
+                                }
                             }
-                            if let purchaseDate = mapElement["tour_date"] as? Int {
-                                self.purchaseIdArr.append(purchaseDate)
-                            }
-                            
                         }
                     }
                     
                     
                     print("ACABE DE JALAR LOS DATOS")
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 } catch {
                     print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
                 }
@@ -177,16 +178,19 @@ class MisBoletosTableViewController: UITableViewController {
         
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "misBoletosCell", for: indexPath) as? MisBoletosTableViewCell else{
+            return UITableViewCell()
+        }
+        cell.idNumber.text = String(self.folios[indexPath.row])
+        cell.ticketDate.text = self.tourDateArr[indexPath.row]
         // Configure the cell...
 
         return cell
     }
-    */
-
+ 
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

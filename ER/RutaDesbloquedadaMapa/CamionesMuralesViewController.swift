@@ -32,7 +32,7 @@ class CamionesMuralesViewController: UIViewController {
             customAlert.definesPresentationContext = true                     //what this guys do
             customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
             customAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-            customAlert.delegate = (self as! SideBarDelegate)
+            customAlert.delegate = self
             self.present(customAlert, animated: false, completion: nil)
         }
     }
@@ -210,6 +210,28 @@ class CamionesMuralesViewController: UIViewController {
 }
 
 extension CamionesMuralesViewController: SideBarDelegate{
+    func showTickets() {
+        let modularStoryboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil);
+        if let customAlert = modularStoryboard.instantiateViewController(withIdentifier: "MisBoletos") as? SideBarMisBoletosViewController {
+            customAlert.providesPresentationContextTransitionStyle = true    //I don't know
+            customAlert.definesPresentationContext = true                     //what this guys do
+            customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            customAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.present(customAlert, animated: false, completion: nil)
+        }
+        else{
+            fatalError()
+        }
+    }
+    
+    func showHelp() {
+        
+    }
+    
+    func showSchedules() {
+        
+    }
+    
     func closeSession() {
         /*let removeSuccessful: Bool = KeychainWrapper.standard.removeObject(forKey: "accessToken")*/
         let removeSuccessful = true

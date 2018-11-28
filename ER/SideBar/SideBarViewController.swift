@@ -22,25 +22,24 @@ class SideBarViewController: UIViewController {
     var delegate: SideBarDelegate!
     
     @IBAction func misBoletosAction(_ sender: UIButton) {
+        dismissView(action: 0)
+        print("show tickets on mis boletos action")
         
-        dismissView(closeSession: false)
+        
     }
     
     @IBAction func horariosAction(_ sender: UIButton) {
         
-        dismissView(closeSession: false)
+        dismissView(action: 1)
     }
     
     @IBAction func ayudaAction(_ sender: UIButton) {
-        let url = URL(string: "https://www.tourister.com.mx/faqs")
-        let svc = SFSafariViewController(url: url!)
-        present(svc, animated: true, completion: nil)
-        dismissView(closeSession: false)
+        dismissView(action: 2)
     }
     
     @IBAction func cerrarSesionAction(_ sender: UIButton) {
         
-        dismissView(closeSession: true)
+        dismissView(action: 3)
     }
     
     override func viewDidLoad() {
@@ -59,12 +58,12 @@ class SideBarViewController: UIViewController {
     
     @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
         if sender.direction == .left{
-            dismissView(closeSession: false)
+            dismissView(action: 10)
         }
     }
     
     @objc func swipeToDismiss(){
-        dismissView(closeSession: false)
+        dismissView(action: 10)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,7 +79,13 @@ class SideBarViewController: UIViewController {
     }
     
     //Close session tells if the session should be closed once the view is dismissed
-    func dismissView(closeSession: Bool){
+    func dismissView(action: Int){
+        /*
+         0 boletos
+         1 horarios
+         2 aiura
+         3 cerrars sesion
+         */
         self.constraintImportante.constant = 0
         
         UIView.animate(withDuration: 0.25, animations: {
@@ -88,9 +93,24 @@ class SideBarViewController: UIViewController {
         }) { (result: Bool) in
             //what the hell is this syntax...
             self.dismiss(animated: true, completion: {
-                if(closeSession){
-                    self.delegate?.closeSession()
+                switch action {
+                    case 0:
+                        self.delegate?.showTickets()
+                    break;
+                    case 1:
+                        self.delegate?.showSchedules()
+                    break;
+                    case 2:
+                        self.delegate?.showHelp()
+                    break;
+                    case 3:
+                        self.delegate.closeSession()
+                    break;
+                    default:
+                        print("ola")
+                        break;
                 }
+               
             })
         }
     }

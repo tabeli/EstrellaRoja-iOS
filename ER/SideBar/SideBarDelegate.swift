@@ -10,4 +10,7 @@ import Foundation
 
 protocol SideBarDelegate {
     func closeSession()
+    func showTickets()
+    func showHelp()
+    func showSchedules()
 }
