@@ -110,7 +110,6 @@ class SideBarViewController: UIViewController {
                         print("ola")
                         break;
                 }
-               
             })
         }
     }
