@@ -802,7 +802,7 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
         renderer.strokeColor = #colorLiteral(red: 0.8829703927, green: 0.1867307127, blue: 0.4812199473, alpha: 1)
-        let rand = Int.random(in: 0...10)
+        //let rand = Int.random(in: 0...10)
         
         
        /* switch rand {

@@ -57,7 +57,7 @@ class SideBarViewController: UIViewController {
     }
     
     @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
-        if sender.direction == .left{
+        if sender.direction == .left {
             dismissView(action: 10)
         }
     }
