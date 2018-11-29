@@ -111,6 +111,12 @@ class CompletaPagoViewController: UIViewController {
             button.layer.borderColor = #colorLiteral(red: 0.786775421, green: 0.1943393403, blue: 0.1217412519, alpha: 1)
         }
         
+        nombreUsuario.text = "Taba Acosta"
+        numeroTarjeta.text = "22222222222"
+        mesVencimiento.text = "02"
+        anioVencimiento.text = "21"
+        codigoSeguridad.text = "333"
+        
         topTitle.adjustsFontSizeToFitWidth = true
         uno.layer.cornerRadius = 15
         uno.titleLabel?.adjustsFontSizeToFitWidth = true

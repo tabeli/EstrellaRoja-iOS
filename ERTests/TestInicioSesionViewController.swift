@@ -24,8 +24,8 @@ class TestInicioSesionViewController: XCTestCase {
         let doLogin = storyboard.instantiateViewController(withIdentifier: "IniciaSesion") as! IniciaSesionViewController
         _ = doLogin.view
         
-        doLogin.username.text = "admin@admin.com"
-        doLogin.password.text = "admin"
+        doLogin.username.text = "admi@admi.com"
+        doLogin.password.text = "admi"
         doLogin.ingresarAction(UIButton())
         
         sleep(3)

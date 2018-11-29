@@ -43,12 +43,12 @@ class IniciaSesionViewController: UIViewController {
     }
     
     func verifyUsernameInput(usernameStr: String) -> Bool {
-        return usernameStr.count > 5
+        return usernameStr.count > 4
     }
     
     func verifyPasswordInput(passwordStr: String) -> Bool {
         //Aqui verificar que la contraseña sea correcta
-        return passwordStr.count > 4
+        return passwordStr.count > 2
     }
     
     func loginRequest(){
@@ -154,8 +154,8 @@ class IniciaSesionViewController: UIViewController {
         super.viewDidLoad()
         
         //MARK: - BORRA-ENTRADA
-        username.text? = "admin@admin.com"
-        password.text? = "admin"
+        username.text? = "admi@admi.com"
+        password.text? = "admi"
         
         
         ingresar.layer.cornerRadius = 15

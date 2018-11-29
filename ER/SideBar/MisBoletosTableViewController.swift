@@ -14,8 +14,10 @@ class MisBoletosTableViewController: UITableViewController {
     var userId = 0
     var tourDateArr:[String] = []
     var folios:[Int] = []
+    var nameArr:[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         userId = UserDefaults.standard.integer(forKey: "id_user")
         getPurchasesRequest()
         // Uncomment the following line to preserve selection between presentations
@@ -141,9 +143,10 @@ class MisBoletosTableViewController: UITableViewController {
                         if let mapElement = element as? [String:Any] {
                             if let purchaseId = mapElement["purchase_id"] as? Int {
                                 if self.purchaseIdArray.contains(purchaseId) {
-                                    if let ticketId = mapElement["id"] as? Int, let tourDate = mapElement["tour_date"] as? String{
+                                    if let ticketId = mapElement["id"] as? Int, let tourDate = mapElement["tour_date"] as? String, let ticketName = mapElement["client_name"] as? String{
                                         self.folios.append(ticketId)
                                         self.tourDateArr.append(tourDate)
+                                        self.nameArr.append(ticketName)
                                     }
                                 }
                             }
@@ -184,7 +187,8 @@ class MisBoletosTableViewController: UITableViewController {
             return UITableViewCell()
         }
         cell.idNumber.text = String(self.folios[indexPath.row])
-        cell.ticketDate.text = self.tourDateArr[indexPath.row]
+        cell.ticketDate.text = "Fecha del tour: " + self.tourDateArr[indexPath.row]
+        cell.name.text = self.nameArr[indexPath.row]
         // Configure the cell...
 
         return cell

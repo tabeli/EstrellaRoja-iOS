@@ -35,6 +35,8 @@ class TutorialDetalleViewController: UIViewController {
             centralSubtitle.text = self.subtitleStr
         }
         
+        centralTitle.adjustsFontSizeToFitWidth = true
+        centralSubtitle.adjustsFontSizeToFitWidth = true
         // Do any additional setup after loading the view.
     }
     

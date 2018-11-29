@@ -73,7 +73,7 @@ class MuestraRutaActualViewController: UIViewController {
     
     
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 2500
+    let regionInMeters: Double = 3000
     
     var coordinatesArr:[CLLocationCoordinate2D] = [
         CLLocationCoordinate2D(latitude: 19.0380368, longitude: -98.1919112),
@@ -346,7 +346,7 @@ class MuestraRutaActualViewController: UIViewController {
                         }
                     }
                     print("MARKERS ARRAY")
-                    print(self.coordinatesMarkersArr)
+                    print(self.coordinatesMarkersArr.count)
                     
                     var indice = -1
                     for coordinate in self.coordinatesMarkersArr {

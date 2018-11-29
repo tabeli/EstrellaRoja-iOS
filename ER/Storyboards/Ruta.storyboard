@@ -84,28 +84,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rutaCell" rowHeight="243" id="pri-IE-MTE" customClass="RutaTableViewCell" customModule="ER" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="243"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rutaCell" rowHeight="300" id="pri-IE-MTE" customClass="RutaTableViewCell" customModule="ER" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pri-IE-MTE" id="2lN-kk-Xs9" userLabel="rutaCell">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="242.66666666666666"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pri-IE-MTE" id="2lN-kk-Xs9" userLabel="rutaCell">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="299.66666666666669"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puebla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-Rm-jjo">
-                                            <rect key="frame" x="0.0" y="71.333333333333329" width="414" height="99.999999999999986"/>
+                                            <rect key="frame" x="41.333333333333343" y="170" width="331.33333333333326" height="70"/>
                                             <color key="backgroundColor" red="0.98905342819999997" green="0.71650582549999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="JZR-XD-uDn"/>
+                                                <constraint firstAttribute="height" constant="70" id="JZR-XD-uDn"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cholula" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-B8-OCl">
+                                            <rect key="frame" x="-289" y="10" width="992" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="sMp-lq-4Xw"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="mBI-Rm-jjo" firstAttribute="centerY" secondItem="2lN-kk-Xs9" secondAttribute="centerY" id="2v0-9E-dqd"/>
-                                        <constraint firstItem="mBI-Rm-jjo" firstAttribute="width" secondItem="2lN-kk-Xs9" secondAttribute="width" id="BKp-Qg-Om9"/>
+                                        <constraint firstItem="mNe-B8-OCl" firstAttribute="centerX" secondItem="2lN-kk-Xs9" secondAttribute="centerX" id="7Pv-kp-UmB"/>
+                                        <constraint firstItem="mBI-Rm-jjo" firstAttribute="width" secondItem="2lN-kk-Xs9" secondAttribute="width" multiplier="0.8" id="BKp-Qg-Om9"/>
+                                        <constraint firstItem="mNe-B8-OCl" firstAttribute="top" secondItem="2lN-kk-Xs9" secondAttribute="top" constant="10" id="Sf2-g4-dSt"/>
+                                        <constraint firstItem="mBI-Rm-jjo" firstAttribute="top" secondItem="mNe-B8-OCl" secondAttribute="bottom" constant="10" id="Wf1-A6-3xX"/>
                                         <constraint firstItem="mBI-Rm-jjo" firstAttribute="centerX" secondItem="2lN-kk-Xs9" secondAttribute="centerX" id="bd2-lh-GHa"/>
+                                        <constraint firstAttribute="bottom" secondItem="mBI-Rm-jjo" secondAttribute="bottom" constant="10" id="gLo-el-9YR"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -373,7 +382,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t6a-wJ-wDf">
-                                <rect key="frame" x="62" y="213.66666666666666" width="290" height="289.66666666666674"/>
+                                <rect key="frame" x="103.66666666666669" y="210" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="t6a-wJ-wDf" secondAttribute="height" multiplier="1:1" id="JLe-fd-h7O"/>
                                 </constraints>
@@ -405,13 +414,13 @@
                             <constraint firstItem="t6a-wJ-wDf" firstAttribute="centerX" secondItem="NsK-pI-Tjh" secondAttribute="centerX" id="EVz-jv-bIL"/>
                             <constraint firstItem="agq-NL-j82" firstAttribute="leading" secondItem="dXc-Uv-3Gu" secondAttribute="leading" id="FuD-uk-6R1"/>
                             <constraint firstItem="dXc-Uv-3Gu" firstAttribute="trailing" secondItem="agq-NL-j82" secondAttribute="trailing" id="K3S-fM-tGW"/>
-                            <constraint firstItem="t6a-wJ-wDf" firstAttribute="centerY" secondItem="NsK-pI-Tjh" secondAttribute="centerY" multiplier="0.8" id="Lwg-fJ-zaZ"/>
+                            <constraint firstItem="t6a-wJ-wDf" firstAttribute="centerY" secondItem="NsK-pI-Tjh" secondAttribute="centerY" multiplier="0.7" id="Lwg-fJ-zaZ"/>
                             <constraint firstItem="1wc-20-yNk" firstAttribute="centerY" secondItem="NsK-pI-Tjh" secondAttribute="centerY" multiplier="1.3" id="V58-mx-fkn"/>
                             <constraint firstItem="1wc-20-yNk" firstAttribute="centerX" secondItem="NsK-pI-Tjh" secondAttribute="centerX" id="a1a-vX-YRZ"/>
                             <constraint firstItem="1wc-20-yNk" firstAttribute="width" secondItem="agq-NL-j82" secondAttribute="width" multiplier="0.8" id="gbu-Ab-5nD"/>
                             <constraint firstItem="bGW-4M-wOh" firstAttribute="centerY" secondItem="NsK-pI-Tjh" secondAttribute="centerY" multiplier="1.5" id="gga-25-P7g"/>
                             <constraint firstItem="agq-NL-j82" firstAttribute="top" secondItem="NsK-pI-Tjh" secondAttribute="top" id="oFD-uf-506"/>
-                            <constraint firstItem="t6a-wJ-wDf" firstAttribute="width" secondItem="agq-NL-j82" secondAttribute="width" multiplier="0.7" id="rpi-Pw-TPv"/>
+                            <constraint firstItem="t6a-wJ-wDf" firstAttribute="width" secondItem="agq-NL-j82" secondAttribute="width" multiplier="0.5" id="rpi-Pw-TPv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dXc-Uv-3Gu"/>
                     </view>
@@ -429,6 +438,7 @@
     </scenes>
     <resources>
         <image name="cart" width="630" height="630"/>
+        <image name="cholula" width="992" height="661"/>
         <image name="left-arrow" width="980" height="840"/>
         <image name="menuBurger" width="129" height="120"/>
         <image name="pueblaredondo" width="1100" height="733"/>

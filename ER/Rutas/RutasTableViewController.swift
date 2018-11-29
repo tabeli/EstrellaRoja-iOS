@@ -103,6 +103,8 @@ class RutasTableViewController: UITableViewController {
         super.viewDidLoad()
         print("Hola")
         tourRequest()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 250
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -131,6 +133,13 @@ class RutasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rutaCell", for: indexPath) as! RutaTableViewCell
         cell.tourIdArray = tourIdArray[indexPath.row]
         cell.nombreRuta.text = tourNameArray[indexPath.row]
+    
+        cell.nombreRuta.adjustsFontSizeToFitWidth = true
+        cell.nombreRuta.layer.backgroundColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
+        cell.nombreRuta.layer.cornerRadius = 15
+        cell.nombreRuta.layer.borderWidth = 2
+        cell.nombreRuta.layer.borderColor = #colorLiteral(red: 0.8271533947, green: 0.5080588404, blue: 0.0448990865, alpha: 1)
+        
         cell.tourNameArray = tourNameArray[indexPath.row]
         cell.tourImageArray = tourImageArray[indexPath.row]
         cell.tourDescriptionArray = tourDescriptionArray[indexPath.row]
