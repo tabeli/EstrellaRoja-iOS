@@ -75,6 +75,7 @@ class RutasTableViewController: UITableViewController {
                                 self.tourDescriptionArray.append(description)
                             }
                         }
+                        
                     }
                     print("ACABE DE JALAR LOS DATOS")
                 } catch {
@@ -104,13 +105,15 @@ class RutasTableViewController: UITableViewController {
         print("Hola")
         tourRequest()
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 250
+        tableView.estimatedRowHeight = 270
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
 
     // MARK: - Table view data source
 
@@ -135,11 +138,15 @@ class RutasTableViewController: UITableViewController {
         cell.nombreRuta.text = tourNameArray[indexPath.row]
     
         cell.nombreRuta.adjustsFontSizeToFitWidth = true
-        cell.nombreRuta.layer.backgroundColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
-        cell.nombreRuta.layer.cornerRadius = 15
-        cell.nombreRuta.layer.borderWidth = 2
-        cell.nombreRuta.layer.borderColor = #colorLiteral(red: 0.8271533947, green: 0.5080588404, blue: 0.0448990865, alpha: 1)
+        //cell.nombreRuta.layer.backgroundColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
+        cell.nombreRuta.layer.masksToBounds = true;
+        cell.nombreRuta.layer.cornerRadius = 35
+        //cell.nombreRuta.layer.borderWidth = 5
+        //cell.nombreRuta.layer.borderColor = #colorLiteral(red: 0.8271533947, green: 0.5080588404, blue: 0.0448990865, alpha: 1)
         
+        let url = URL(string: tourImageArray[indexPath.row])
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        cell.fotoImg.image = UIImage(data: data!)
         cell.tourNameArray = tourNameArray[indexPath.row]
         cell.tourImageArray = tourImageArray[indexPath.row]
         cell.tourDescriptionArray = tourDescriptionArray[indexPath.row]
@@ -169,9 +176,9 @@ class RutasTableViewController: UITableViewController {
         dad.performSegue(withIdentifier: "detalleRutaSegue", sender: cell)
      }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    /*override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
-    }
+    }*/
 
     /*
     // Override to support conditional editing of the table view.

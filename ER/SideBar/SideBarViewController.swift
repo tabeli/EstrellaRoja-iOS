@@ -12,6 +12,8 @@ import SafariServices
 class SideBarViewController: UIViewController {
     
     @IBOutlet weak var backgroudBar: UIView!
+    
+    @IBOutlet weak var canjearPulseraOutlet: UILabel!
     @IBOutlet weak var misBoletosOutlet: UILabel!
     @IBOutlet weak var horariosOutlet: UILabel!
     @IBOutlet weak var ayudaOutlet: UILabel!
@@ -48,6 +50,7 @@ class SideBarViewController: UIViewController {
         horariosOutlet.adjustsFontSizeToFitWidth = true
         ayudaOutlet.adjustsFontSizeToFitWidth = true
         cerrarSesionOutlet.adjustsFontSizeToFitWidth = true
+        canjearPulseraOutlet.adjustsFontSizeToFitWidth = true
         // Do any additional setup after loading the view.
         
         self.constraintImportante.constant = 0

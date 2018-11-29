@@ -21,29 +21,29 @@
                                 <rect key="frame" x="0.0" y="-9" width="414" height="107.66666666666667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rutas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzS-Yf-O4L">
-                                        <rect key="frame" x="0.0" y="43.666666666666657" width="414" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                        <rect key="frame" x="62" y="49" width="290" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMc-XG-yiD">
-                                        <rect key="frame" x="10" y="33.666666666666671" width="62" height="62"/>
+                                        <rect key="frame" x="10" y="29.999999999999993" width="74.666666666666671" height="74.333333333333314"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="dMc-XG-yiD" secondAttribute="height" multiplier="1:1" id="z6K-33-j1o"/>
                                         </constraints>
-                                        <state key="normal" image="menuBurger"/>
+                                        <state key="normal" image="menuBurgerWhite"/>
                                         <connections>
                                             <action selector="showSideBar:" destination="wko-k3-Flk" eventType="touchUpInside" id="U9S-Mg-DNa"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.07928534597158432" green="0.44520735740661621" blue="0.82666951417922974" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.9889252781867981" green="0.71259152889251709" blue="0.0052291173487901688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="dMc-XG-yiD" firstAttribute="leading" secondItem="zB3-n9-gcI" secondAttribute="leading" constant="10" id="EhA-yG-xsl"/>
-                                    <constraint firstItem="KzS-Yf-O4L" firstAttribute="width" secondItem="zB3-n9-gcI" secondAttribute="width" id="JYC-qe-Nua"/>
-                                    <constraint firstItem="KzS-Yf-O4L" firstAttribute="centerY" secondItem="zB3-n9-gcI" secondAttribute="centerY" multiplier="1.2" id="M8O-Wa-VpW"/>
-                                    <constraint firstItem="dMc-XG-yiD" firstAttribute="width" secondItem="zB3-n9-gcI" secondAttribute="width" multiplier="0.15" id="Ryp-d3-ljg"/>
-                                    <constraint firstItem="dMc-XG-yiD" firstAttribute="centerY" secondItem="zB3-n9-gcI" secondAttribute="centerY" multiplier="1.2" id="WrI-f8-5R1"/>
+                                    <constraint firstItem="KzS-Yf-O4L" firstAttribute="width" secondItem="zB3-n9-gcI" secondAttribute="width" multiplier="0.7" id="JYC-qe-Nua"/>
+                                    <constraint firstItem="KzS-Yf-O4L" firstAttribute="centerY" secondItem="zB3-n9-gcI" secondAttribute="centerY" multiplier="1.3" id="M8O-Wa-VpW"/>
+                                    <constraint firstItem="dMc-XG-yiD" firstAttribute="width" secondItem="zB3-n9-gcI" secondAttribute="width" multiplier="0.18" id="Ryp-d3-ljg"/>
+                                    <constraint firstItem="dMc-XG-yiD" firstAttribute="centerY" secondItem="zB3-n9-gcI" secondAttribute="centerY" multiplier="1.25" id="WrI-f8-5R1"/>
                                     <constraint firstItem="KzS-Yf-O4L" firstAttribute="centerX" secondItem="zB3-n9-gcI" secondAttribute="centerX" id="hUk-jf-Avf"/>
                                 </constraints>
                             </view>
@@ -79,38 +79,40 @@
         <scene sceneID="2Fq-aZ-bnV">
             <objects>
                 <tableViewController id="wBZ-4S-afo" customClass="RutasTableViewController" customModule="ER" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="243" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xv2-Ef-fAo">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="266" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xv2-Ef-fAo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="763.33333333333326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rutaCell" rowHeight="300" id="pri-IE-MTE" customClass="RutaTableViewCell" customModule="ER" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="300"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rutaCell" rowHeight="266" id="pri-IE-MTE" customClass="RutaTableViewCell" customModule="ER" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="266"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pri-IE-MTE" id="2lN-kk-Xs9" userLabel="rutaCell">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="299.66666666666669"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="265.66666666666669"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puebla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-Rm-jjo">
-                                            <rect key="frame" x="41.333333333333343" y="170" width="331.33333333333326" height="70"/>
-                                            <color key="backgroundColor" red="0.98905342819999997" green="0.71650582549999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puebla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-Rm-jjo">
+                                            <rect key="frame" x="62" y="190.33333333333334" width="290" height="70.000000000000028"/>
+                                            <color key="backgroundColor" red="0.021427849307656288" green="0.21520483493804932" blue="0.39329022169113159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="JZR-XD-uDn"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cholula" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-B8-OCl">
-                                            <rect key="frame" x="-289" y="10" width="992" height="150"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsApp Image 2018-09-11 at 5.16.59 PM" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-B8-OCl">
+                                            <rect key="frame" x="37" y="10.333333333333329" width="340" height="170"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="150" id="sMp-lq-4Xw"/>
+                                                <constraint firstAttribute="width" secondItem="mNe-B8-OCl" secondAttribute="height" multiplier="10:5" id="aQ0-tS-lDN"/>
+                                                <constraint firstAttribute="height" constant="170" id="sMp-lq-4Xw"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="mNe-B8-OCl" firstAttribute="centerX" secondItem="2lN-kk-Xs9" secondAttribute="centerX" id="7Pv-kp-UmB"/>
-                                        <constraint firstItem="mBI-Rm-jjo" firstAttribute="width" secondItem="2lN-kk-Xs9" secondAttribute="width" multiplier="0.8" id="BKp-Qg-Om9"/>
+                                        <constraint firstItem="mBI-Rm-jjo" firstAttribute="width" secondItem="2lN-kk-Xs9" secondAttribute="width" multiplier="0.7" id="BKp-Qg-Om9"/>
                                         <constraint firstItem="mNe-B8-OCl" firstAttribute="top" secondItem="2lN-kk-Xs9" secondAttribute="top" constant="10" id="Sf2-g4-dSt"/>
                                         <constraint firstItem="mBI-Rm-jjo" firstAttribute="top" secondItem="mNe-B8-OCl" secondAttribute="bottom" constant="10" id="Wf1-A6-3xX"/>
                                         <constraint firstItem="mBI-Rm-jjo" firstAttribute="centerX" secondItem="2lN-kk-Xs9" secondAttribute="centerX" id="bd2-lh-GHa"/>
@@ -118,6 +120,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="fotoImg" destination="mNe-B8-OCl" id="eVB-IH-BrD"/>
                                     <outlet property="nombreRuta" destination="mBI-Rm-jjo" id="tbL-Au-ni8"/>
                                 </connections>
                             </tableViewCell>
@@ -130,7 +133,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QG-k2-F0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1878" y="496"/>
+            <point key="canvasLocation" x="1876.8115942028987" y="495.53571428571428"/>
         </scene>
         <!--Puebla-->
         <scene sceneID="ZZ6-V0-2LB">
@@ -437,10 +440,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="WhatsApp Image 2018-09-11 at 5.16.59 PM" width="1280" height="914"/>
         <image name="cart" width="630" height="630"/>
-        <image name="cholula" width="992" height="661"/>
         <image name="left-arrow" width="980" height="840"/>
-        <image name="menuBurger" width="129" height="120"/>
+        <image name="menuBurgerWhite" width="129" height="120"/>
         <image name="pueblaredondo" width="1100" height="733"/>
     </resources>
 </document>
