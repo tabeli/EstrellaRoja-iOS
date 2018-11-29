@@ -16,6 +16,8 @@ class SideBarViewController: UIViewController {
     @IBOutlet weak var canjearPulseraOutlet: UILabel!
     @IBOutlet weak var misBoletosOutlet: UILabel!
     @IBOutlet weak var horariosOutlet: UILabel!
+    @IBOutlet weak var seleccionaIdiomaOutlet: UILabel!
+    @IBOutlet weak var terminosCondiciones: UILabel!
     @IBOutlet weak var ayudaOutlet: UILabel!
     @IBOutlet weak var cerrarSesionOutlet: UILabel!
     
@@ -48,6 +50,8 @@ class SideBarViewController: UIViewController {
         super.viewDidLoad()
         misBoletosOutlet.adjustsFontSizeToFitWidth = true
         horariosOutlet.adjustsFontSizeToFitWidth = true
+        seleccionaIdiomaOutlet.adjustsFontSizeToFitWidth = true
+        terminosCondiciones.adjustsFontSizeToFitWidth = true
         ayudaOutlet.adjustsFontSizeToFitWidth = true
         cerrarSesionOutlet.adjustsFontSizeToFitWidth = true
         canjearPulseraOutlet.adjustsFontSizeToFitWidth = true
