@@ -325,19 +325,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zz-Zf-inl">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="662"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <connections>
                                     <segue destination="wKC-j6-UNS" kind="embed" id="34z-dp-qkO"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqp-3a-Zol">
-                                <rect key="frame" x="62" y="732.66666666666663" width="290" height="58"/>
+                                <rect key="frame" x="62" y="770.33333333333337" width="290" height="72.333333333333371"/>
+                                <color key="backgroundColor" red="0.02142784931" green="0.2152048349" blue="0.3932902217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Lqp-3a-Zol" secondAttribute="height" multiplier="10:2" id="Gmu-SI-fUo"/>
+                                    <constraint firstAttribute="width" secondItem="Lqp-3a-Zol" secondAttribute="height" multiplier="100:25" id="Gmu-SI-fUo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="¡Empecemos!">
-                                    <color key="titleColor" red="0.98905342819999997" green="0.71650582549999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="EmpezarAction:" destination="MaJ-Ut-5X1" eventType="touchUpInside" id="kdV-h1-e6J"/>
@@ -348,10 +349,10 @@
                         <constraints>
                             <constraint firstItem="5Zz-Zf-inl" firstAttribute="centerX" secondItem="mev-qd-IY3" secondAttribute="centerX" id="Fk4-Ky-30D"/>
                             <constraint firstItem="5Zz-Zf-inl" firstAttribute="top" secondItem="mev-qd-IY3" secondAttribute="top" id="Nd8-8R-xuV"/>
-                            <constraint firstItem="Lqp-3a-Zol" firstAttribute="centerY" secondItem="mev-qd-IY3" secondAttribute="centerY" multiplier="1.7" id="i3H-7u-3F4"/>
+                            <constraint firstItem="Lqp-3a-Zol" firstAttribute="centerY" secondItem="mev-qd-IY3" secondAttribute="centerY" multiplier="1.8" id="i3H-7u-3F4"/>
                             <constraint firstItem="Lqp-3a-Zol" firstAttribute="width" secondItem="mev-qd-IY3" secondAttribute="width" multiplier="0.7" id="mdN-vU-No2"/>
                             <constraint firstItem="5Zz-Zf-inl" firstAttribute="width" secondItem="mev-qd-IY3" secondAttribute="width" id="n9f-z4-v2q"/>
-                            <constraint firstItem="ros-5J-7IX" firstAttribute="bottom" secondItem="5Zz-Zf-inl" secondAttribute="bottom" constant="200" id="nJK-Z5-ydJ"/>
+                            <constraint firstItem="ros-5J-7IX" firstAttribute="bottom" secondItem="5Zz-Zf-inl" secondAttribute="bottom" constant="170" id="nJK-Z5-ydJ"/>
                             <constraint firstItem="Lqp-3a-Zol" firstAttribute="centerX" secondItem="mev-qd-IY3" secondAttribute="centerX" id="uTN-ly-y74"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ros-5J-7IX"/>

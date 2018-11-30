@@ -22,7 +22,8 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xU1-0h-Ggb">
                                 <rect key="frame" x="62" y="631.5" width="290" height="63"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                <color key="backgroundColor" red="0.02142784931" green="0.2152048349" blue="0.3932902217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <state key="normal" title="Inicia sesión">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -32,7 +33,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMv-SS-HBP">
                                 <rect key="frame" x="62" y="730" width="290" height="63"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                <color key="backgroundColor" red="0.02142784931" green="0.2152048349" blue="0.3932902217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <state key="normal" title="Registro">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>

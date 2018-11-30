@@ -21,7 +21,7 @@ class TutorialViewController: UIViewController {
         EmpezarOutlet.titleLabel?.adjustsFontSizeToFitWidth = true
         EmpezarOutlet.layer.cornerRadius = 15
         EmpezarOutlet.layer.borderWidth = 2
-        EmpezarOutlet.layer.borderColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
+        //EmpezarOutlet.layer.borderColor = #colorLiteral(red: 0.9890534282, green: 0.7165058255, blue: 0, alpha: 1)
         // Do any additional setup after loading the view.
     }
     

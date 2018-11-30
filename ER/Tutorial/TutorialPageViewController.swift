@@ -40,7 +40,7 @@ class TutorialPageViewController: UIPageViewController {
         
         //Set up pagecontrol
         //its -50 because its height of navbar + -50 because height of page control + -20 because some stupid padding
-        pageControl = UIPageControl(frame: CGRect(x: 0,y: self.view.frame.height-100-100-20,width: UIScreen.main.bounds.width,height: 100))
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: self.view.frame.height-100-90,width: UIScreen.main.bounds.width,height: 100))
         self.pageControl.numberOfPages = titleStr.count
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.white

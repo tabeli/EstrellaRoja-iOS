@@ -26,13 +26,13 @@ class InicialViewController: UIViewController {
         iniciaSesion.titleLabel?.adjustsFontSizeToFitWidth = true
         iniciaSesion.layer.cornerRadius = 10
         iniciaSesion.layer.borderWidth = 3
-        iniciaSesion.layer.borderColor = UIColor.white.cgColor
+        //iniciaSesion.layer.borderColor = UIColor.white.cgColor
         iniciaSesion.titleEdgeInsets = UIEdgeInsets(top: 20, left: 5, bottom: 20, right: 5)
         
         registro.titleLabel?.adjustsFontSizeToFitWidth = true
         registro.layer.cornerRadius = 10
         registro.layer.borderWidth = 3
-        registro.layer.borderColor = UIColor.white.cgColor
+        //registro.layer.borderColor = UIColor.white.cgColor
         iniciaSesion.titleEdgeInsets = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
         // Do any additional setup after loading the view.
     }
