@@ -38,6 +38,19 @@ class MuestraConveniosMapViewController: UIViewController {
     
      var coordinatesArr:[CLLocationCoordinate2D] = []
     
+    
+    @IBAction func showSideBar(_ sender: Any) {
+        let modularStoryboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil);
+        if let customAlert = modularStoryboard.instantiateViewController(withIdentifier: "SideBar") as? SideBarViewController {
+            customAlert.providesPresentationContextTransitionStyle = true    //I don't know
+            customAlert.definesPresentationContext = true                     //what this guys do
+            customAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            customAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            customAlert.delegate = self
+            self.present(customAlert, animated: false, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,6 +64,8 @@ class MuestraConveniosMapViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    
     
     func centerAll() {
         
@@ -220,7 +235,7 @@ class MuestraConveniosMapViewController: UIViewController {
                     //for tourPlaceId in self.tourPlaceId {
                         print("uno")
                         var index = -1
-                        for placeId in self.placeId {
+                    for _ in self.placeId {
                             print("dos")
                             index += 1
                             print(self.placeTypeId[index])
@@ -397,7 +412,7 @@ extension MuestraConveniosMapViewController: MKMapViewDelegate {
         return renderer
     }
     
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    /*func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let annView = view.annotation
         let storyboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil)
         let detalleVC = storyboard.instantiateViewController(withIdentifier: "Detalle") as! DetalleViewController
@@ -407,7 +422,7 @@ extension MuestraConveniosMapViewController: MKMapViewDelegate {
         detalleVC.longitud = (annView?.coordinate.longitude)!
         
         self.navigationController?.pushViewController(detalleVC, animated: true)
-    }
+    }*/
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKAnnotationView
@@ -419,7 +434,7 @@ extension MuestraConveniosMapViewController: MKMapViewDelegate {
         annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
         annotationView!.image = UIImage(named: "pindos")
         annotationView!.canShowCallout = true
-        annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        //annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         
         return annotationView
     }
@@ -427,6 +442,27 @@ extension MuestraConveniosMapViewController: MKMapViewDelegate {
 }
 
 extension MuestraConveniosMapViewController: SideBarDelegate {
+    func showBracelet() {
+        //
+    }
+    
+    func showLanguage() {
+        //
+    }
+    
+    func showBill() {
+        let url = URL(string: "https://www.tourister.com.mx/contacto")
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
+    }
+    
+    func showTerms() {
+        let url = URL(string: "https://www.tourister.com.mx/terminos-condiciones")
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
+    }
+    
+    
     func showTickets() {
         let modularStoryboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil);
         if let customAlert = modularStoryboard.instantiateViewController(withIdentifier: "MisBoletos") as? SideBarMisBoletosViewController {

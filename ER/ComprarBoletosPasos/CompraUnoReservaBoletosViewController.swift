@@ -51,10 +51,6 @@ class CompraUnoReservaBoletosViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        //MARK: - BORRA-ENTRADA
-        eligeFecha.text = "23/07/2018"
-        eligeHora.text = "23:57"
-        
         print(nameRuta)
         super.viewDidLoad()
         crearToolbar()

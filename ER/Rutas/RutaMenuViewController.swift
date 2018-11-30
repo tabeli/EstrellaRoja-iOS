@@ -60,6 +60,27 @@ class RutaMenuViewController: UIViewController {
 }
 
 extension RutaMenuViewController: SideBarDelegate{
+    func showBracelet() {
+        //
+    }
+    
+    func showLanguage() {
+        //
+    }
+    
+    func showBill() {
+        let url = URL(string: "https://www.tourister.com.mx/contacto")
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
+    }
+    
+    func showTerms() {
+        let url = URL(string: "https://www.tourister.com.mx/terminos-condiciones")
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
+    }
+    
+    
     func showTickets() {
         print("SWJHOTTICKETS")
         let modularStoryboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil);

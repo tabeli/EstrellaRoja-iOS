@@ -4,7 +4,8 @@
 target 'ER' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
   # Pods for ER
 
   #  target 'ERTests' do

@@ -140,6 +140,9 @@
                                             <constraint firstAttribute="width" secondItem="0sG-Ja-q0X" secondAttribute="height" multiplier="1:1" id="tpS-Mg-d2E"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="facebookicon"/>
+                                        <connections>
+                                            <action selector="doFacebookLogin:" destination="fQF-v8-bkp" eventType="touchUpInside" id="tGl-5N-KiA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCh-SV-Y5f">
                                         <rect key="frame" x="226.5" y="0.0" width="64.5" height="62.5"/>
@@ -147,6 +150,9 @@
                                             <constraint firstAttribute="width" secondItem="TCh-SV-Y5f" secondAttribute="height" multiplier="32:31" id="8g7-e0-UoV"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="googleicon"/>
+                                        <connections>
+                                            <action selector="doGoogleLogin:" destination="fQF-v8-bkp" eventType="touchUpInside" id="QD5-3R-IJu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

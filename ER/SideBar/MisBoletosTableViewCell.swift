@@ -14,12 +14,14 @@ class MisBoletosTableViewCell: UITableViewCell {
     @IBOutlet weak var idNumber: UILabel!
     @IBOutlet weak var ticketDate: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var ageType: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         idNumber.adjustsFontSizeToFitWidth = true
         ticketDate.adjustsFontSizeToFitWidth = true
         name.adjustsFontSizeToFitWidth = true
+        ageType.adjustsFontSizeToFitWidth = true
         // Initialization code
     }
 

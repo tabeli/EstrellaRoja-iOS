@@ -13,6 +13,7 @@ class DetalleViewController: UIViewController {
     @IBOutlet weak var lblnombre: UILabel!
     @IBOutlet weak var lblDescripcion: UITextView!
     @IBOutlet weak var lblCoordenadas: UILabel!
+    @IBOutlet weak var image: UIImageView!
     
     @IBAction func reproduceAudio(_ sender: UIButton) {
     }
@@ -24,6 +25,7 @@ class DetalleViewController: UIViewController {
     var descripcion = ""
     var latitud = 0.0
     var longitud = 0.0
+    var imageStr = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,9 @@ class DetalleViewController: UIViewController {
         lblDescripcion.text = descripcion
         lblCoordenadas.adjustsFontSizeToFitWidth = true
         lblCoordenadas.text = String(format: "Lat: %4f // Lon: %4f", latitud,longitud)
+        let url = URL(string: imageStr)
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        image.image = UIImage(data: data!)
         // Do any additional setup after loading the view.
     }
     

@@ -50,7 +50,10 @@ class RutaDetalleTableViewController: UITableViewController {
 
         if (indexPath.row == 0) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "detalleImagenCell", for: indexPath) as! DetalleImagenRutaTableViewCell
-            cell.rutaImg.image = UIImage(named: img)
+            let url = URL(string: imageRuta)
+            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            cell.rutaImg.image = UIImage(data: data!)
+            //cell.rutaImg.image = UIImage(named: imageRuta)
             
             
             var height = CGFloat(0.0)

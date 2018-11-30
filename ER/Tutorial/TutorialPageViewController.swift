@@ -12,7 +12,7 @@ class TutorialPageViewController: UIPageViewController {
 
     var pageControl = UIPageControl()
     
-    var backgroundStr:[String] = ["fondo1", "fondo2", "fondo3"]
+    var backgroundStr:[String] = ["fondoER", "fondoER", "fondoER"]
     var imageStr = ["ticket", "pindos", "playAudio"]
     var titleStr = ["Consulta tus tickets", "Lugares relevantes", "Conoce más"]
     var subtitleStr = ["Ubica tu folio de ticket con la fecha programada", "Obten información interesante por donde pases", "Reproduce nuestras narrativas"]

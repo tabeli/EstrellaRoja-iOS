@@ -10,6 +10,7 @@
 		030706072178E5CF0071E0A0 /* BoletosAdquiridos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030706062178E5CF0071E0A0 /* BoletosAdquiridos.storyboard */; };
 		030706092178E5E40071E0A0 /* EscanearPulsera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030706082178E5E40071E0A0 /* EscanearPulsera.storyboard */; };
 		19CB5B3476F45C4F5C878632 /* Pods_ER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE3742A633FBF236C70C65B /* Pods_ER.framework */; };
+		4B28CB4494F783C7B48DDE78 /* Pods_ERUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C24F642BC86D73EC2465E02 /* Pods_ERUITests.framework */; };
 		B5333E39217864E800C0C19D /* RutaMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5333E38217864E800C0C19D /* RutaMenuViewController.swift */; };
 		B535C385219D1BBA00D326F9 /* MuestraRutaActualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B535C384219D1BB900D326F9 /* MuestraRutaActualViewController.swift */; };
 		B540456821ADEF4100033B50 /* ERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540456721ADEF4100033B50 /* ERTests.swift */; };
@@ -17,6 +18,9 @@
 		B540457221ADF4CC00033B50 /* TestInicioSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540457121ADF4CC00033B50 /* TestInicioSesionViewController.swift */; };
 		B54B7A08219A4420008DBE6A /* CompraUnoReservaBoletosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B7A07219A441F008DBE6A /* CompraUnoReservaBoletosViewController.swift */; };
 		B54B7A0A219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54B7A09219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift */; };
+		B56021DA21B1272200E27751 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56021D921B1272200E27751 /* credentials.plist */; };
+		B56021DB21B1272200E27751 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56021D921B1272200E27751 /* credentials.plist */; };
+		B56021DC21B1272200E27751 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56021D921B1272200E27751 /* credentials.plist */; };
 		B561F446216C669D00EB917C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F445216C669D00EB917C /* AppDelegate.swift */; };
 		B561F448216C669D00EB917C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B561F447216C669D00EB917C /* ViewController.swift */; };
 		B561F44B216C669D00EB917C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B561F449216C669D00EB917C /* Main.storyboard */; };
@@ -106,6 +110,7 @@
 		B540457121ADF4CC00033B50 /* TestInicioSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInicioSesionViewController.swift; sourceTree = "<group>"; };
 		B54B7A07219A441F008DBE6A /* CompraUnoReservaBoletosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompraUnoReservaBoletosViewController.swift; sourceTree = "<group>"; };
 		B54B7A09219A58A4008DBE6A /* DosSeleccionaPasajerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosSeleccionaPasajerosViewController.swift; sourceTree = "<group>"; };
+		B56021D921B1272200E27751 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		B561F442216C669D00EB917C /* ER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B561F445216C669D00EB917C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B561F447216C669D00EB917C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B28CB4494F783C7B48DDE78 /* Pods_ERUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +299,7 @@
 				B561F447216C669D00EB917C /* ViewController.swift */,
 				B561F44E216C669F00EB917C /* LaunchScreen.storyboard */,
 				B561F44C216C669F00EB917C /* Assets.xcassets */,
+				B56021D921B1272200E27751 /* credentials.plist */,
 				B561F451216C669F00EB917C /* Info.plist */,
 			);
 			path = ER;
@@ -453,6 +460,8 @@
 				B561F43E216C669D00EB917C /* Sources */,
 				B561F43F216C669D00EB917C /* Frameworks */,
 				B561F440216C669D00EB917C /* Resources */,
+				46369628FC413CB4B9E8FBBA /* [CP] Embed Pods Frameworks */,
+				00E8FD9055CD14C0EA18BCC2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -467,6 +476,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B57CEF3E21AE0BBA00B8C2F8 /* Build configuration list for PBXNativeTarget "ERUITests" */;
 			buildPhases = (
+				E83A3EC0199B2AC3DE727103 /* [CP] Check Pods Manifest.lock */,
 				B57CEF3321AE0BB900B8C2F8 /* Sources */,
 				B57CEF3421AE0BB900B8C2F8 /* Frameworks */,
 				B57CEF3521AE0BB900B8C2F8 /* Resources */,
@@ -529,6 +539,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56021DB21B1272200E27751 /* credentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +554,7 @@
 				B5D6BD3F2174004A004CDCC2 /* RutaDesbloqueada.storyboard in Resources */,
 				B5D6BD3B21740013004CDCC2 /* Ruta.storyboard in Resources */,
 				030706092178E5E40071E0A0 /* EscanearPulsera.storyboard in Resources */,
+				B56021DA21B1272200E27751 /* credentials.plist in Resources */,
 				B561F44B216C669D00EB917C /* Main.storyboard in Resources */,
 				B5D6BD3D21740021004CDCC2 /* Pago.storyboard in Resources */,
 			);
@@ -552,12 +564,67 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56021DC21B1272200E27751 /* credentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00E8FD9055CD14C0EA18BCC2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ER/Pods-ER-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ER/Pods-ER-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46369628FC413CB4B9E8FBBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ER/Pods-ER-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ER/Pods-ER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7C1C654A1C2CE2681141DEB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -574,6 +641,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E83A3EC0199B2AC3DE727103 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ERUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -789,6 +878,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -843,6 +933,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -863,7 +954,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ProyectoERiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ProyectoERiOS.myapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -884,7 +975,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ProyectoERiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ProyectoERiOS.myapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -894,6 +985,7 @@
 		};
 		B57CEF3F21AE0BBA00B8C2F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 053DA7D936B5A0946064E440 /* Pods-ERUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;
@@ -914,6 +1006,7 @@
 		};
 		B57CEF4021AE0BBA00B8C2F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD1F8C527D2E9E6BF9705E49 /* Pods-ERUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KCWH3KQ5N;

@@ -25,25 +25,43 @@ class SideBarViewController: UIViewController {
     
     var delegate: SideBarDelegate!
     
-    @IBAction func misBoletosAction(_ sender: UIButton) {
+    
+    @IBAction func canjearPulseraAction(_ sender: UIButton) {
         dismissView(action: 0)
+    }
+    
+    @IBAction func misBoletosAction(_ sender: UIButton) {
+        dismissView(action: 1)
         print("show tickets on mis boletos action")
         
         
     }
     
     @IBAction func horariosAction(_ sender: UIButton) {
-        
-        dismissView(action: 1)
-    }
-    
-    @IBAction func ayudaAction(_ sender: UIButton) {
         dismissView(action: 2)
     }
     
-    @IBAction func cerrarSesionAction(_ sender: UIButton) {
-        
+    
+    @IBAction func seleccionaIdiomaAction(_ sender: UIButton) {
         dismissView(action: 3)
+    }
+    
+    @IBAction func facturacionAction(_ sender: UIButton) {
+        dismissView(action: 4)
+        print("show facturacion action")
+    }
+    
+    
+    @IBAction func terminosCondicionesAction(_ sender: UIButton) {
+        dismissView(action: 5)
+    }
+    
+    @IBAction func ayudaAction(_ sender: UIButton) {
+        dismissView(action: 6)
+    }
+    
+    @IBAction func cerrarSesionAction(_ sender: UIButton) {
+        dismissView(action: 7)
     }
     
     override func viewDidLoad() {
@@ -88,34 +106,51 @@ class SideBarViewController: UIViewController {
     //Close session tells if the session should be closed once the view is dismissed
     func dismissView(action: Int){
         /*
-         0 boletos
-         1 horarios
-         2 aiura
-         3 cerrars sesion
+         0 Pulsera
+         1 Boletos
+         2 Horarios
+         3 Idiomas
+         4 Factura
+         5 Terminos
+         6 Ayuda
+         7 Cerrar sesion
+         
          */
         self.constraintImportante.constant = 0
         
-        UIView.animate(withDuration: 0.25, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.view.layoutIfNeeded()
         }) { (result: Bool) in
             //what the hell is this syntax...
             self.dismiss(animated: true, completion: {
                 switch action {
                     case 0:
-                        self.delegate?.showTickets()
+                        self.delegate?.showBracelet()
                     break;
                     case 1:
-                        self.delegate?.showSchedules()
+                        self.delegate?.showTickets()
                     break;
                     case 2:
-                        self.delegate?.showHelp()
+                        self.delegate?.showSchedules()
                     break;
                     case 3:
+                        self.delegate.showLanguage()
+                    break;
+                    case 4:
+                        self.delegate?.showBill()
+                    break;
+                    case 5:
+                        self.delegate?.showTerms()
+                    break;
+                    case 6:
+                        self.delegate?.showHelp()
+                    break;
+                    case 7:
                         self.delegate.closeSession()
                     break;
                     default:
                         print("ola")
-                        break;
+                    break;
                 }
             })
         }

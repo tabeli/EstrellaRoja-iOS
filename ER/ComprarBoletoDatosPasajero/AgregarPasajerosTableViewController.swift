@@ -61,10 +61,10 @@ class AgregarPasajerosTableViewController: UITableViewController {
         let sumOfTouristRows = countAdulto + countNino + countInapam
         for i in 0..<sumOfTouristRows {
             //MARK: - BORRA-ENTRADA
-            print("\(i) ->\(sumOfTouristRows) ")
-            touristNameArray.append("a")
-            touristAgeArray.append("12")
-            touristGenderArray.append("male")
+            //print("\(i) ->\(sumOfTouristRows) ")
+            touristNameArray.append("")
+            touristAgeArray.append("")
+            touristGenderArray.append("")
         }
         print("Cuenta Adulto")
         print(countAdulto)
@@ -252,7 +252,7 @@ class AgregarPasajerosTableViewController: UITableViewController {
             cell.touristName.text = cell.name
             cell.touristAge.text = cell.age
             
-            print("now cell gender is \(cell.gender)")
+            //print("now cell gender is \(cell.gender)")
             if (cell.gender == "male") {
                 cell.genderButtons[0].backgroundColor = #colorLiteral(red: 0.1574883461, green: 0.6851269603, blue: 0.009970044717, alpha: 1)
             } else if (cell.gender == "female"){

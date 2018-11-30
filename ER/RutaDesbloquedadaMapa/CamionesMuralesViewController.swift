@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class CamionesMuralesViewController: UIViewController {
 
@@ -210,6 +211,27 @@ class CamionesMuralesViewController: UIViewController {
 }
 
 extension CamionesMuralesViewController: SideBarDelegate{
+    func showBracelet() {
+        //
+    }
+    
+    func showLanguage() {
+        //
+    }
+    
+    func showBill() {
+        let url = URL(string: "https://www.tourister.com.mx/contacto")
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
+    }
+    
+    func showTerms() {
+        let url = URL(string: "https://www.tourister.com.mx/terminos-condiciones")
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
+    }
+    
+    
     func showTickets() {
         let modularStoryboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil);
         if let customAlert = modularStoryboard.instantiateViewController(withIdentifier: "MisBoletos") as? SideBarMisBoletosViewController {
@@ -219,13 +241,15 @@ extension CamionesMuralesViewController: SideBarDelegate{
             customAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
             self.present(customAlert, animated: false, completion: nil)
         }
-        else{
+        else {
             fatalError()
         }
     }
     
     func showHelp() {
-        
+        let url = URL(string: "https://www.tourister.com.mx/faqs")
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
     }
     
     func showSchedules() {
@@ -238,6 +262,5 @@ extension CamionesMuralesViewController: SideBarDelegate{
         if(removeSuccessful){
             self.navigationController?.popToRootViewController(animated: true)
         }
-        
     }
 }

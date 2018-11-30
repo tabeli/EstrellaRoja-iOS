@@ -15,11 +15,16 @@ class MisBoletosTableViewController: UITableViewController {
     var tourDateArr:[String] = []
     var folios:[Int] = []
     var nameArr:[String] = []
+    var clientAge:[Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userId = UserDefaults.standard.integer(forKey: "id_user")
         getPurchasesRequest()
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 250
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -143,10 +148,11 @@ class MisBoletosTableViewController: UITableViewController {
                         if let mapElement = element as? [String:Any] {
                             if let purchaseId = mapElement["purchase_id"] as? Int {
                                 if self.purchaseIdArray.contains(purchaseId) {
-                                    if let ticketId = mapElement["id"] as? Int, let tourDate = mapElement["tour_date"] as? String, let ticketName = mapElement["client_name"] as? String{
+                                    if let ticketId = mapElement["id"] as? Int, let tourDate = mapElement["tour_date"] as? String, let ticketName = mapElement["client_name"] as? String, let age = mapElement["client_age"] as? Int{
                                         self.folios.append(ticketId)
                                         self.tourDateArr.append(tourDate)
                                         self.nameArr.append(ticketName)
+                                        self.clientAge.append(age)
                                     }
                                 }
                             }
@@ -186,11 +192,20 @@ class MisBoletosTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "misBoletosCell", for: indexPath) as? MisBoletosTableViewCell else{
             return UITableViewCell()
         }
-        cell.idNumber.text = String(self.folios[indexPath.row])
+        cell.idNumber.text = "Folio: " + String(self.folios[indexPath.row])
         cell.ticketDate.text = "Fecha del tour: " + self.tourDateArr[indexPath.row]
         cell.name.text = self.nameArr[indexPath.row]
         // Configure the cell...
-
+        cell.ageType.adjustsFontSizeToFitWidth = true
+        if self.clientAge[indexPath.row] < 13 {
+            cell.ageType.text = "Niño (Edad: " + String(self.clientAge[indexPath.row]) + ")"
+        } else if self.clientAge[indexPath.row] > 12 && self.clientAge[indexPath.row] < 60 {
+            cell.ageType.text = "Adulto (Edad: " + String(self.clientAge[indexPath.row]) + ")"
+        } else {
+            cell.ageType.text = "Inapam (Edad: " + String(self.clientAge[indexPath.row]) + ")"
+        }
+        
+        
         return cell
     }
  

@@ -51,6 +51,7 @@ class MuestraRutaActualViewController: UIViewController {
     var stopLongitud:[Double] = []
     var stopLatitud:[Double] = []
     var stopDescription:[String] = []
+    var stopImage:[String] = []
     
     var stopTourId:[Int] = []
     var stopStopId:[Int] = []
@@ -95,10 +96,17 @@ class MuestraRutaActualViewController: UIViewController {
     var markersArr:[MKPointAnnotation] = []
     var coordinatesMarkersArr:[CLLocationCoordinate2D] = []
     
+    var coordinatesStopsArr:[CLLocationCoordinate2D] = []
+    var markersStopArr:[MKPointAnnotation] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         obtenerTourPlaceRequest()
         obtenerPlaceRequest()
+        
+        obtenerTourStopRequest()
+        obtenerStopRequest()
+        
         checkLocationServices()
         //coordinatesArr.append(locationManager.location!.coordinate)
         getDirections()
@@ -345,7 +353,7 @@ class MuestraRutaActualViewController: UIViewController {
                             }
                         }
                     }
-                    print("MARKERS ARRAY")
+                    /*print("MARKERS ARRAY")
                     print(self.coordinatesMarkersArr.count)
                     
                     var indice = -1
@@ -362,7 +370,7 @@ class MuestraRutaActualViewController: UIViewController {
                     
                     print(self.placeTypeId)
                     print("A VER QUE SALE")
-                    print(self.placeLatitud)
+                    print(self.placeLatitud)*/
                     
                     /*for i in 0..<self.placeLatitud.count{
                         if self.placeTypeId[i] == 20 {
@@ -626,43 +634,41 @@ class MuestraRutaActualViewController: UIViewController {
                     // Checas si el valor con se agrego el id
                     for element in dataArr {
                         if let mapElement = element as? [String:Any] {
-                            if let id = mapElement["id"] as? Int {
-                                self.stopId.append(id)
-                            }
-                            if let name = mapElement["name"] as? String {
-                                self.stopName.append(name)
-                            }
-                            if let longitude = mapElement["longitude"] as? Double {
-                                self.stopLongitud.append(longitude)
-                            }
-                            if let latitude = mapElement["latitude"] as? Double {
-                                self.stopLatitud.append(latitude)
-                            }
-                            if let description = mapElement["description"] as? String {
-                                self.stopDescription.append(description)
+                            if let id = mapElement["id"] as? Int, let name = mapElement["name"] as? String, let longitude = mapElement["longitude"] as? Double, let latitude = mapElement["latitude"] as? Double, let description = mapElement["description"] as? String, let image = mapElement["image_path"] as? String{
+                                if self.stopStopId.contains(id){
+                                    self.stopId.append(id)
+                                    self.stopName.append(name)
+                                    self.stopLongitud.append(longitude)
+                                    self.stopLatitud.append(latitude)
+                                    self.stopDescription.append(description)
+                                    self.stopImage.append(image)
+                                }
                             }
                         }
                     }
                     
-                    
-                    DispatchQueue.main.async {
-                        self.obtenerTourPlaceRequest()
+                    self.coordinatesStopsArr = []
+                    var index = 0
+                    for _ in self.stopId {
+                        let latitud = self.stopLatitud[index]
+                        let longitud = self.stopLongitud[index]
+                        self.coordinatesStopsArr.append(CLLocationCoordinate2DMake(latitud, longitud))
+                        index += 1
                     }
                     
-                    self.coordinatesArr = []
-                    for stopStopId in self.stopStopId {
-                        var index = -1
-                        for stopId in self.stopId {
-                            index += 1
-                            if (stopStopId == stopId) && (self.stopTourId[index] == 17) {
-                                let latitud = self.stopLatitud[index]
-                                let longitud = self.stopLongitud[index]
-                                self.coordinatesArr.append(CLLocationCoordinate2DMake(latitud, longitud))
-                                
-                            }
-                        }
+                    print("MARKERS ARRAY")
+                    print(self.coordinatesStopsArr.count)
+                    var indice = 0
+                    for coordinate in self.coordinatesStopsArr {
+                        print("Hago puntitos")
+                        let annotation = MKPointAnnotation()
+                        annotation.title = self.stopName[indice]
+                        annotation.subtitle = self.stopDescription[indice]
+                        annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+                        self.markersStopArr.append(annotation)
+                        self.mapView.addAnnotation(annotation)
+                        indice += 1
                     }
-                    
                     
                     /*self.coordinatesArr = []
                     for i in 0..<self.stopLatitud.count{
@@ -670,13 +676,10 @@ class MuestraRutaActualViewController: UIViewController {
                     }*/
                     self.getDirections()
                     
-                    
+                    print("COORDENADAS DE LA PARADA")
+                    print(self.coordinatesStopsArr)
                     print("ESTO TIENE QUE JALAR")
                     print(self.stopLatitud)
-                    /*
-                     coordinatesArr:[CLLocationCoordinate2D] = [
-                     CLLocationCoordinate2D(latitude: 19.0380368, longitude: -98.1919112),
-                     */
                     
                 } catch {
                     print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
@@ -730,21 +733,27 @@ class MuestraRutaActualViewController: UIViewController {
                     // Casteas el dataMap de un data a un json de tipo string a cualquier cosa
                     let dataArr = try JSONSerialization.jsonObject(with: dataUnwrapped, options: .mutableContainers) as! [Any]
                     // Checas si el valor con se agrego el id
+                    
+                    let routeId = UserDefaults.standard.integer(forKey: "idRuta")
+                    print(routeId)
                     for element in dataArr {
                         if let mapElement = element as? [String:Any] {
-                            if let tourId = mapElement["tour_id"] as? Int {
-                                self.stopTourId.append(tourId)
-                            }
-                            if let stopId = mapElement["stop_id"] as? Int {
-                                self.stopStopId.append(stopId)
+                            if let tourId = mapElement["tour_id"] as? Int, let stopId = mapElement["stop_id"] as? Int {
+                                if routeId == tourId {
+                                    self.stopTourId.append(tourId)
+                                    self.stopStopId.append(stopId)
+                                }
                             }
                         }
                     }
                     
-                    /*
-                     coordinatesArr:[CLLocationCoordinate2D] = [
-                     CLLocationCoordinate2D(latitude: 19.0380368, longitude: -98.1919112),
-                     */
+                    DispatchQueue.main.async {
+                        self.obtenerStopRequest()
+                    }
+                    
+                    
+                    print("ESTO TIENE QUE JALAR TOUR STOP")
+                    print(self.stopTourId)
                     
                 } catch {
                     print("ERROR: \(error)") //Por si se muere si no puedes parser el data a un json
@@ -764,15 +773,16 @@ class MuestraRutaActualViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
+    
+    /*// MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
+     
+    }*/
+    
 
 }
 
@@ -838,11 +848,21 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let annView = view.annotation
         let storyboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil)
-        let detalleVC = storyboard.instantiateViewController(withIdentifier: "Detalle") as! DetalleViewController
+        let detalleVC = storyboard.instantiateViewController(withIdentifier: "checkDetailStop") as! DetalleViewController
         detalleVC.nombre = (annView?.title!)!
         detalleVC.descripcion = (annView?.subtitle!)!
         detalleVC.latitud = (annView?.coordinate.latitude)!
         detalleVC.longitud = (annView?.coordinate.longitude)!
+        
+        var index = 0
+        for name in self.stopName {
+            if name == (annView?.title!)! {
+                break
+            }
+            index+=1
+        }
+        
+        detalleVC.imageStr = stopImage[index]
         
         self.navigationController?.pushViewController(detalleVC, animated: true)
     }
@@ -855,7 +875,7 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            annotationView!.image = UIImage(named: "pindos")
+            annotationView!.image = UIImage(named: "playAudio")
             annotationView!.canShowCallout = true
             annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
        
@@ -865,6 +885,27 @@ extension MuestraRutaActualViewController: MKMapViewDelegate {
 }
 
 extension MuestraRutaActualViewController: SideBarDelegate{
+    func showBracelet() {
+        //
+    }
+    
+    func showLanguage() {
+        //
+    }
+    
+    func showBill() {
+        let url = URL(string: "https://www.tourister.com.mx/contacto")
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
+    }
+    
+    func showTerms() {
+        let url = URL(string: "https://www.tourister.com.mx/terminos-condiciones")
+        let svc = SFSafariViewController(url: url!)
+        present(svc, animated: true, completion: nil)
+    }
+
+    
     func showTickets() {
         let modularStoryboard = UIStoryboard(name: "RutaDesbloqueada", bundle: nil);
         if let customAlert = modularStoryboard.instantiateViewController(withIdentifier: "MisBoletos") as? SideBarMisBoletosViewController {

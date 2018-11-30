@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class IniciaSesionViewController: UIViewController {
     
@@ -24,6 +27,23 @@ class IniciaSesionViewController: UIViewController {
     @IBOutlet weak var ingresar: UIButton!
     
     
+    @IBAction func doGoogleLogin(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
+    @IBAction func doFacebookLogin(_ sender: UIButton) {
+        let loginManager = FBSDKLoginManager()
+        loginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) {
+            (result, error) in
+            if (result?.isCancelled)! {
+                print("There was an error")
+            } else {
+                if (FBSDKAccessToken.current() != nil) {
+                    self.performSegue(withIdentifier: "RutaMenuSegue", sender: nil)
+                }
+            }
+        }
+    }
     
     @IBAction func backArrow(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -153,10 +173,6 @@ class IniciaSesionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: - BORRA-ENTRADA
-        username.text? = "admi@admi.com"
-        password.text? = "admi"
-        
         
         ingresar.layer.cornerRadius = 15
         ingresar.layer.borderWidth = 2
@@ -172,6 +188,9 @@ class IniciaSesionViewController: UIViewController {
         password.isSecureTextEntry = true
         password.returnKeyType = .done
         password.delegate = self
+        
+        GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIApplication.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIApplication.keyboardWillHideNotification, object: nil)
@@ -231,4 +250,34 @@ extension IniciaSesionViewController: UITextFieldDelegate {
             self.view.frame.origin.y = 0
         }
     }
+}
+
+extension IniciaSesionViewController: GIDSignInDelegate, GIDSignInUIDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print(" \(String(describing: user.userID))  \(String(describing: user.profile.name)) \(String(describing: user.profile.givenName)) \(String(describing: user.profile.familyName)) \(String(describing: user.profile.email))")
+        
+        performSegue(withIdentifier: "RutaMenuSegue", sender: nil)
+    }
+    
+    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
+        if let error = error {
+            print(error)
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error)
+        } else {
+          print("User logout")
+        }
+    }
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
 }

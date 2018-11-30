@@ -9,8 +9,12 @@
 import Foundation
 
 protocol SideBarDelegate {
-    func closeSession()
+    func showBracelet()
     func showTickets()
-    func showHelp()
     func showSchedules()
+    func showLanguage()
+    func showBill()
+    func showTerms()
+    func showHelp()
+    func closeSession()
 }
